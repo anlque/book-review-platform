@@ -1,6 +1,6 @@
 import { JsxAttribute, Node, Project, SyntaxKind } from 'ts-morph';
 
-const removedFeatureName = process.argv[2]; // example isArticleEnabled
+const removedFeatureName = process.argv[2]; // example isBookEnabled
 const featureState = process.argv[3]; // example off\on
 
 const toggleFunctionName = 'toggleFeatures';

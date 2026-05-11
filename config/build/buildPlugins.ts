@@ -41,9 +41,11 @@ export function buildPlugins({
     if (isDev) {
         plugins.push(new ReactRefreshWebpackPlugin());
         plugins.push(new webpack.HotModuleReplacementPlugin());
-        plugins.push(new BundleAnalyzerPlugin({
-            openAnalyzer: false,
-        }));
+        if (process.env.ANALYZE === 'true') {
+            plugins.push(new BundleAnalyzerPlugin({
+                openAnalyzer: false,
+            }));
+        }
     }
 
     if (isProd) {

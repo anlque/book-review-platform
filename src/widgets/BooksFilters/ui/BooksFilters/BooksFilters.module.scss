@@ -1,0 +1,53 @@
+@use '@/app/styles/media' as media;
+
+.BooksFilters {
+  overflow-y: visible;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: visible;
+  width: 100%;
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.tabs::-webkit-scrollbar {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  display: none;
+}
+
+@include media.respond-up(sm) {
+  .BooksFilters {
+    width: 100%;
+  }
+}
+
+@include media.respond-up(md) {
+  .BooksFilters {
+    width: 100%;
+  }
+}
+
+@include media.respond-up(lg) {
+  .BooksFilters {
+    width: 204px;
+  }
+
+  .tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+@include media.respond-up(xl) {
+  .BooksFilters {
+    width: 264px;
+  }
+}

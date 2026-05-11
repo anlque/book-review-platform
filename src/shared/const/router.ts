@@ -3,10 +3,10 @@ export enum AppRoutes {
     SETTINGS = 'settings',
     ABOUT = 'about',
     PROFILE = 'profile',
-    ARTICLES = 'articles',
-    ARTICLE_DETAILS = 'article_details',
-    ARTICLE_CREATE = 'article_create',
-    ARTICLE_EDIT = 'article_edit',
+    BOOKS = 'books',
+    BOOK_DETAILS = 'book_details',
+    BOOK_CREATE = 'book_create',
+    BOOK_EDIT = 'book_edit',
     ADMIN_PANEL = 'admin_panel',
     FORBIDDEN = 'forbidden',
     // last
@@ -17,10 +17,10 @@ export const getRouteMain = () => '/';
 export const getRouteSettings = () => '/settings';
 export const getRouteAbout = () => '/about';
 export const getRouteProfile = (id: string) => `/profile/${id}`;
-export const getRouteArticles = () => '/articles';
-export const getRouteArticleDetails = (id: string) => `/articles/${id}`;
-export const getRouteArticleCreate = () => '/articles/new';
-export const getRouteArticleEdit = (id: string) => `/articles/${id}/edit`;
+export const getRouteBooks = () => '/books';
+export const getRouteBookDetails = (id: string) => `/books/${id}`;
+export const getRouteBookCreate = () => '/books/new';
+export const getRouteBookEdit = (id: string) => `/books/${id}/edit`;
 export const getRouteAdmin = () => '/admin';
 export const getRouteForbidden = () => '/forbidden';
 
@@ -29,10 +29,10 @@ export const AppRouteByPathPattern: Record<string, AppRoutes> = {
     [getRouteSettings()]: AppRoutes.SETTINGS,
     [getRouteAbout()]: AppRoutes.ABOUT,
     [getRouteProfile(':id')]: AppRoutes.PROFILE,
-    [getRouteArticles()]: AppRoutes.ARTICLES,
-    [getRouteArticleDetails(':id')]: AppRoutes.ARTICLE_DETAILS,
-    [getRouteArticleCreate()]: AppRoutes.ARTICLE_CREATE,
-    [getRouteArticleEdit(':id')]: AppRoutes.ARTICLE_EDIT,
+    [getRouteBooks()]: AppRoutes.BOOKS,
+    [getRouteBookDetails(':id')]: AppRoutes.BOOK_DETAILS,
+    [getRouteBookCreate()]: AppRoutes.BOOK_CREATE,
+    [getRouteBookEdit(':id')]: AppRoutes.BOOK_EDIT,
     [getRouteAdmin()]: AppRoutes.ADMIN_PANEL,
     [getRouteForbidden()]: AppRoutes.FORBIDDEN,
 };

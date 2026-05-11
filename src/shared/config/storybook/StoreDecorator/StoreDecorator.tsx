@@ -2,17 +2,17 @@ import type { Decorator } from '@storybook/react';
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
 import { loginReducer } from '@/features/AuthByUsername/model/slice/loginSlice';
 import { ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { articleDetailsReducer } from '@/entities/Article/testing';
+import { bookDetailsReducer } from '@/entities/Book/testing';
 import { addCommentFormReducer } from '@/features/addCommentForm/testing';
 import { profileReducer } from '@/features/editableProfileCard/testing';
-import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage/testing';
+import { bookDetailsPageReducer } from '@/pages/BookDetailsPage/testing';
 
 const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
     profile: profileReducer,
-    articleDetails: articleDetailsReducer,
+    bookDetails: bookDetailsReducer,
     addCommentForm: addCommentFormReducer,
-    articleDetailsPage: articleDetailsPageReducer,
+    bookDetailsPage: bookDetailsPageReducer,
 };
 
 export const StoreDecorator = (

@@ -1,9 +1,9 @@
 import { MainPage } from '@/pages/MainPage';
 import { AboutPage } from '@/pages/AboutPage';
 import { ProfilePage } from '@/pages/ProfilePage';
-import { ArticlesPage } from '@/pages/ArticlesPage';
-import { ArticleDetailsPage } from '@/pages/ArticleDetailsPage';
-import { ArticleEditPage } from '@/pages/ArticleEditPage';
+import { BooksPage } from '@/pages/BooksPage';
+import { BookDetailsPage } from '@/pages/BookDetailsPage';
+import { BookEditPage } from '@/pages/BookEditPage';
 import { AdminPanelPage } from '@/pages/AdminPanelPage';
 import { UserRole } from '@/entities/User';
 import { ForbiddenPage } from '@/pages/ForbiddenPage';
@@ -12,11 +12,11 @@ import {
     AppRoutes,
     getRouteAbout,
     getRouteAdmin,
-    getRouteArticleCreate,
-    getRouteArticleDetails,
-    getRouteArticleEdit,
+    getRouteBookCreate,
+    getRouteBookDetails,
+    getRouteBookEdit,
     getRouteForbidden,
-    getRouteArticles,
+    getRouteBooks,
     getRouteMain,
     getRouteProfile,
     getRouteSettings,
@@ -42,24 +42,24 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
         element: <ProfilePage />,
         authOnly: true,
     },
-    [AppRoutes.ARTICLES]: {
-        path: getRouteArticles(),
-        element: <ArticlesPage />,
+    [AppRoutes.BOOKS]: {
+        path: getRouteBooks(),
+        element: <BooksPage />,
         authOnly: true,
     },
-    [AppRoutes.ARTICLE_DETAILS]: {
-        path: getRouteArticleDetails(':id'),
-        element: <ArticleDetailsPage />,
+    [AppRoutes.BOOK_DETAILS]: {
+        path: getRouteBookDetails(':id'),
+        element: <BookDetailsPage />,
         authOnly: true,
     },
-    [AppRoutes.ARTICLE_CREATE]: {
-        path: getRouteArticleCreate(),
-        element: <ArticleEditPage />,
+    [AppRoutes.BOOK_CREATE]: {
+        path: getRouteBookCreate(),
+        element: <BookEditPage />,
         authOnly: true,
     },
-    [AppRoutes.ARTICLE_EDIT]: {
-        path: getRouteArticleEdit(':id'),
-        element: <ArticleEditPage />,
+    [AppRoutes.BOOK_EDIT]: {
+        path: getRouteBookEdit(':id'),
+        element: <BookEditPage />,
         authOnly: true,
     },
     [AppRoutes.ADMIN_PANEL]: {

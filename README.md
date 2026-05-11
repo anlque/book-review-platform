@@ -141,7 +141,7 @@ it takes 2 args
 
 ## Entities
 
-- [Article](/src/entities/Article)
+- [Book](/src/entities/Book)
 - [Comment](/src/entities/Comment)
 - [Counter](/src/entities/Counter)
 - [Country](/src/entities/Country)
@@ -154,9 +154,9 @@ it takes 2 args
 ## Features
 
 - [addCommentForm](/src/features/addCommentForm)
-- [articleEditForm](/src/features/articleEditForm)
-- [articleRating](/src/features/articleRating)
-- [articleRecommendationsList](/src/features/articleRecommendationsList)
+- [bookEditForm](/src/features/bookEditForm)
+- [bookRating](/src/features/bookRating)
+- [bookRecommendationsList](/src/features/bookRecommendationsList)
 - [AuthByUsername](/src/features/AuthByUsername)
 - [avatarDropdown](/src/features/avatarDropdown)
 - [editableProfileCard](/src/features/editableProfileCard)

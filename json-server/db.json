@@ -11,623 +11,689 @@
       "userId": "2"
     }
   ],
-  "articles": [
+  "books": [
     {
       "id": "1",
-      "title": "Javascript news FRESH",
-      "subtitle": "What's new in JS in 2022 year?",
-      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-      "views": 1022,
-      "createdAt": "26.04.2022",
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "subtitle": "Epic science fiction: politics, ecology, and prophecy on the desert world Arrakis.",
+      "img": "https://picsum.photos/seed/book1/800/1200",
+      "views": 18420,
+      "createdAt": "01.08.1965",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE_FICTION"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block's title",
+          "title": "About this book",
           "paragraphs": [
-            "The program traditionally called \"Hello, world!\" is very simple. It prints the phrase \"Hello, world!\" or something similar, using some language.",
-            "JavaScript is a language that can be run in a variety of environments. In our case, that means browsers and the Node.js server platform. If you haven't written a single line of JavaScript code yet and are reading this text in a browser on a desktop computer, you're literally seconds away from writing your first JavaScript program.",
-            "There are other ways to run JS code in a browser. For example, in the typical use of JavaScript programs, they are loaded into the browser to power web pages. Typically, the code is formatted as separate files with the .js extension, which are included in web pages, but the program code can also be included directly in the page code. This is all done using the <script> tag. When the browser encounters such code, it executes it. You can find more information about the script tag on w3school.com. In particular, let's look at an example demonstrating how to work with a web page using JavaScript, which is provided on this resource. This example can also be run using this resource (look for the \"Try it Yourself\" button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, VS Code or Notepad++), which we'll call hello.html, and add the following code to it:"
-          ]
-        },
-        {
-          "id": "4",
-          "type": "CODE",
-          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
-        },
-        {
-          "id": "5",
-          "type": "TEXT",
-          "title": "This block's title",
-          "paragraphs": [
-            "The program traditionally called \"Hello, world!\" is very simple. It prints the phrase \"Hello, world!\" or something similar, using some language.",
-            "There are other ways to run JS code in a browser. For example, in the typical use of JavaScript programs, they are loaded into the browser to power web pages. Typically, the code is formatted as separate files with the .js extension, which are included in web pages, but the program code can also be included directly in the page code. This is all done using the <script> tag. When the browser encounters such code, it executes it. You can find more information about the script tag on w3school.com. In particular, let's look at an example demonstrating how to work with a web page using JavaScript, which is provided on this resource. This example can also be run using this resource (look for the \"Try it Yourself\" button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, VS Code or Notepad++), which we'll call hello.html, and add the following code to it:"
+            "House Atreides is ordered to take control of Arrakis, the only source of the universe’s most valuable substance: spice melange.",
+            "Paul Atreides must survive betrayal and desert storms as ancient forces awaken around him."
           ]
         },
         {
           "id": "2",
           "type": "IMAGE",
-          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
-          "title": "Figure 1 - screenshot of the site"
-        },
-        {
-          "id": "3",
-          "type": "CODE",
-          "code": "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);"
-        },
-        {
-          "id": "7",
-          "type": "TEXT",
-          "title": "This block's title",
-          "paragraphs": [
-            "JavaScript is a language that can be run in a variety of environments. In our case, that means browsers and the Node.js server platform. If you haven't written a single line of JavaScript code yet and are reading this text in a browser on a desktop computer, you're literally seconds away from writing your first JavaScript program.",
-            "There are other ways to run JS code in a browser. For example, in the typical use of JavaScript programs, they are loaded into the browser to power web pages. Typically, the code is formatted as separate files with the .js extension, which are included in web pages, but the program code can also be included directly in the page code. This is all done using the <script> tag. When the browser encounters such code, it executes it. You can find more information about the script tag on w3school.com. In particular, let's look at an example demonstrating how to work with a web page using JavaScript, which is provided on this resource. This example can also be run using this resource (look for the \"Try it Yourself\" button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, VS Code or Notepad++), which we'll call hello.html, and add the following code to it:"
-          ]
-        },
-        {
-          "id": "8",
-          "type": "IMAGE",
-          "src": "https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png",
-          "title": "Figure 1 - screenshot of the site"
-        },
-        {
-          "id": "9",
-          "type": "TEXT",
-          "title": "This block's title",
-          "paragraphs": [
-            "JavaScript is a language that can be run in a variety of environments. In our case, that means browsers and the Node.js server platform. If you haven't written a single line of JavaScript code yet and are reading this text in a browser on a desktop computer, you're literally seconds away from writing your first JavaScript program."
-          ]
+          "src": "https://picsum.photos/seed/book101/800/1200",
+          "title": "Cover"
         }
       ]
     },
     {
       "id": "2",
-      "title": "Python news",
-      "subtitle": "What's new in JS in 2022 year?",
-      "img": "https://admin.wac.co/uploads/Features_Of_Python_1_f4ccd6d9f7.jpg",
-      "views": 5204,
-      "createdAt": "26.02.2022",
+      "title": "The Hobbit",
+      "author": "J. R. R. Tolkien",
+      "subtitle": "A cozy fantasy adventure from the Shire to the Lonely Mountain.",
+      "img": "https://picsum.photos/seed/book2/800/1200",
+      "views": 22100,
+      "createdAt": "21.09.1937",
       "userId": "1",
       "type": [
-        "IT"
+        "FANTASY"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block's title",
+          "title": "About this book",
           "paragraphs": [
-            "The program traditionally called \"Hello, world!\" is very simple. It prints the phrase \"Hello, world!\" or something similar, using some language.",
-            "JavaScript is a language that can be run in a variety of environments. In our case, that means browsers and the Node.js server platform. If you haven't written a single line of JavaScript code yet and are reading this text in a browser on a desktop computer, you're literally seconds away from writing your first JavaScript program.",
-            "There are other ways to run JS code in a browser. For example, in the typical use of JavaScript programs, they are loaded into the browser to power web pages. Typically, the code is formatted as separate files with the .js extension, which are included in web pages, but the program code can also be included directly in the page code. This is all done using the <script> tag. When the browser encounters such code, it executes it. You can find more information about the script tag on w3school.com. In particular, let's look at an example demonstrating how to work with a web page using JavaScript, which is provided on this resource. This example can also be run using this resource (look for the \"Try it Yourself\" button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, VS Code or Notepad++), which we'll call hello.html, and add the following code to it:"
+            "Bilbo Baggins is swept into a quest with thirteen dwarves and the wizard Gandalf to reclaim a kingdom from the dragon Smaug.",
+            "Tolkien’s tale blends humour, courage, and mythic landscapes that define modern fantasy."
           ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://picsum.photos/seed/book102/800/1200",
+          "title": "Cover"
         }
       ]
     },
     {
       "id": "3",
-      "title": "Kotlin news 2019",
-      "subtitle": "What's new in JS in 2022 year?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 94002,
-      "createdAt": "26.02.2019",
-      "userId": "1",
+      "title": "Neuromancer",
+      "author": "William Gibson",
+      "subtitle": "Cyberpunk cornerstone: hackers, AIs, and corporate power in the Sprawl.",
+      "img": "https://picsum.photos/seed/book3/800/1200",
+      "views": 15300,
+      "createdAt": "01.07.1984",
+      "userId": "2",
       "type": [
-        "IT"
+        "CYBERPUNK"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block's title",
+          "title": "About this book",
           "paragraphs": [
-            "The program traditionally called 'Hello, world!' is very simple. It prints the phrase 'Hello, world!' or something similar, using some language.",
-            "JavaScript is a language that can be run in a variety of environments. In our case, that means browsers and the Node.js server platform. If you haven't written a single line of JavaScript code yet and are reading this text in a browser on a desktop computer, you're literally seconds away from writing your first JavaScript program.",
-            "There are other ways to run JS code in a browser. For example, in the typical use of JavaScript programs, they are loaded into the browser to power web pages. Typically, the code is formatted as separate files with the .js extension, which are included in web pages, but the program code can also be included directly in the page code. This is all done using the <script> tag. When the browser encounters such code, it executes it. You can find more information about the script tag on w3school.com. In particular, let's look at an example demonstrating how to work with a web page using JavaScript, which is provided on this resource. This example can also be run using this resource (look for the 'Try it Yourself' button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, VS Code or Notepad++), which we'll call hello.html, and add the following code to it:"
+            "Case, a washed-up console cowboy, is offered one last job that pulls him into a conspiracy woven by an enigmatic AI.",
+            "Gibson’s prose defined the texture of high-tech, low-life futures for generations of readers."
           ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://picsum.photos/seed/book103/800/1200",
+          "title": "Cover"
         }
       ]
     },
     {
       "id": "4",
-      "title": "Scala news",
-      "subtitle": "What's new in JS in 2022 year?",
-      "img": "https://raw.githubusercontent.com/OlegIlyenko/scala-icon/master/scala-icon.png",
-      "views": 10222,
-      "createdAt": "24.01.2022",
+      "title": "Gone Girl",
+      "author": "Gillian Flynn",
+      "subtitle": "A marriage thriller where media narratives and private truths violently collide.",
+      "img": "https://picsum.photos/seed/book4/800/1200",
+      "views": 19800,
+      "createdAt": "24.06.2012",
       "userId": "1",
       "type": [
-        "IT"
+        "THRILLER"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block's title",
+          "title": "About this book",
           "paragraphs": [
-            "The program traditionally called 'Hello, world!' is very simple. It prints the phrase 'Hello, world!' or something similar, using some language.",
-            "JavaScript is a language that can be run in a variety of environments. In our case, that means browsers and the Node.js server platform. If you haven't written a single line of JavaScript code yet and are reading this text in a browser on a desktop computer, you're literally seconds away from writing your first JavaScript program.",
-            "There are other ways to run JS code in a browser. For example, in the typical use of JavaScript programs, they are loaded into the browser to power web pages. Typically, the code is formatted as separate files with the .js extension, which are included in web pages, but the program code can also be included directly in the page code. This is all done using the <script> tag. When the browser encounters such code, it executes it. You can find more information about the script tag on w3school.com. In particular, let's look at an example demonstrating how to work with a web page using JavaScript, which is provided on this resource. This example can also be run using this resource (look for the 'Try it Yourself' button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, VS Code or Notepad++), which we'll call hello.html, and add the following code to it:"
+            "On the morning of their fifth anniversary, Amy Dunne disappears—and suspicion falls on her husband Nick.",
+            "Flynn alternates voices to expose manipulation, performance, and the cost of a perfect public image."
           ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://picsum.photos/seed/book104/800/1200",
+          "title": "Cover"
         }
       ]
     },
     {
       "id": "5",
-      "title": "Golang news",
-      "subtitle": "What's new in JS in 2022 year?",
-      "img": "https://www.softwebsolutions.com/wp-content/uploads/2020/10/golang-Programing.jpg",
-      "views": 10222,
-      "createdAt": "26.02.2020",
+      "title": "The Hound of the Baskervilles",
+      "author": "Arthur Conan Doyle",
+      "subtitle": "Sherlock Holmes investigates a family curse on the Devonshire moor.",
+      "img": "https://picsum.photos/seed/book5/800/1200",
+      "views": 12800,
+      "createdAt": "25.08.1902",
       "userId": "1",
       "type": [
-        "IT"
+        "DETECTIVE"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block's title",
+          "title": "About this book",
           "paragraphs": [
-            "The program traditionally called 'Hello, world!' is very simple. It prints the phrase 'Hello, world!' or something similar, using some language.",
-            "JavaScript is a language that can be run in a variety of environments. In our case, that means browsers and the Node.js server platform. If you haven't written a single line of JavaScript code yet and are reading this text in a browser on a desktop computer, you're literally seconds away from writing your first JavaScript program.",
-            "There are other ways to run JS code in a browser. For example, in the typical use of JavaScript programs, they are loaded into the browser to power web pages. Typically, the code is formatted as separate files with the .js extension, which are included in web pages, but the program code can also be included directly in the page code. This is all done using the <script> tag. When the browser encounters such code, it executes it. You can find more information about the script tag on w3school.com. In particular, let's look at an example demonstrating how to work with a web page using JavaScript, which is provided on this resource. This example can also be run using this resource (look for the 'Try it Yourself' button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, VS Code or Notepad++), which we'll call hello.html, and add the following code to it:"
+            "Holmes and Watson untangle rumours of a supernatural hound haunting the Baskerville line.",
+            "Atmospheric moors and tight deduction make this one of the most celebrated detective novels."
           ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://picsum.photos/seed/book105/800/1200",
+          "title": "Cover"
         }
       ]
     },
     {
       "id": "6",
-      "title": "Java news",
-      "subtitle": "What's new in JS in 2022 year?",
-      "img": "https://andreyex.ru/wp-content/uploads/2018/05/Kak-ustanovit-Java-s-apt-na-Ubuntu-18.04.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
-      "userId": "1",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "subtitle": "A sharp comedy of manners about love, class, and mistaken first impressions.",
+      "img": "https://picsum.photos/seed/book6/800/1200",
+      "views": 31050,
+      "createdAt": "28.01.1813",
+      "userId": "2",
       "type": [
-        "IT"
+        "ROMANCE"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block's title",
+          "title": "About this book",
           "paragraphs": [
-            "The program traditionally called 'Hello, world!' is very simple. It prints the phrase 'Hello, world!' or something similar, using some language.",
-            "JavaScript is a language that can be run in a variety of environments. In our case, that means browsers and the Node.js server platform. If you haven't written a single line of JavaScript code yet and are reading this text in a browser on a desktop computer, you're literally seconds away from writing your first JavaScript program.",
-            "There are other ways to run JS code in a browser. For example, in the typical use of JavaScript programs, they are loaded into the browser to power web pages. Typically, the code is formatted as separate files with the .js extension, which are included in web pages, but the program code can also be included directly in the page code. This is all done using the <script> tag. When the browser encounters such code, it executes it. You can find more information about the script tag on w3school.com. In particular, let's look at an example demonstrating how to work with a web page using JavaScript, which is provided on this resource. This example can also be run using this resource (look for the 'Try it Yourself' button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, VS Code or Notepad++), which we'll call hello.html, and add the following code to it:"
+            "Elizabeth Bennet navigates society’s expectations while clashing—and eventually connecting—with the proud Mr Darcy.",
+            "Austen’s dialogue and irony remain a gold standard for character-driven romance."
           ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://picsum.photos/seed/book106/800/1200",
+          "title": "Cover"
         }
       ]
     },
     {
       "id": "7",
-      "title": "Ruby news",
-      "subtitle": "What's new in JS in 2022 year?",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIVdUxev706oG0AXiU7J__oryAveESm57WVQ&s",
-      "views": 100,
-      "createdAt": "21.02.2022",
+      "title": "It",
+      "author": "Stephen King",
+      "subtitle": "Childhood trauma and an ancient evil resurfacing in small-town Maine.",
+      "img": "https://picsum.photos/seed/book7/800/1200",
+      "views": 26700,
+      "createdAt": "15.09.1986",
       "userId": "1",
       "type": [
-        "IT"
+        "HORROR"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block's title",
+          "title": "About this book",
           "paragraphs": [
-            "The program traditionally called 'Hello, world!' is very simple. It prints the phrase 'Hello, world!' or something similar, using some language.",
-            "JavaScript is a language that can be run in a variety of environments. In our case, that means browsers and the Node.js server platform. If you haven't written a single line of JavaScript code yet and are reading this text in a browser on a desktop computer, you're literally seconds away from writing your first JavaScript program.",
-            "There are other ways to run JS code in a browser. For example, in the typical use of JavaScript programs, they are loaded into the browser to power web pages. Typically, the code is formatted as separate files with the .js extension, which are included in web pages, but the program code can also be included directly in the page code. This is all done using the <script> tag. When the browser encounters such code, it executes it. You can find more information about the script tag on w3school.com. In particular, let's look at an example demonstrating how to work with a web page using JavaScript, which is provided on this resource. This example can also be run using this resource (look for the 'Try it Yourself' button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, VS Code or Notepad++), which we'll call hello.html, and add the following code to it:"
+            "The Losers Club confronts a shape-shifting predator that feeds on fear—often appearing as a clown.",
+            "King interweaves past and present to explore memory, friendship, and what it costs to face the dark."
           ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://picsum.photos/seed/book107/800/1200",
+          "title": "Cover"
         }
       ]
     },
     {
       "id": "8",
-      "title": "TypeScript news",
-      "subtitle": "What's new in JS in 2022 year?",
-      "img": "https://miro.medium.com/max/1400/1*aTCN2ctKNoZupUCMP0hQuw.png",
-      "views": 102222,
-      "createdAt": "26.02.2022",
-      "userId": "1",
+      "title": "The Name of the Rose",
+      "author": "Umberto Eco",
+      "subtitle": "A medieval mystery of forbidden books and murders in a Benedictine abbey.",
+      "img": "https://picsum.photos/seed/book8/800/1200",
+      "views": 14200,
+      "createdAt": "01.01.1980",
+      "userId": "2",
       "type": [
-        "IT"
+        "MYSTERY"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block's title",
+          "title": "About this book",
           "paragraphs": [
-            "The program traditionally called 'Hello, world!' is very simple. It prints the phrase 'Hello, world!' or something similar, using some language.",
-            "JavaScript is a language that can be run in a variety of environments. In our case, that means browsers and the Node.js server platform. If you haven't written a single line of JavaScript code yet and are reading this text in a browser on a desktop computer, you're literally seconds away from writing your first JavaScript program.",
-            "There are other ways to run JS code in a browser. For example, in the typical use of JavaScript programs, they are loaded into the browser to power web pages. Typically, the code is formatted as separate files with the .js extension, which are included in web pages, but the program code can also be included directly in the page code. This is all done using the <script> tag. When the browser encounters such code, it executes it. You can find more information about the script tag on w3school.com. In particular, let's look at an example demonstrating how to work with a web page using JavaScript, which is provided on this resource. This example can also be run using this resource (look for the 'Try it Yourself' button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, VS Code or Notepad++), which we'll call hello.html, and add the following code to it:"
+            "Brother William of Baskerville arrives to debate theology—and ends up investigating a series of bizarre deaths.",
+            "Eco layers semiotics, history, and detective fiction into a labyrinthine library of ideas."
           ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://picsum.photos/seed/book108/800/1200",
+          "title": "Cover"
         }
       ]
     },
     {
       "id": "9",
-      "title": "Kotlin news",
-      "subtitle": "What's new in JS in 2022 year?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "The Shining",
+      "author": "Stephen King",
+      "subtitle": "Isolation, alcoholism, and a hotel that remembers every cruel winter.",
+      "img": "https://picsum.photos/seed/book9/800/1200",
+      "views": 23500,
+      "createdAt": "28.01.1977",
       "userId": "1",
       "type": [
-        "IT"
+        "HORROR"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block's title",
+          "title": "About this book",
           "paragraphs": [
-            "The program traditionally called 'Hello, world!' is very simple. It prints the phrase 'Hello, world!' or something similar, using some language.",
-            "JavaScript is a language that can be run in a variety of environments. In our case, that means browsers and the Node.js server platform. If you haven't written a single line of JavaScript code yet and are reading this text in a browser on a desktop computer, you're literally seconds away from writing your first JavaScript program.",
-            "There are other ways to run JS code in a browser. For example, in the typical use of JavaScript programs, they are loaded into the browser to power web pages. Typically, the code is formatted as separate files with the .js extension, which are included in web pages, but the program code can also be included directly in the page code. This is all done using the <script> tag. When the browser encounters such code, it executes it. You can find more information about the script tag on w3school.com. In particular, let's look at an example demonstrating how to work with a web page using JavaScript, which is provided on this resource. This example can also be run using this resource (look for the 'Try it Yourself' button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, VS Code or Notepad++), which we'll call hello.html, and add the following code to it:"
+            "Jack Torrance takes a winter caretaker job at the Overlook Hotel, bringing his wife Wendy and psychic son Danny.",
+            "As the snow seals them in, the hotel’s history presses against Jack’s fragile sobriety."
           ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://picsum.photos/seed/book109/800/1200",
+          "title": "Cover"
         }
       ]
     },
     {
       "id": "10",
-      "title": "Python news",
-      "subtitle": "What's new in JS in 2022 year?",
-      "img": "https://admin.wac.co/uploads/Features_Of_Python_1_f4ccd6d9f7.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
-      "userId": "1",
+      "title": "The Girl with the Dragon Tattoo",
+      "author": "Stieg Larsson",
+      "subtitle": "A journalist and a hacker probe a decades-old disappearance in a powerful Swedish family.",
+      "img": "https://picsum.photos/seed/book10/800/1200",
+      "views": 20100,
+      "createdAt": "01.09.2005",
+      "userId": "2",
       "type": [
-        "IT"
+        "THRILLER"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block's title",
+          "title": "About this book",
           "paragraphs": [
-            "The program traditionally called 'Hello, world!' is very simple. It prints the phrase 'Hello, world!' or something similar, using some language.",
-            "JavaScript is a language that can be run in a variety of environments. In our case, that means browsers and the Node.js server platform. If you haven't written a single line of JavaScript code yet and are reading this text in a browser on a desktop computer, you're literally seconds away from writing your first JavaScript program.",
-            "There are other ways to run JS code in a browser. For example, in the typical use of JavaScript programs, they are loaded into the browser to power web pages. Typically, the code is formatted as separate files with the .js extension, which are included in web pages, but the program code can also be included directly in the page code. This is all done using the <script> tag. When the browser encounters such code, it executes it. You can find more information about the script tag on w3school.com. In particular, let's look at an example demonstrating how to work with a web page using JavaScript, which is provided on this resource. This example can also be run using this resource (look for the 'Try it Yourself' button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, VS Code or Notepad++), which we'll call hello.html, and add the following code to it:"
+            "Mikael Blomkvist teams up with Lisbeth Salander to crack a cold case buried under corporate secrecy.",
+            "Larsson’s Millennium series blends procedural detail with blistering social critique."
           ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://picsum.photos/seed/book110/800/1200",
+          "title": "Cover"
         }
       ]
     },
     {
       "id": "11",
-      "title": "Kotlin news",
-      "subtitle": "What's new in JS in 2022 year?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "1984",
+      "author": "George Orwell",
+      "subtitle": "A dystopian novel of surveillance, propaganda, and the politics of truth.",
+      "img": "https://picsum.photos/seed/book11/800/1200",
+      "views": 40200,
+      "createdAt": "08.06.1949",
       "userId": "1",
       "type": [
-        "IT"
+        "NOVEL"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block's title",
+          "title": "About this book",
           "paragraphs": [
-            "The program traditionally called 'Hello, world!' is very simple. It prints the phrase 'Hello, world!' or something similar, using some language.",
-            "JavaScript is a language that can be run in a variety of environments. In our case, that means browsers and the Node.js server platform. If you haven't written a single line of JavaScript code yet and are reading this text in a browser on a desktop computer, you're literally seconds away from writing your first JavaScript program.",
-            "There are other ways to run JS code in a browser. For example, in the typical use of JavaScript programs, they are loaded into the browser to power web pages. Typically, the code is formatted as separate files with the .js extension, which are included in web pages, but the program code can also be included directly in the page code. This is all done using the <script> tag. When the browser encounters such code, it executes it. You can find more information about the script tag on w3school.com. In particular, let's look at an example demonstrating how to work with a web page using JavaScript, which is provided on this resource. This example can also be run using this resource (look for the 'Try it Yourself' button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, VS Code or Notepad++), which we'll call hello.html, and add the following code to it:"
+            "Winston Smith works rewriting history for the Party, until a forbidden love and doubt crack his obedience.",
+            "Orwell’s terms—Big Brother, thoughtcrime, Newspeak—entered the global vocabulary."
           ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://picsum.photos/seed/book111/800/1200",
+          "title": "Cover"
         }
       ]
     },
     {
       "id": "12",
-      "title": "Python news",
-      "subtitle": "What's new in JS in 2022 year?",
-      "img": "https://admin.wac.co/uploads/Features_Of_Python_1_f4ccd6d9f7.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
-      "userId": "1",
+      "title": "The Martian",
+      "author": "Andy Weir",
+      "subtitle": "Stranded on Mars, an engineer survives with science, duct tape, and stubborn optimism.",
+      "img": "https://picsum.photos/seed/book12/800/1200",
+      "views": 17600,
+      "createdAt": "27.09.2011",
+      "userId": "2",
       "type": [
-        "IT"
+        "SCIENCE_FICTION"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block's title",
+          "title": "About this book",
           "paragraphs": [
-            "The program traditionally called 'Hello, world!' is very simple. It prints the phrase 'Hello, world!' or something similar, using some language.",
-            "JavaScript is a language that can be run in a variety of environments. In our case, that means browsers and the Node.js server platform. If you haven't written a single line of JavaScript code yet and are reading this text in a browser on a desktop computer, you're literally seconds away from writing your first JavaScript program.",
-            "There are other ways to run JS code in a browser. For example, in the typical use of JavaScript programs, they are loaded into the browser to power web pages. Typically, the code is formatted as separate files with the .js extension, which are included in web pages, but the program code can also be included directly in the page code. This is all done using the <script> tag. When the browser encounters such code, it executes it. You can find more information about the script tag on w3school.com. In particular, let's look at an example demonstrating how to work with a web page using JavaScript, which is provided on this resource. This example can also be run using this resource (look for the 'Try it Yourself' button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, VS Code or Notepad++), which we'll call hello.html, and add the following code to it:"
+            "Mark Watney is left behind by his crew after a dust storm; he must farm potatoes and jury-rig communications.",
+            "Weir’s debut celebrates problem-solving under impossible odds with humour and rigour."
           ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://picsum.photos/seed/book112/800/1200",
+          "title": "Cover"
         }
       ]
     },
     {
       "id": "13",
-      "title": "Kotlin news",
-      "subtitle": "What's new in JS in 2022 year?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "The Fellowship of the Ring",
+      "author": "J. R. R. Tolkien",
+      "subtitle": "The first volume of The Lord of the Rings: a ring of power and a fellowship formed.",
+      "img": "https://picsum.photos/seed/book13/800/1200",
+      "views": 28900,
+      "createdAt": "29.07.1954",
       "userId": "1",
       "type": [
-        "IT"
+        "FANTASY"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block's title",
+          "title": "About this book",
           "paragraphs": [
-            "The program traditionally called 'Hello, world!' is very simple. It prints the phrase 'Hello, world!' or something similar, using some language.",
-            "JavaScript is a language that can be run in a variety of environments. In our case, that means browsers and the Node.js server platform. If you haven't written a single line of JavaScript code yet and are reading this text in a browser on a desktop computer, you're literally seconds away from writing your first JavaScript program.",
-            "There are other ways to run JS code in a browser. For example, in the typical use of JavaScript programs, they are loaded into the browser to power web pages. Typically, the code is formatted as separate files with the .js extension, which are included in web pages, but the program code can also be included directly in the page code. This is all done using the <script> tag. When the browser encounters such code, it executes it. You can find more information about the script tag on w3school.com. In particular, let's look at an example demonstrating how to work with a web page using JavaScript, which is provided on this resource. This example can also be run using this resource (look for the 'Try it Yourself' button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, VS Code or Notepad++), which we'll call hello.html, and add the following code to it:"
+            "Frodo Baggins inherits a ring that darkens the world; a fellowship sets out to destroy it.",
+            "From the Shire to Moria, Tolkien expands his legendarium with epic scope and intimate courage."
           ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://picsum.photos/seed/book113/800/1200",
+          "title": "Cover"
         }
       ]
     },
     {
       "id": "14",
-      "title": "Python news",
-      "subtitle": "What's new in JS in 2022 year?",
-      "img": "https://admin.wac.co/uploads/Features_Of_Python_1_f4ccd6d9f7.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
-      "userId": "1",
+      "title": "Dracula",
+      "author": "Bram Stoker",
+      "subtitle": "Victorian Gothic horror told through letters, journals, and ship logs.",
+      "img": "https://picsum.photos/seed/book14/800/1200",
+      "views": 19500,
+      "createdAt": "26.05.1897",
+      "userId": "2",
       "type": [
-        "IT"
+        "HORROR"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block's title",
+          "title": "About this book",
           "paragraphs": [
-            "The program traditionally called 'Hello, world!' is very simple. It prints the phrase 'Hello, world!' or something similar, using some language.",
-            "JavaScript is a language that can be run in a variety of environments. In our case, that means browsers and the Node.js server platform. If you haven't written a single line of JavaScript code yet and are reading this text in a browser on a desktop computer, you're literally seconds away from writing your first JavaScript program.",
-            "There are other ways to run JS code in a browser. For example, in the typical use of JavaScript programs, they are loaded into the browser to power web pages. Typically, the code is formatted as separate files with the .js extension, which are included in web pages, but the program code can also be included directly in the page code. This is all done using the <script> tag. When the browser encounters such code, it executes it. You can find more information about the script tag on w3school.com. In particular, let's look at an example demonstrating how to work with a web page using JavaScript, which is provided on this resource. This example can also be run using this resource (look for the 'Try it Yourself' button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, VS Code or Notepad++), which we'll call hello.html, and add the following code to it:"
+            "Jonathan Harker’s Transylvanian journey introduces Count Dracula, whose hunger reaches England.",
+            "Stoker’s collage narrative helped codify the modern vampire for literature and film."
           ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://picsum.photos/seed/book114/800/1200",
+          "title": "Cover"
         }
       ]
     },
     {
       "id": "15",
-      "title": "Kotlin news",
-      "subtitle": "What's new in JS in 2022 year?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "The Da Vinci Code",
+      "author": "Dan Brown",
+      "subtitle": "A symbologist and a cryptologist race through Europe decoding a secret protected for centuries.",
+      "img": "https://picsum.photos/seed/book15/800/1200",
+      "views": 36000,
+      "createdAt": "18.03.2003",
       "userId": "1",
       "type": [
-        "IT"
+        "MYSTERY"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block's title",
+          "title": "About this book",
           "paragraphs": [
-            "The program traditionally called 'Hello, world!' is very simple. It prints the phrase 'Hello, world!' or something similar, using some language.",
-            "JavaScript is a language that can be run in a variety of environments. In our case, that means browsers and the Node.js server platform. If you haven't written a single line of JavaScript code yet and are reading this text in a browser on a desktop computer, you're literally seconds away from writing your first JavaScript program.",
-            "There are other ways to run JS code in a browser. For example, in the typical use of JavaScript programs, they are loaded into the browser to power web pages. Typically, the code is formatted as separate files with the .js extension, which are included in web pages, but the program code can also be included directly in the page code. This is all done using the <script> tag. When the browser encounters such code, it executes it. You can find more information about the script tag on w3school.com. In particular, let's look at an example demonstrating how to work with a web page using JavaScript, which is provided on this resource. This example can also be run using this resource (look for the 'Try it Yourself' button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, VS Code or Notepad++), which we'll call hello.html, and add the following code to it:"
+            "Robert Langdon is pulled into a murder investigation at the Louvre that spirals into conspiracy and history.",
+            "Brown’s pacing and puzzles made this one of the best-selling mysteries of its era."
           ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://picsum.photos/seed/book115/800/1200",
+          "title": "Cover"
         }
       ]
     },
     {
       "id": "16",
-      "title": "Python news",
-      "subtitle": "What's new in JS in 2022 year?",
-      "img": "https://admin.wac.co/uploads/Features_Of_Python_1_f4ccd6d9f7.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
-      "userId": "1",
+      "title": "The Big Sleep",
+      "author": "Raymond Chandler",
+      "subtitle": "Hardboiled Los Angeles: blackmail, missing daughters, and Philip Marlowe’s code.",
+      "img": "https://picsum.photos/seed/book16/800/1200",
+      "views": 9900,
+      "createdAt": "23.02.1939",
+      "userId": "2",
       "type": [
-        "IT"
+        "DETECTIVE"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block's title",
+          "title": "About this book",
           "paragraphs": [
-            "The program traditionally called 'Hello, world!' is very simple. It prints the phrase 'Hello, world!' or something similar, using some language.",
-            "JavaScript is a language that can be run in a variety of environments. In our case, that means browsers and the Node.js server platform. If you haven't written a single line of JavaScript code yet and are reading this text in a browser on a desktop computer, you're literally seconds away from writing your first JavaScript program.",
-            "There are other ways to run JS code in a browser. For example, in the typical use of JavaScript programs, they are loaded into the browser to power web pages. Typically, the code is formatted as separate files with the .js extension, which are included in web pages, but the program code can also be included directly in the page code. This is all done using the <script> tag. When the browser encounters such code, it executes it. You can find more information about the script tag on w3school.com. In particular, let's look at an example demonstrating how to work with a web page using JavaScript, which is provided on this resource. This example can also be run using this resource (look for the 'Try it Yourself' button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, VS Code or Notepad++), which we'll call hello.html, and add the following code to it:"
+            "Private detective Philip Marlowe is hired by General Sternwood—and walks into a maze of vice and violence.",
+            "Chandler’s voice rewrote what crime prose could sound like on the page."
           ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://picsum.photos/seed/book116/800/1200",
+          "title": "Cover"
         }
       ]
     },
     {
       "id": "17",
-      "title": "Kotlin news",
-      "subtitle": "What's new in JS in 2022 year?",
-      "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Do Androids Dream of Electric Sheep?",
+      "author": "Philip K. Dick",
+      "subtitle": "Bounty hunting androids in a ruined Earth—and questioning what empathy really means.",
+      "img": "https://picsum.photos/seed/book17/800/1200",
+      "views": 13100,
+      "createdAt": "01.01.1968",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE_FICTION"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block's title",
+          "title": "About this book",
           "paragraphs": [
-            "The program traditionally called 'Hello, world!' is very simple. It prints the phrase 'Hello, world!' or something similar, using some language.",
-            "JavaScript is a language that can be run in a variety of environments. In our case, that means browsers and the Node.js server platform. If you haven't written a single line of JavaScript code yet and are reading this text in a browser on a desktop computer, you're literally seconds away from writing your first JavaScript program.",
-            "There are other ways to run JS code in a browser. For example, in the typical use of JavaScript programs, they are loaded into the browser to power web pages. Typically, the code is formatted as separate files with the .js extension, which are included in web pages, but the program code can also be included directly in the page code. This is all done using the <script> tag. When the browser encounters such code, it executes it. You can find more information about the script tag on w3school.com. In particular, let's look at an example demonstrating how to work with a web page using JavaScript, which is provided on this resource. This example can also be run using this resource (look for the 'Try it Yourself' button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, VS Code or Notepad++), which we'll call hello.html, and add the following code to it:"
+            "Rick Deckard tracks escaped Nexus-6 androids while craving a real animal in a dying ecosystem.",
+            "Dick’s themes of authenticity and compassion inspired generations of philosophical SF."
           ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://picsum.photos/seed/book117/800/1200",
+          "title": "Cover"
         }
       ]
     },
     {
       "id": "18",
-      "title": "Economic article - INFLATION!",
-      "subtitle": "Economics",
-      "img": "https://www.mirea.ru/upload/iblock/7cf/vvp_rf2018_1.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
-      "userId": "1",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "subtitle": "Jazz Age glamour, longing, and the American dream refracted through one summer on Long Island.",
+      "img": "https://picsum.photos/seed/book18/800/1200",
+      "views": 24400,
+      "createdAt": "10.04.1925",
+      "userId": "2",
       "type": [
-        "ECONOMICS"
+        "NOVEL"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block's title",
+          "title": "About this book",
           "paragraphs": [
-            "The program traditionally called 'Hello, world!' is very simple. It prints the phrase 'Hello, world!' or something similar, using some language.",
-            "JavaScript is a language that can be run in a variety of environments. In our case, that means browsers and the Node.js server platform. If you haven't written a single line of JavaScript code yet and are reading this text in a browser on a desktop computer, you're literally seconds away from writing your first JavaScript program.",
-            "There are other ways to run JS code in a browser. For example, in the typical use of JavaScript programs, they are loaded into the browser to power web pages. Typically, the code is formatted as separate files with the .js extension, which are included in web pages, but the program code can also be included directly in the page code. This is all done using the <script> tag. When the browser encounters such code, it executes it. You can find more information about the script tag on w3school.com. In particular, let's look at an example demonstrating how to work with a web page using JavaScript, which is provided on this resource. This example can also be run using this resource (look for the 'Try it Yourself' button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, VS Code or Notepad++), which we'll call hello.html, and add the following code to it:"
+            "Nick Carraway becomes drawn into the orbit of Jay Gatsby, whose parties mask an obsessive love for Daisy Buchanan.",
+            "Fitzgerald’s prose captures aspiration, illusion, and the ache beneath the glitter."
           ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://picsum.photos/seed/book118/800/1200",
+          "title": "Cover"
         }
       ]
     },
     {
-      "id": "18",
-      "title": "Scientific article - Biology",
-      "subtitle": "Biology",
-      "img": "https://beyondexclamation.com/wp-content/uploads/2020/12/10-1.jpg",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "id": "19",
+      "title": "The Andromeda Strain",
+      "author": "Michael Crichton",
+      "subtitle": "A techno-thriller about a satellite-borne organism and a secret lab racing to contain it.",
+      "img": "https://picsum.photos/seed/book19/800/1200",
+      "views": 11200,
+      "createdAt": "12.05.1969",
       "userId": "1",
       "type": [
-        "SCIENCE"
+        "SCIENCE_FICTION"
       ],
       "blocks": [
         {
           "id": "1",
           "type": "TEXT",
-          "title": "This block's title",
+          "title": "About this book",
           "paragraphs": [
-            "The program traditionally called 'Hello, world!' is very simple. It prints the phrase 'Hello, world!' or something similar, using some language.",
-            "JavaScript is a language that can be run in a variety of environments. In our case, that means browsers and the Node.js server platform. If you haven't written a single line of JavaScript code yet and are reading this text in a browser on a desktop computer, you're literally seconds away from writing your first JavaScript program.",
-            "There are other ways to run JS code in a browser. For example, in the typical use of JavaScript programs, they are loaded into the browser to power web pages. Typically, the code is formatted as separate files with the .js extension, which are included in web pages, but the program code can also be included directly in the page code. This is all done using the <script> tag. When the browser encounters such code, it executes it. You can find more information about the script tag on w3school.com. In particular, let's look at an example demonstrating how to work with a web page using JavaScript, which is provided on this resource. This example can also be run using this resource (look for the 'Try it Yourself' button), but we'll do it a little differently. Specifically, we'll create a new file in a text editor (for example, VS Code or Notepad++), which we'll call hello.html, and add the following code to it:"
+            "After a small town dies almost overnight, scientists isolate an extraterrestrial microorganism code-named Andromeda.",
+            "Crichton’s clinical detail and ticking-clock structure defined the modern outbreak thriller."
           ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "https://picsum.photos/seed/book119/800/1200",
+          "title": "Cover"
         }
       ]
     }
   ],
-  "comments": [
+  "reviews": [
     {
       "id": "1",
       "text": "some comment",
-      "articleId": "1",
+      "bookId": "1",
       "userId": "1"
     },
     {
       "id": "2",
       "text": "some comment 2",
-      "articleId": "1",
+      "bookId": "1",
       "userId": "1"
     },
     {
       "id": "3",
       "text": "some comment 3",
-      "articleId": "1",
+      "bookId": "1",
       "userId": "1"
     },
     {
-      "articleId": "1",
+      "bookId": "1",
       "userId": "1",
       "text": "123",
       "id": "4Cljjzl"
     },
     {
-      "articleId": "1",
+      "bookId": "1",
       "userId": "1",
       "text": "123asfasf",
       "id": "AEM4Dvc"
     },
     {
-      "articleId": "1",
+      "bookId": "1",
       "userId": "2",
       "text": "123asfasf",
       "id": "IFEOWl0"
     },
     {
-      "articleId": "1",
+      "bookId": "1",
       "userId": "2",
       "text": "hello world",
       "id": "dBacYRZ"
     },
     {
-      "articleId": "1",
+      "bookId": "1",
       "userId": "2",
       "text": "dssfd",
       "id": "rBX_C-e"
     },
     {
-      "articleId": "1",
+      "bookId": "1",
       "userId": "2",
       "text": "dscsdf",
       "id": "5k0ApX-"
     },
     {
-      "articleId": "1",
+      "bookId": "1",
       "userId": "2",
       "text": "sdfsdfsd",
       "id": "w-HDIRq"
     },
     {
-      "articleId": "1",
+      "bookId": "1",
       "userId": "2",
       "text": "asdasdasd",
       "id": "MVvGQoZ"
     },
     {
-      "articleId": "3",
+      "bookId": "3",
       "userId": "1",
       "text": "comment 1",
       "id": "bAs7YBE"
     },
     {
-      "articleId": "2",
+      "bookId": "2",
       "userId": "1",
       "text": "python!!!",
       "id": "p5rMadd"
     },
     {
-      "articleId": "3",
+      "bookId": "3",
       "userId": "1",
       "text": "123213",
       "id": "Zu_RNuF"
     },
     {
-      "articleId": "8",
+      "bookId": "8",
       "userId": "1",
       "text": "dfdsf",
       "id": "4rFHQgJ"
     },
     {
-      "articleId": "8",
+      "bookId": "8",
       "userId": "1",
       "text": "sdfsdf",
       "id": "yYEdTI-"
     },
     {
-      "articleId": "7",
+      "bookId": "7",
       "userId": "1",
       "text": "123213",
       "id": "TR1yDY6"
     },
     {
-      "articleId": "7",
+      "bookId": "7",
       "userId": "1",
       "text": "112",
       "id": "wSAhqy5"
     },
     {
-      "articleId": "7",
+      "bookId": "7",
       "userId": "1",
       "text": "hjhk",
       "id": "7mJRMVl"
@@ -638,21 +704,26 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://i.ytimg.com/vi/Q6Nsvrnnug8/maxresdefault.jpg",
       "features": {
         "isAppRedesigned": true
       },
       "jsonSettings": {
         "isArticlesPageWasOpened": true,
-        "theme": "app_candy_theme"
+        "theme": "app_candy_theme",
+        "isBooksPageWasOpened": true
       }
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://i.imgflip.com/1gl4ru.jpg?a469920"
     }
   ],
@@ -680,48 +751,55 @@
       "avatar": "https://i.imgflip.com/1gl4ru.jpg?a469920"
     }
   ],
-  "article-ratings": [
+  "book-ratings": [
     {
       "id": "1",
       "rate": 4,
       "feedback": "Good",
       "userId": "1",
-      "articleId": "1"
+      "bookId": "1"
     },
     {
       "id": "2",
       "rate": 4,
       "feedback": "Good",
       "userId": "1",
-      "articleId": "2"
+      "bookId": "2"
     },
     {
       "userId": "1",
-      "articleId": "3",
+      "bookId": "3",
       "rate": 3,
       "feedback": "",
       "id": "I7ofk1u"
     },
     {
       "userId": "1",
-      "articleId": "9",
+      "bookId": "9",
       "rate": 5,
       "feedback": "asdasdasdasd",
       "id": "Y7MhPzo"
     },
     {
       "userId": "1",
-      "articleId": "10",
+      "bookId": "10",
       "rate": 1,
       "feedback": "Bad",
       "id": "II0a75O"
     },
     {
       "userId": "1",
-      "articleId": "7",
+      "bookId": "7",
       "rate": 3,
       "feedback": "",
       "id": "bcPnbbZ"
+    },
+    {
+      "userId": "1",
+      "bookId": "5",
+      "rate": 3,
+      "feedback": "nmnjk",
+      "id": "cnCBxTC"
     }
   ],
   "profile-ratings": [

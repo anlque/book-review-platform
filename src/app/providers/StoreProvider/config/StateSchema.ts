@@ -5,15 +5,13 @@ import {
 import { AxiosInstance } from 'axios';
 import { LoginSchema } from '@/features/AuthByUsername';
 import { UserSchema } from '@/entities/User';
-import { ArticleDetailsSchema } from '@/entities/Article';
-import {
-    ArticleDetailsPageSchema,
-} from '@/pages/ArticleDetailsPage';
+import { BookDetailsSchema } from '@/entities/Book';
 import { AddCommentFormSchema } from '@/features/addCommentForm';
-import { ArticlesPageSchema } from '@/pages/ArticlesPage';
+import { BooksPageSchema } from '@/pages/BooksPage';
 import { UISchema } from '@/features/UI';
 import { rtkApi } from '@/shared/api/rtkApi';
 import { ProfileSchema } from '@/features/editableProfileCard';
+import { BookDetailsPageSchema } from '@/pages/BookDetailsPage';
 
 export interface StateSchema {
     user: UserSchema;
@@ -23,10 +21,10 @@ export interface StateSchema {
     // Async reducers
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
-    articleDetails?: ArticleDetailsSchema;
+    bookDetails?: BookDetailsSchema;
     addCommentForm?: AddCommentFormSchema;
-    articlesPage?: ArticlesPageSchema;
-    articleDetailsPage?: ArticleDetailsPageSchema;
+    booksPage?: BooksPageSchema;
+    bookDetailsPage?: BookDetailsPageSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

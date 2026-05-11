@@ -1,0 +1,23 @@
+@use '@/app/styles/media' as media;
+
+.BookAdditionalInfo {
+    padding: 0;
+    flex-direction: row;
+    align-items: center;
+}
+
+@include media.respond-down(sm) {
+    .BookAdditionalInfo {
+        width: 100%;
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+@include media.respond-up(lg) {
+    .BookAdditionalInfo {
+        width: 100%;
+        flex-direction: column;
+        align-items: start;
+    }
+}

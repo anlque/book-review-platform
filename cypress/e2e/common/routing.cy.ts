@@ -24,9 +24,9 @@ describe('Routing', () => {
             cy.get(selectByTestId('ProfilePage')).should('exist');
         });
 
-        it('Should open articles page', () => {
-            cy.visit('/articles');
-            cy.get(selectByTestId('ArticlesPage')).should('exist');
+        it('Should open books page', () => {
+            cy.visit('/books');
+            cy.get(selectByTestId('BooksPage')).should('exist');
         });
     });
 });

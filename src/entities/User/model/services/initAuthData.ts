@@ -12,6 +12,7 @@ export const initAuthData = createAsyncThunk<User, void, ThunkConfig<string>>(
     async (newJsonSettings, thunkApi) => {
         const { rejectWithValue, dispatch } = thunkApi;
 
+        // user id is saving to local storage only on the rights of pet project
         const userId = localStorage.getItem(USER_LOCALSTORAGE_KEY);
 
         if (!userId) {

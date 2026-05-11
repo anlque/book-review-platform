@@ -1,0 +1,23 @@
+{
+    "sort_by": "Sort by",
+    "search": "Search",
+    "by": "By",
+    "asc": "ascending",
+    "desc": "descending",
+    "created_at": "publication date",
+    "title": "title",
+    "views": "ratings",
+    "types": {
+        "all": "All",
+        "fantasy": "Fantasy",
+        "science_fiction": "Science Fiction",
+        "romance": "Romance",
+        "thriller": "Thriller",
+        "mystery": "Mystery",
+        "horror": "Horror",
+        "cyberpunk": "Cyberpunk",
+        "detective": "Detective",
+        "novel": "Novel"
+    }
+}
+

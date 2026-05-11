@@ -3,17 +3,17 @@ import { getUserAuthData } from '@/entities/User';
 import MainIconDeprecated from '@/shared/assets/icons/main_old.svg';
 import AboutIconDeprecated from '@/shared/assets/icons/about_old.svg';
 import ProfileIconDeprecated from '@/shared/assets/icons/profile_old.svg';
-import ArticleIconDeprecated from '@/shared/assets/icons/article_old.svg';
+import BookIconDeprecated from '@/shared/assets/icons/book_old.svg';
 
 import MainIcon from '@/shared/assets/icons/home.svg';
-import ArticleIcon from '@/shared/assets/icons/article.svg';
+import BookIcon from '@/shared/assets/icons/book.svg';
 import AboutIcon from '@/shared/assets/icons/Info.svg';
 import ProfileIcon from '@/shared/assets/icons/avatar.svg';
 
 import { SidebarItemType } from '../types/sidebar';
 import {
     getRouteAbout,
-    getRouteArticles,
+    getRouteBooks,
     getRouteMain,
     getRouteProfile,
 } from '@/shared/const/router';
@@ -55,13 +55,13 @@ export const useSidebarItems = () => {
                 authOnly: true,
             },
             {
-                path: getRouteArticles(),
+                path: getRouteBooks(),
                 Icon: toggleFeatures({
                     name: 'isAppRedesigned',
-                    off: () => ArticleIconDeprecated,
-                    on: () => ArticleIcon,
+                    off: () => BookIconDeprecated,
+                    on: () => BookIcon,
                 }),
-                text: 'articles_page',
+                text: 'books_page',
                 authOnly: true,
             },
         );

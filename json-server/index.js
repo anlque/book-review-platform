@@ -2,6 +2,7 @@ const fs = require('fs');
 const jsonServer = require('json-server');
 const path = require('path');
 const https = require('https');
+const http = require('http');
 
 const options = {
     key: fs.readFileSync(path.resolve(__dirname, 'key.pem')),
@@ -10,7 +11,17 @@ const options = {
 
 const server = jsonServer.create();
 
-const router = jsonServer.router(path.resolve(__dirname, 'db.json'));
+const dbPath = path.resolve(__dirname, 'db.json');
+
+console.log('DB PATH:', dbPath);
+
+console.log('DB EXISTS:', fs.existsSync(dbPath));
+
+console.log('DB PREVIEW:', fs.readFileSync(dbPath, 'utf-8').slice(0, 300));
+
+const router = jsonServer.router(dbPath);
+
+// const router = jsonServer.router(path.resolve(__dirname, 'db.json'));
 
 server.use(jsonServer.defaults({}));
 server.use(jsonServer.bodyParser);
@@ -58,10 +69,16 @@ server.use((req, res, next) => {
 server.use(router);
 
 // Run server
-const PORT = process.env.PORT || 8080;
+const PORT = 8443;
+const HTTP_PORT = 8000;
 
 const httpsServer = https.createServer(options, server);
+const httpServer = http.createServer(server);
 
 httpsServer.listen(PORT, () => {
     console.log(`server is running on ${PORT} port`);
+});
+
+httpServer.listen(HTTP_PORT, () => {
+    console.log(`server is running on ${HTTP_PORT} port`);
 });

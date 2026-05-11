@@ -1,0 +1,16 @@
+{
+    "not_found": "Book is not found",
+    "loading_error": "Error while loading the book",
+    "comments": "Book reviews",
+    "enter_comment": "Enter your review",
+    "send": "Send",
+    "back_to_list": "Back to list",
+    "recommend": "Recommendations:",
+    "edit": "Edit",
+    "your_feedback": "What do you think of this book? Your opinion will help others",
+    "evaluate_book": "Rate this book",
+    "thank_for_feedback": "Thank you for your feedback!",
+    "close": "Close",
+    "feedback_appear_soon": "Book rating will appear soon!"
+}
+
