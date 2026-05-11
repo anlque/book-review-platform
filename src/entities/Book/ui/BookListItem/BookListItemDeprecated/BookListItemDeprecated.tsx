@@ -3,8 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from '../BookListItem.module.scss';
 import { Text } from '@/shared/ui/deprecated/Text';
-import { Icon } from '@/shared/ui/deprecated/Icon';
-import EyeIcon from '@/shared/assets/icons/eye.svg';
 import { BookTextBlock } from '../../../model/types/book';
 import {
     BookView,
@@ -25,12 +23,6 @@ export const BookListItemDeprecated = memo((props: BookListItemProps) => {
     const { t } = useTranslation();
 
     const types = <Text text={book.type.join(', ')} className={cls.types} />;
-    const views = (
-        <>
-            <Text text={String(book.views)} className={cls.views} />
-            <Icon Svg={EyeIcon} />
-        </>
-    );
 
     if (view === BookView.BIG) {
         const textBlock = book.blocks.find(
@@ -77,7 +69,6 @@ export const BookListItemDeprecated = memo((props: BookListItemProps) => {
                                 {t('show_more')}
                             </Button>
                         </AppLink>
-                        {views}
                     </div>
                 </Card>
             </div>
@@ -106,7 +97,6 @@ export const BookListItemDeprecated = memo((props: BookListItemProps) => {
                 </div>
                 <div className={cls.infoWrapper}>
                     {types}
-                    {views}
                 </div>
                 <Text text={book.title} className={cls.title} />
             </Card>

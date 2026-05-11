@@ -13,12 +13,6 @@ const server = jsonServer.create();
 
 const dbPath = path.resolve(__dirname, 'db.json');
 
-console.log('DB PATH:', dbPath);
-
-console.log('DB EXISTS:', fs.existsSync(dbPath));
-
-console.log('DB PREVIEW:', fs.readFileSync(dbPath, 'utf-8').slice(0, 300));
-
 const router = jsonServer.router(dbPath);
 
 // const router = jsonServer.router(path.resolve(__dirname, 'db.json'));

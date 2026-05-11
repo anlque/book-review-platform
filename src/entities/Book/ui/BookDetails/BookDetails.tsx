@@ -31,6 +31,7 @@ import {
 import { renderBookBlock } from './renderBlock';
 import { toggleFeatures, ToggleFeatures } from '@/shared/lib/features';
 import { AppImage } from '@/shared/ui/redesigned/AppImage';
+import { AuthorPanel } from '@/entities/Author';
 
 interface BookDetailsProps {
     className?: string;
@@ -55,9 +56,11 @@ const Deprecated = () => {
                     text={book?.subtitle}
                     size={TextSize.L}
                 />
+                {book?.author ? (
+                    <AuthorPanel author={book.author} className={cls.author} />
+                ) : null}
                 <HStack gap="8" className={cls.bookInfo}>
                     <Icon className={cls.icon} Svg={EyeIcon} />
-                    <TextDeprecated text={String(book?.views)} />
                 </HStack>
                 <HStack gap="8" className={cls.bookInfo}>
                     <Icon className={cls.icon} Svg={CalendarIcon} />
@@ -76,6 +79,9 @@ const Redesigned = () => {
         <>
             <Text title={book?.title} size="l" bold />
             <Text title={book?.subtitle} />
+            {book?.author ? (
+                <AuthorPanel author={book.author} className={cls.author} />
+            ) : null}
             <AppImage
                 fallback={
                     <SkeletonRedesigned
@@ -160,4 +166,3 @@ export const BookDetails = memo((props: BookDetailsProps) => {
         </DynamicModuleLoader>
     );
 });
-

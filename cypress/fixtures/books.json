@@ -2,10 +2,15 @@
     {
         "id": "1",
         "title": "Dune",
-        "author": "Frank Herbert",
+        "authorId": "1",
+        "author": {
+            "id": "1",
+            "name": "Frank Herbert",
+            "bio": "Frank Herbert is a featured writer in this demo catalog.",
+            "portrait": "https://picsum.photos/seed/author-1/200/200"
+        },
         "subtitle": "A desert planet, political intrigue, and a destiny that reshapes an empire.",
         "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-        "views": 1022,
         "createdAt": "26.04.2022",
         "userId": "1",
         "type": [
@@ -75,10 +80,15 @@
     {
         "id": "2",
         "title": "The Hobbit",
-        "author": "J. R. R. Tolkien",
+        "authorId": "2",
+        "author": {
+            "id": "2",
+            "name": "J. R. R. Tolkien",
+            "bio": "J. R. R. Tolkien is a featured writer in this demo catalog.",
+            "portrait": "https://picsum.photos/seed/author-2/200/200"
+        },
         "subtitle": "A reluctant hero, a perilous journey, and a dragon guarding a stolen kingdom.",
         "img": "https://admin.wac.co/uploads/Features_Of_Python_1_f4ccd6d9f7.jpg",
-        "views": 5204,
         "createdAt": "26.02.2022",
         "userId": "1",
         "type": [
@@ -100,10 +110,15 @@
     {
         "id": "3",
         "title": "Neuromancer",
-        "author": "William Gibson",
+        "authorId": "3",
+        "author": {
+            "id": "3",
+            "name": "William Gibson",
+            "bio": "William Gibson is a featured writer in this demo catalog.",
+            "portrait": "https://picsum.photos/seed/author-3/200/200"
+        },
         "subtitle": "A washed-up hacker is pulled into a high-stakes job in the neon sprawl.",
         "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-        "views": 94002,
         "createdAt": "26.02.2019",
         "userId": "1",
         "type": [

@@ -64,7 +64,6 @@
     "it": "it",
     "science": "science"
   },
-  "views": "views",
   "wrong_auth": "",
   "your_age": "your_age",
   "your_avatar": "your_avatar",
@@ -73,8 +72,6 @@
   "your_name": "your_name",
   "your_surname": "your_surname",
   "your_username": "your_username",
-  "{{count}} views_one": "",
-  "{{count}} views_other": "",
   "Введите текст комментария": "",
   "Комментарии": "Комментарии",
   "Комментарии отсутствуют": "Комментарии отсутствуют",

@@ -6,7 +6,6 @@
     "desc": "descending",
     "created_at": "publication date",
     "title": "title",
-    "views": "ratings",
     "types": {
         "all": "All",
         "fantasy": "Fantasy",

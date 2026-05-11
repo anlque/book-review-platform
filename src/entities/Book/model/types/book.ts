@@ -1,3 +1,4 @@
+import { Author } from '@/entities/Author';
 import { User } from '@/entities/User';
 import { BookBlockType, BookType } from '../consts/bookConsts';
 
@@ -24,9 +25,9 @@ export interface Book {
     id: string;
     title: string;
     user: User;
+    author: Author;
     subtitle: string;
     img: string;
-    views: number;
     createdAt: string;
     type: BookType[];
     blocks: BookBlock[];

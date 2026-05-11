@@ -8,7 +8,7 @@ const bookRecommendationsApi = rtkApi.injectEndpoints({
                 url: '/books',
                 params: {
                     _limit: limit,
-                    _expand: 'user',
+                    _expand: ['user', 'author'],
                 },
             }),
         }),
@@ -17,4 +17,3 @@ const bookRecommendationsApi = rtkApi.injectEndpoints({
 
 export const useBookRecommendationsList =
     bookRecommendationsApi.useGetBookRecommendationsListQuery;
-

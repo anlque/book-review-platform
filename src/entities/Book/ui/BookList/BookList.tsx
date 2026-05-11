@@ -44,7 +44,6 @@ export const BookList = memo((props: BookListProps) => {
         target,
     } = props;
     const { t } = useTranslation();
-    console.log('BOOKS', books);
 
     if (!isLoading && !books.length) {
         return (

@@ -15,11 +15,9 @@
     {
       "id": "1",
       "title": "Dune",
-      "author": "Frank Herbert",
       "subtitle": "Epic science fiction: politics, ecology, and prophecy on the desert world Arrakis.",
       "img": "https://picsum.photos/seed/book1/800/1200",
-      "views": 18420,
-      "createdAt": "01.08.1965",
+      "createdAt": "1965",
       "userId": "1",
       "type": [
         "SCIENCE_FICTION"
@@ -40,16 +38,15 @@
           "src": "https://picsum.photos/seed/book101/800/1200",
           "title": "Cover"
         }
-      ]
+      ],
+      "authorId": "1"
     },
     {
       "id": "2",
       "title": "The Hobbit",
-      "author": "J. R. R. Tolkien",
       "subtitle": "A cozy fantasy adventure from the Shire to the Lonely Mountain.",
       "img": "https://picsum.photos/seed/book2/800/1200",
-      "views": 22100,
-      "createdAt": "21.09.1937",
+      "createdAt": "1937",
       "userId": "1",
       "type": [
         "FANTASY"
@@ -70,16 +67,15 @@
           "src": "https://picsum.photos/seed/book102/800/1200",
           "title": "Cover"
         }
-      ]
+      ],
+      "authorId": "2"
     },
     {
       "id": "3",
       "title": "Neuromancer",
-      "author": "William Gibson",
       "subtitle": "Cyberpunk cornerstone: hackers, AIs, and corporate power in the Sprawl.",
       "img": "https://picsum.photos/seed/book3/800/1200",
-      "views": 15300,
-      "createdAt": "01.07.1984",
+      "createdAt": "1984",
       "userId": "2",
       "type": [
         "CYBERPUNK"
@@ -100,16 +96,15 @@
           "src": "https://picsum.photos/seed/book103/800/1200",
           "title": "Cover"
         }
-      ]
+      ],
+      "authorId": "3"
     },
     {
       "id": "4",
       "title": "Gone Girl",
-      "author": "Gillian Flynn",
       "subtitle": "A marriage thriller where media narratives and private truths violently collide.",
       "img": "https://picsum.photos/seed/book4/800/1200",
-      "views": 19800,
-      "createdAt": "24.06.2012",
+      "createdAt": "2012",
       "userId": "1",
       "type": [
         "THRILLER"
@@ -130,16 +125,15 @@
           "src": "https://picsum.photos/seed/book104/800/1200",
           "title": "Cover"
         }
-      ]
+      ],
+      "authorId": "4"
     },
     {
       "id": "5",
       "title": "The Hound of the Baskervilles",
-      "author": "Arthur Conan Doyle",
       "subtitle": "Sherlock Holmes investigates a family curse on the Devonshire moor.",
       "img": "https://picsum.photos/seed/book5/800/1200",
-      "views": 12800,
-      "createdAt": "25.08.1902",
+      "createdAt": "1902",
       "userId": "1",
       "type": [
         "DETECTIVE"
@@ -160,16 +154,15 @@
           "src": "https://picsum.photos/seed/book105/800/1200",
           "title": "Cover"
         }
-      ]
+      ],
+      "authorId": "5"
     },
     {
       "id": "6",
       "title": "Pride and Prejudice",
-      "author": "Jane Austen",
       "subtitle": "A sharp comedy of manners about love, class, and mistaken first impressions.",
       "img": "https://picsum.photos/seed/book6/800/1200",
-      "views": 31050,
-      "createdAt": "28.01.1813",
+      "createdAt": "1813",
       "userId": "2",
       "type": [
         "ROMANCE"
@@ -190,16 +183,15 @@
           "src": "https://picsum.photos/seed/book106/800/1200",
           "title": "Cover"
         }
-      ]
+      ],
+      "authorId": "6"
     },
     {
       "id": "7",
       "title": "It",
-      "author": "Stephen King",
       "subtitle": "Childhood trauma and an ancient evil resurfacing in small-town Maine.",
       "img": "https://picsum.photos/seed/book7/800/1200",
-      "views": 26700,
-      "createdAt": "15.09.1986",
+      "createdAt": "1986",
       "userId": "1",
       "type": [
         "HORROR"
@@ -220,16 +212,15 @@
           "src": "https://picsum.photos/seed/book107/800/1200",
           "title": "Cover"
         }
-      ]
+      ],
+      "authorId": "7"
     },
     {
       "id": "8",
       "title": "The Name of the Rose",
-      "author": "Umberto Eco",
       "subtitle": "A medieval mystery of forbidden books and murders in a Benedictine abbey.",
       "img": "https://picsum.photos/seed/book8/800/1200",
-      "views": 14200,
-      "createdAt": "01.01.1980",
+      "createdAt": "1980",
       "userId": "2",
       "type": [
         "MYSTERY"
@@ -250,16 +241,15 @@
           "src": "https://picsum.photos/seed/book108/800/1200",
           "title": "Cover"
         }
-      ]
+      ],
+      "authorId": "8"
     },
     {
       "id": "9",
       "title": "The Shining",
-      "author": "Stephen King",
       "subtitle": "Isolation, alcoholism, and a hotel that remembers every cruel winter.",
       "img": "https://picsum.photos/seed/book9/800/1200",
-      "views": 23500,
-      "createdAt": "28.01.1977",
+      "createdAt": "1977",
       "userId": "1",
       "type": [
         "HORROR"
@@ -280,16 +270,15 @@
           "src": "https://picsum.photos/seed/book109/800/1200",
           "title": "Cover"
         }
-      ]
+      ],
+      "authorId": "7"
     },
     {
       "id": "10",
       "title": "The Girl with the Dragon Tattoo",
-      "author": "Stieg Larsson",
       "subtitle": "A journalist and a hacker probe a decades-old disappearance in a powerful Swedish family.",
       "img": "https://picsum.photos/seed/book10/800/1200",
-      "views": 20100,
-      "createdAt": "01.09.2005",
+      "createdAt": "2005",
       "userId": "2",
       "type": [
         "THRILLER"
@@ -310,16 +299,15 @@
           "src": "https://picsum.photos/seed/book110/800/1200",
           "title": "Cover"
         }
-      ]
+      ],
+      "authorId": "9"
     },
     {
       "id": "11",
       "title": "1984",
-      "author": "George Orwell",
       "subtitle": "A dystopian novel of surveillance, propaganda, and the politics of truth.",
       "img": "https://picsum.photos/seed/book11/800/1200",
-      "views": 40200,
-      "createdAt": "08.06.1949",
+      "createdAt": "1949",
       "userId": "1",
       "type": [
         "NOVEL"
@@ -340,16 +328,15 @@
           "src": "https://picsum.photos/seed/book111/800/1200",
           "title": "Cover"
         }
-      ]
+      ],
+      "authorId": "10"
     },
     {
       "id": "12",
       "title": "The Martian",
-      "author": "Andy Weir",
       "subtitle": "Stranded on Mars, an engineer survives with science, duct tape, and stubborn optimism.",
       "img": "https://picsum.photos/seed/book12/800/1200",
-      "views": 17600,
-      "createdAt": "27.09.2011",
+      "createdAt": "2011",
       "userId": "2",
       "type": [
         "SCIENCE_FICTION"
@@ -370,16 +357,15 @@
           "src": "https://picsum.photos/seed/book112/800/1200",
           "title": "Cover"
         }
-      ]
+      ],
+      "authorId": "11"
     },
     {
       "id": "13",
       "title": "The Fellowship of the Ring",
-      "author": "J. R. R. Tolkien",
       "subtitle": "The first volume of The Lord of the Rings: a ring of power and a fellowship formed.",
       "img": "https://picsum.photos/seed/book13/800/1200",
-      "views": 28900,
-      "createdAt": "29.07.1954",
+      "createdAt": "1954",
       "userId": "1",
       "type": [
         "FANTASY"
@@ -400,16 +386,15 @@
           "src": "https://picsum.photos/seed/book113/800/1200",
           "title": "Cover"
         }
-      ]
+      ],
+      "authorId": "2"
     },
     {
       "id": "14",
       "title": "Dracula",
-      "author": "Bram Stoker",
       "subtitle": "Victorian Gothic horror told through letters, journals, and ship logs.",
       "img": "https://picsum.photos/seed/book14/800/1200",
-      "views": 19500,
-      "createdAt": "26.05.1897",
+      "createdAt": "1897",
       "userId": "2",
       "type": [
         "HORROR"
@@ -430,16 +415,15 @@
           "src": "https://picsum.photos/seed/book114/800/1200",
           "title": "Cover"
         }
-      ]
+      ],
+      "authorId": "12"
     },
     {
       "id": "15",
       "title": "The Da Vinci Code",
-      "author": "Dan Brown",
       "subtitle": "A symbologist and a cryptologist race through Europe decoding a secret protected for centuries.",
       "img": "https://picsum.photos/seed/book15/800/1200",
-      "views": 36000,
-      "createdAt": "18.03.2003",
+      "createdAt": "2003",
       "userId": "1",
       "type": [
         "MYSTERY"
@@ -460,16 +444,15 @@
           "src": "https://picsum.photos/seed/book115/800/1200",
           "title": "Cover"
         }
-      ]
+      ],
+      "authorId": "13"
     },
     {
       "id": "16",
       "title": "The Big Sleep",
-      "author": "Raymond Chandler",
       "subtitle": "Hardboiled Los Angeles: blackmail, missing daughters, and Philip Marlowe’s code.",
       "img": "https://picsum.photos/seed/book16/800/1200",
-      "views": 9900,
-      "createdAt": "23.02.1939",
+      "createdAt": "1939",
       "userId": "2",
       "type": [
         "DETECTIVE"
@@ -490,16 +473,15 @@
           "src": "https://picsum.photos/seed/book116/800/1200",
           "title": "Cover"
         }
-      ]
+      ],
+      "authorId": "14"
     },
     {
       "id": "17",
       "title": "Do Androids Dream of Electric Sheep?",
-      "author": "Philip K. Dick",
       "subtitle": "Bounty hunting androids in a ruined Earth—and questioning what empathy really means.",
       "img": "https://picsum.photos/seed/book17/800/1200",
-      "views": 13100,
-      "createdAt": "01.01.1968",
+      "createdAt": "1968",
       "userId": "1",
       "type": [
         "SCIENCE_FICTION"
@@ -520,16 +502,15 @@
           "src": "https://picsum.photos/seed/book117/800/1200",
           "title": "Cover"
         }
-      ]
+      ],
+      "authorId": "15"
     },
     {
       "id": "18",
       "title": "The Great Gatsby",
-      "author": "F. Scott Fitzgerald",
       "subtitle": "Jazz Age glamour, longing, and the American dream refracted through one summer on Long Island.",
       "img": "https://picsum.photos/seed/book18/800/1200",
-      "views": 24400,
-      "createdAt": "10.04.1925",
+      "createdAt": "1925",
       "userId": "2",
       "type": [
         "NOVEL"
@@ -550,16 +531,15 @@
           "src": "https://picsum.photos/seed/book118/800/1200",
           "title": "Cover"
         }
-      ]
+      ],
+      "authorId": "16"
     },
     {
       "id": "19",
       "title": "The Andromeda Strain",
-      "author": "Michael Crichton",
       "subtitle": "A techno-thriller about a satellite-borne organism and a secret lab racing to contain it.",
       "img": "https://picsum.photos/seed/book19/800/1200",
-      "views": 11200,
-      "createdAt": "12.05.1969",
+      "createdAt": "1969",
       "userId": "1",
       "type": [
         "SCIENCE_FICTION"
@@ -580,7 +560,8 @@
           "src": "https://picsum.photos/seed/book119/800/1200",
           "title": "Cover"
         }
-      ]
+      ],
+      "authorId": "17"
     }
   ],
   "reviews": [
@@ -712,8 +693,7 @@
         "isAppRedesigned": true
       },
       "jsonSettings": {
-        "isArticlesPageWasOpened": true,
-        "theme": "app_candy_theme",
+        "theme": "app_dark_theme",
         "isBooksPageWasOpened": true
       }
     },
@@ -816,6 +796,110 @@
       "feedback": "Good",
       "userId": "1",
       "profileId": "2"
+    }
+  ],
+  "authors": [
+    {
+      "id": "1",
+      "name": "Frank Herbert",
+      "bio": "Frank Herbert is a featured writer in this demo catalog.",
+      "portrait": "https://picsum.photos/seed/author-1/200/200"
+    },
+    {
+      "id": "2",
+      "name": "J. R. R. Tolkien",
+      "bio": "J. R. R. Tolkien is a featured writer in this demo catalog.",
+      "portrait": "https://picsum.photos/seed/author-2/200/200"
+    },
+    {
+      "id": "3",
+      "name": "William Gibson",
+      "bio": "William Gibson is a featured writer in this demo catalog.",
+      "portrait": "https://picsum.photos/seed/author-3/200/200"
+    },
+    {
+      "id": "4",
+      "name": "Gillian Flynn",
+      "bio": "Gillian Flynn is a featured writer in this demo catalog.",
+      "portrait": "https://picsum.photos/seed/author-4/200/200"
+    },
+    {
+      "id": "5",
+      "name": "Arthur Conan Doyle",
+      "bio": "Arthur Conan Doyle is a featured writer in this demo catalog.",
+      "portrait": "https://picsum.photos/seed/author-5/200/200"
+    },
+    {
+      "id": "6",
+      "name": "Jane Austen",
+      "bio": "Jane Austen is a featured writer in this demo catalog.",
+      "portrait": "https://picsum.photos/seed/author-6/200/200"
+    },
+    {
+      "id": "7",
+      "name": "Stephen King",
+      "bio": "Stephen King is a featured writer in this demo catalog.",
+      "portrait": "https://picsum.photos/seed/author-7/200/200"
+    },
+    {
+      "id": "8",
+      "name": "Umberto Eco",
+      "bio": "Umberto Eco is a featured writer in this demo catalog.",
+      "portrait": "https://picsum.photos/seed/author-8/200/200"
+    },
+    {
+      "id": "9",
+      "name": "Stieg Larsson",
+      "bio": "Stieg Larsson is a featured writer in this demo catalog.",
+      "portrait": "https://picsum.photos/seed/author-9/200/200"
+    },
+    {
+      "id": "10",
+      "name": "George Orwell",
+      "bio": "George Orwell is a featured writer in this demo catalog.",
+      "portrait": "https://picsum.photos/seed/author-10/200/200"
+    },
+    {
+      "id": "11",
+      "name": "Andy Weir",
+      "bio": "Andy Weir is a featured writer in this demo catalog.",
+      "portrait": "https://picsum.photos/seed/author-11/200/200"
+    },
+    {
+      "id": "12",
+      "name": "Bram Stoker",
+      "bio": "Bram Stoker is a featured writer in this demo catalog.",
+      "portrait": "https://picsum.photos/seed/author-12/200/200"
+    },
+    {
+      "id": "13",
+      "name": "Dan Brown",
+      "bio": "Dan Brown is a featured writer in this demo catalog.",
+      "portrait": "https://picsum.photos/seed/author-13/200/200"
+    },
+    {
+      "id": "14",
+      "name": "Raymond Chandler",
+      "bio": "Raymond Chandler is a featured writer in this demo catalog.",
+      "portrait": "https://picsum.photos/seed/author-14/200/200"
+    },
+    {
+      "id": "15",
+      "name": "Philip K. Dick",
+      "bio": "Philip K. Dick is a featured writer in this demo catalog.",
+      "portrait": "https://picsum.photos/seed/author-15/200/200"
+    },
+    {
+      "id": "16",
+      "name": "F. Scott Fitzgerald",
+      "bio": "F. Scott Fitzgerald is a featured writer in this demo catalog.",
+      "portrait": "https://picsum.photos/seed/author-16/200/200"
+    },
+    {
+      "id": "17",
+      "name": "Michael Crichton",
+      "bio": "Michael Crichton is a featured writer in this demo catalog.",
+      "portrait": "https://picsum.photos/seed/author-17/200/200"
     }
   ]
 }

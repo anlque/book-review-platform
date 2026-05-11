@@ -14,6 +14,7 @@ import { AppLink } from '@/shared/ui/redesigned/AppLink';
 import { getRouteBookDetails } from '@/shared/const/router';
 import { Button } from '@/shared/ui/redesigned/Button';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
+import { AuthorInline } from '@/entities/Author';
 import { BookBlockType, BookView } from '../../../model/consts/bookConsts';
 import { BookTextBlock } from '../../../model/types/book';
 
@@ -30,12 +31,6 @@ export const BookListItemRedesigned = memo((props: BookListItemProps) => {
             />
             <Text bold text={book.user.username} />
         </>
-    );
-    const views = (
-        <HStack gap="8">
-            <Icon Svg={EyeIcon} />
-            <Text text={String(book.views)} className={cls.views} />
-        </HStack>
     );
 
     if (view === BookView.BIG) {
@@ -55,8 +50,8 @@ export const BookListItemRedesigned = memo((props: BookListItemProps) => {
             >
                 <VStack max gap="16">
                     <HStack gap="8" max>
-                        {userInfo}
-                        <Text text={book.createdAt} />
+                        <AuthorInline author={book.author} className={cls.writer} />
+                        <Text size="s" text={book.createdAt} />
                     </HStack>
                     <Text title={book.title} bold />
                     <Text title={book.subtitle} size="s" />
@@ -81,7 +76,6 @@ export const BookListItemRedesigned = memo((props: BookListItemProps) => {
                                 {t('show_more')}
                             </Button>
                         </AppLink>
-                        {views}
                     </HStack>
                 </VStack>
             </Card>
@@ -108,14 +102,12 @@ export const BookListItemRedesigned = memo((props: BookListItemProps) => {
                 <VStack className={cls.info} gap="4">
                     <Text title={book.title} className={cls.title} />
                     <VStack gap="4" className={cls.footer} max>
-                        <HStack justify="between" max>
-                            <Text
-                                text={book.createdAt}
-                                className={cls.date}
-                            />
-                            {views}
-                        </HStack>
-                        <HStack gap="4">{userInfo}</HStack>
+                        <AuthorInline author={book.author} className={cls.writer} />
+                        <Text
+                            size="s"
+                            text={book.createdAt}
+                            className={cls.date}
+                        />
                     </VStack>
                 </VStack>
             </Card>

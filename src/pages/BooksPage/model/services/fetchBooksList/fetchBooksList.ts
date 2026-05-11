@@ -37,7 +37,7 @@ export const fetchBooksList = createAsyncThunk<
         });
         const response = await extra.api.get<Book[]>('/books', {
             params: {
-                _expand: 'user',
+                _expand: ['user', 'author'],
                 _limit: limit,
                 _page: page,
                 _sort: sort,
@@ -56,4 +56,3 @@ export const fetchBooksList = createAsyncThunk<
         return rejectWithValue('error');
     }
 });
-

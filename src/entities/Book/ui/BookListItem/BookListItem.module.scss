@@ -1,7 +1,8 @@
+.writer {
+  opacity: 0.85;
+}
+
 .BIG {
-  .views {
-    margin-left: auto;
-  }
 
   .header {
     display: flex;
@@ -83,11 +84,6 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-
-  .views {
-    margin-left: auto;
-    margin-right: 8px;
   }
 
   .title {

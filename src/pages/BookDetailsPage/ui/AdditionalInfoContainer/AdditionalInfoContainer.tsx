@@ -24,9 +24,8 @@ export const AdditionalInfoContainer = memo(() => {
         <Card padding="24" border="partial">
             <BookAdditionalInfo
                 onEdit={onEditBook}
-                author={book.user}
+                submittedBy={book.user}
                 createdAt={book.createdAt}
-                views={book.views}
             />
         </Card>
     );

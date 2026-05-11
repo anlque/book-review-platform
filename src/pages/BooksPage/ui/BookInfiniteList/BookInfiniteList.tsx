@@ -26,7 +26,6 @@ export const BookInfiniteList = memo((props: BookInfiniteListProps) => {
         return <Text text={t('load_books_error')} />;
     }
 
-    console.log('TEST', books);
     return (
         <BookList
             isLoading={isLoading}

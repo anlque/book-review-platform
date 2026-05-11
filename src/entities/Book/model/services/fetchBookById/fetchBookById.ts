@@ -16,7 +16,7 @@ export const fetchBookById = createAsyncThunk<
     try {
         const response = await extra.api.get<Book>(`/books/${bookId}`, {
             params: {
-                _expand: 'user',
+                _expand: ['user', 'author'],
             },
         });
 
