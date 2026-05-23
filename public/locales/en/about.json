@@ -1,3 +1,13 @@
 {
-    "about_us": "About us"
+    "about_us": "About us",
+    "page_title": "About Insights hub",
+    "tagline": "Books, readers, honest notes.",
+    "intro": "Insights hub is a space for readers who care what they read next. We bring books, writers, and honest opinions together so you can discover titles worth your time—not just what is trending.",
+    "why_title": "What drives us",
+    "why_body": "Choosing a book still takes trust: a few pages will tell you if the prose fits, but someone else’s thoughtful note can save you hours—or point you to something you would never have picked up alone. We built this app around that idea.",
+    "offer_title": "What you’ll find here",
+    "offer_catalog": "A browsable catalog with genres and authors, so you can explore widely or zoom in on what you already love.",
+    "offer_reviews": "Reviews and ratings from people who finished the book—not one-line scores tied to a checkout.",
+    "offer_recommendations": "Suggestions that help you branch out without losing the thread of what you enjoy.",
+    "closing": "Whether you read one book a month or one a week, we hope Insights hub makes your next choice clearer—and your discussions richer."
 }

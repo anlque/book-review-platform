@@ -1,0 +1,90 @@
+.AboutPage {
+    padding: 16px 0 40px;
+}
+
+.hero {
+    width: 100%;
+    position: relative;
+    padding: 28px 24px 28px 28px;
+    border-radius: 20px;
+    background: var(--light-bg-redesigned);
+    border: 1px solid color-mix(in srgb, var(--accent-redesigned) 22%, transparent);
+    box-shadow: 0 1px 0 color-mix(in srgb, var(--accent-redesigned) 12%, transparent);
+    border-left: 4px solid var(--accent-redesigned);
+}
+
+.tagline {
+    margin: 12px 0 0;
+    padding: 0;
+    color: var(--accent-redesigned);
+    font: var(--font-m-redesigned);
+    letter-spacing: 0.02em;
+}
+
+.introLead {
+    p {
+        line-height: 1.65;
+    }
+}
+
+.sectionIcon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--accent-redesigned) 14%, transparent);
+}
+
+.sectionBody {
+    flex: 1;
+    min-width: 0;
+}
+
+.item {
+    align-items: flex-start;
+}
+
+.itemIcon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin-top: 2px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--accent-redesigned) 12%, transparent);
+}
+
+.itemText {
+    flex: 1;
+    min-width: 0;
+
+    p {
+        line-height: 1.55;
+    }
+}
+
+.closing {
+    margin-top: 8px;
+    padding: 20px 22px;
+    border-radius: 16px;
+    border-left: 4px solid var(--accent-redesigned);
+    background: color-mix(in srgb, var(--accent-redesigned) 8%, var(--light-bg-redesigned));
+
+    p {
+        margin: 0;
+        line-height: 1.6;
+    }
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    margin: 8px 0;
+    background: color-mix(in srgb, var(--hint-redesigned) 35%, transparent);
+    border: none;
+}
