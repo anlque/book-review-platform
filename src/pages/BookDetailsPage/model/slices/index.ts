@@ -1,9 +1,8 @@
 import { combineReducers } from '@reduxjs/toolkit';
 import { bookDetailsRecommendationsReducer } from './bookDetailsRecommendationsSlice';
-import { bookDetailsCommentsReducer } from './bookDetailsCommentsSlice';
+import { bookDetailsReviewsReducer } from './bookDetailsReviewsSlice';
 
 export const bookDetailsPageReducer = combineReducers({
     recommendations: bookDetailsRecommendationsReducer,
-    comments: bookDetailsCommentsReducer,
+    reviews: bookDetailsReviewsReducer,
 });
-

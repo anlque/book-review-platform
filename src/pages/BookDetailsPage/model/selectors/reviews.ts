@@ -1,7 +1,6 @@
 import { StateSchema } from '@/app/providers/StoreProvider';
 
 export const getBookReviewsIsLoading = (state: StateSchema) =>
-    state.bookDetailsPage?.comments?.isLoading;
+    state.bookDetailsPage?.reviews?.isLoading;
 export const getBookReviewsError = (state: StateSchema) =>
-    state.bookDetailsPage?.comments?.error;
-
+    state.bookDetailsPage?.reviews?.error;

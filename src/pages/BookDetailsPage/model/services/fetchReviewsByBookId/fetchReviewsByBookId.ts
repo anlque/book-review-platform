@@ -1,9 +1,9 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from '@/app/providers/StoreProvider';
-import { Comment } from '@/entities/Comment';
+import { type BookReview, type ReviewComment, mapReviewsWithComments } from '@/entities/BookReview';
 
-export const fetchCommentsByBookId = createAsyncThunk<
-    Comment[],
+export const fetchReviewsByBookId = createAsyncThunk<
+    BookReview[],
     string | undefined,
     ThunkConfig<string>
 >('bookDetails/fetchReviewsByBookId', async (bookId, thunkApi) => {
@@ -14,20 +14,33 @@ export const fetchCommentsByBookId = createAsyncThunk<
     }
 
     try {
-        const response = await extra.api.get<Comment[]>('/reviews', {
-            params: {
-                bookId,
-                _expand: 'user',
-            },
-        });
+        const [reviewsResponse, commentsResponse] = await Promise.all([
+            extra.api.get<BookReview[]>('/book-reviews', {
+                params: {
+                    bookId,
+                    _expand: 'user',
+                    text_ne: '',
+                },
+            }),
 
-        if (!response.data) {
+            extra.api.get<ReviewComment[]>('/review-comments', {
+                params: {
+                    bookId,
+                    _expand: 'user',
+                },
+            }),
+
+        ]);
+
+        if (!reviewsResponse.data || !commentsResponse.data) {
             throw new Error();
         }
 
-        return response.data;
+        return mapReviewsWithComments(
+            reviewsResponse.data,
+            commentsResponse.data,
+        );
     } catch (e) {
         return rejectWithValue('error');
     }
 });
-

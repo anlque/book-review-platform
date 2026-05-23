@@ -1,8 +1,7 @@
-import { BookDetailsCommentsSchema } from './BookDetailsCommentsSchema';
+import { BookDetailsReviewsSchema } from './BookDetailsReviewsSchema';
 import { BookDetailsRecommendationsSchema } from './BookDetailsRecommendationsSchema';
 
 export interface BookDetailsPageSchema {
-    comments: BookDetailsCommentsSchema;
+    reviews: BookDetailsReviewsSchema;
     recommendations: BookDetailsRecommendationsSchema;
 }
-

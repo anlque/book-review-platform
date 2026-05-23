@@ -1,21 +1,20 @@
 import { useTranslation } from 'react-i18next';
-import { memo, useCallback, Suspense } from 'react';
+import { memo } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text as TextDeprecated, TextSize } from '@/shared/ui/deprecated/Text';
 import { Text } from '@/shared/ui/redesigned/Text';
-import { AddCommentForm } from '@/features/addCommentForm';
-import { CommentList } from '@/entities/Comment';
+import { BookReviewList } from '@/entities/BookReview';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { VStack } from '@/shared/ui/redesigned/Stack';
-import { Loader } from '@/shared/ui/deprecated/Loader';
+import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { ToggleFeatures } from '@/shared/lib/features';
 
-import { fetchCommentsByBookId } from '../../model/services/fetchReviewsByBookId/fetchReviewsByBookId';
-import { getBookReviews } from '../../model/slices/bookDetailsCommentsSlice';
-import { getBookReviewsIsLoading } from '../../model/selectors/comments';
-import { addReviewForBook } from '../../model/services/addReviewForBook/addReviewForBook';
+import { fetchReviewsByBookId } from '../../model/services/fetchReviewsByBookId/fetchReviewsByBookId';
+import { getBookReviews } from '../../model/slices/bookDetailsReviewsSlice';
+import { getBookReviewsIsLoading } from '../../model/selectors/reviews';
+import { Icon } from '@/shared/ui/redesigned/Icon';
+import WriteIcon from '@/shared/assets/icons/write.svg';
 
 interface BookDetailsCommentsProps {
     className?: string;
@@ -24,36 +23,31 @@ interface BookDetailsCommentsProps {
 
 export const BookDetailsComments = memo((props: BookDetailsCommentsProps) => {
     const { className, id } = props;
-    const { t } = useTranslation();
+    const { t } = useTranslation('book-details');
     const reviews = useSelector(getBookReviews.selectAll);
     const reviewsIsLoading = useSelector(getBookReviewsIsLoading);
     const dispatch = useAppDispatch();
 
-    const onSendComment = useCallback(
-        (text: string) => {
-            dispatch(addReviewForBook(text));
-        },
-        [dispatch],
-    );
-
     useInitialEffect(() => {
-        dispatch(fetchCommentsByBookId(id));
+        dispatch(fetchReviewsByBookId(id));
     });
 
     return (
-        <VStack gap="16" max className={classNames('', {}, [className])}>
+        <VStack gap="8" max className={classNames('', {}, [className])}>
             <ToggleFeatures
                 feature="isAppRedesigned"
-                on={<Text size="l" title={t('reviews')} />}
+                on={
+                    <HStack gap="8">
+                        <Icon height={30} width={30} Svg={WriteIcon} variant="currentColor" />
+                        <Text size="l" title={t('reviews')} />
+                    </HStack>
+                }
                 off={
                     <TextDeprecated size={TextSize.L} title={t('reviews')} />
                 }
             />
-            <Suspense fallback={<Loader />}>
-                <AddCommentForm onSendComment={onSendComment} />
-            </Suspense>
-            <CommentList isLoading={reviewsIsLoading} comments={reviews} />
+
+            <BookReviewList isLoading={reviewsIsLoading} bookReviews={reviews} />
         </VStack>
     );
 });
-
