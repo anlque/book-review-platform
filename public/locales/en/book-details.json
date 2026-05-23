@@ -5,12 +5,25 @@
     "enter_comment": "Enter your review",
     "send": "Send",
     "back_to_list": "Back to list",
-    "recommend": "Recommendations:",
+    "recommend": "Recommendations",
     "edit": "Edit",
-    "your_feedback": "What do you think of this book? Your opinion will help others",
+    "your_feedback": "Your feedback...",
+    "leave_feedback": "What do you think of this book? Your opinion will help others",
     "evaluate_book": "Rate this book",
     "thank_for_feedback": "Thank you for your feedback!",
     "close": "Close",
-    "feedback_appear_soon": "Book rating will appear soon!"
+    "feedback_appear_soon": "Book rating will appear soon!",
+    "publication_year": "Year of publication:",
+    "listed_by": "Listed by:",
+    "reviews": "Book reviews",
+    "reply_review": "Reply",
+    "cancel_save_comment": "Cancel",
+    "replies_amount_one": "{{count}} reply",
+    "replies_amount_few": "{{count}} replies",
+    "replies_amount_many": "{{count}} replies",
+    "replies_amount_other": "{{count}} replies",
+    "your_reply": "Write a reply...",
+    "hide_replies": "Hide",
+    "show_replies": "Show"
 }
 

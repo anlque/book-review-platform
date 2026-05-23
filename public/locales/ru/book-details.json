@@ -5,12 +5,25 @@
     "enter_comment": "Введите отзыв",
     "send": "Отправить",
     "back_to_list": "Назад к списку",
-    "recommend": "Рекомендации:",
+    "recommend": "Рекомендации",
     "edit": "Редактировать",
-    "your_feedback": "Оставьте свой отзыв о книге, это поможет другим",
+    "your_feedback": "Ваш отзыв...",
+    "leave_feedback": "Оставьте свой отзыв о книге, это поможет другим",
     "evaluate_book": "Оцените книгу",
     "thank_for_feedback": "Спасибо за оценку!",
     "close": "Закрыть",
-    "feedback_appear_soon": "Оценка книг скоро появится!"
+    "feedback_appear_soon": "Оценка книг скоро появится!",
+    "publication_year": "Год публикации:",
+    "listed_by": "Добавил:",
+    "reviews": "Рецензии к книге",
+    "reply_review": "Ответить",
+    "cancel_save_comment": "Отмена",
+    "replies_amount_one": "{{count}} ответ",
+    "replies_amount_few": "{{count}} ответа",
+    "replies_amount_many": "{{count}} ответов",
+    "replies_amount_other": "{{count}} ответов",
+    "your_reply": "Напишите ответ...",
+    "hide_replies": "Спрятать",
+    "show_replies": "Показать"
 }
 
