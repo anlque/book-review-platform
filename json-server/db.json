@@ -17,9 +17,9 @@
       "title": "Dune",
       "subtitle": "Epic science fiction: politics, ecology, and prophecy on the desert world Arrakis.",
       "img": "https://picsum.photos/seed/book1/800/1200",
-      "createdAt": "1965",
+      "publishedYear": 1965,
       "userId": "1",
-      "type": [
+      "genres": [
         "SCIENCE_FICTION"
       ],
       "blocks": [
@@ -46,9 +46,9 @@
       "title": "The Hobbit",
       "subtitle": "A cozy fantasy adventure from the Shire to the Lonely Mountain.",
       "img": "https://picsum.photos/seed/book2/800/1200",
-      "createdAt": "1937",
+      "publishedYear": 1937,
       "userId": "1",
-      "type": [
+      "genres": [
         "FANTASY"
       ],
       "blocks": [
@@ -75,9 +75,9 @@
       "title": "Neuromancer",
       "subtitle": "Cyberpunk cornerstone: hackers, AIs, and corporate power in the Sprawl.",
       "img": "https://picsum.photos/seed/book3/800/1200",
-      "createdAt": "1984",
+      "publishedYear": 1984,
       "userId": "2",
-      "type": [
+      "genres": [
         "CYBERPUNK"
       ],
       "blocks": [
@@ -104,9 +104,9 @@
       "title": "Gone Girl",
       "subtitle": "A marriage thriller where media narratives and private truths violently collide.",
       "img": "https://picsum.photos/seed/book4/800/1200",
-      "createdAt": "2012",
+      "publishedYear": 2012,
       "userId": "1",
-      "type": [
+      "genres": [
         "THRILLER"
       ],
       "blocks": [
@@ -133,9 +133,9 @@
       "title": "The Hound of the Baskervilles",
       "subtitle": "Sherlock Holmes investigates a family curse on the Devonshire moor.",
       "img": "https://picsum.photos/seed/book5/800/1200",
-      "createdAt": "1902",
+      "publishedYear": 1902,
       "userId": "1",
-      "type": [
+      "genres": [
         "DETECTIVE"
       ],
       "blocks": [
@@ -162,9 +162,9 @@
       "title": "Pride and Prejudice",
       "subtitle": "A sharp comedy of manners about love, class, and mistaken first impressions.",
       "img": "https://picsum.photos/seed/book6/800/1200",
-      "createdAt": "1813",
+      "publishedYear": 1813,
       "userId": "2",
-      "type": [
+      "genres": [
         "ROMANCE"
       ],
       "blocks": [
@@ -191,9 +191,9 @@
       "title": "It",
       "subtitle": "Childhood trauma and an ancient evil resurfacing in small-town Maine.",
       "img": "https://picsum.photos/seed/book7/800/1200",
-      "createdAt": "1986",
+      "publishedYear": 1986,
       "userId": "1",
-      "type": [
+      "genres": [
         "HORROR"
       ],
       "blocks": [
@@ -220,9 +220,9 @@
       "title": "The Name of the Rose",
       "subtitle": "A medieval mystery of forbidden books and murders in a Benedictine abbey.",
       "img": "https://picsum.photos/seed/book8/800/1200",
-      "createdAt": "1980",
+      "publishedYear": 1980,
       "userId": "2",
-      "type": [
+      "genres": [
         "MYSTERY"
       ],
       "blocks": [
@@ -249,9 +249,9 @@
       "title": "The Shining",
       "subtitle": "Isolation, alcoholism, and a hotel that remembers every cruel winter.",
       "img": "https://picsum.photos/seed/book9/800/1200",
-      "createdAt": "1977",
+      "publishedYear": 1977,
       "userId": "1",
-      "type": [
+      "genres": [
         "HORROR"
       ],
       "blocks": [
@@ -278,9 +278,9 @@
       "title": "The Girl with the Dragon Tattoo",
       "subtitle": "A journalist and a hacker probe a decades-old disappearance in a powerful Swedish family.",
       "img": "https://picsum.photos/seed/book10/800/1200",
-      "createdAt": "2005",
+      "publishedYear": 2005,
       "userId": "2",
-      "type": [
+      "genres": [
         "THRILLER"
       ],
       "blocks": [
@@ -307,9 +307,9 @@
       "title": "1984",
       "subtitle": "A dystopian novel of surveillance, propaganda, and the politics of truth.",
       "img": "https://picsum.photos/seed/book11/800/1200",
-      "createdAt": "1949",
+      "publishedYear": 1949,
       "userId": "1",
-      "type": [
+      "genres": [
         "NOVEL"
       ],
       "blocks": [
@@ -336,9 +336,9 @@
       "title": "The Martian",
       "subtitle": "Stranded on Mars, an engineer survives with science, duct tape, and stubborn optimism.",
       "img": "https://picsum.photos/seed/book12/800/1200",
-      "createdAt": "2011",
+      "publishedYear": 2011,
       "userId": "2",
-      "type": [
+      "genres": [
         "SCIENCE_FICTION"
       ],
       "blocks": [
@@ -365,9 +365,9 @@
       "title": "The Fellowship of the Ring",
       "subtitle": "The first volume of The Lord of the Rings: a ring of power and a fellowship formed.",
       "img": "https://picsum.photos/seed/book13/800/1200",
-      "createdAt": "1954",
+      "publishedYear": 1954,
       "userId": "1",
-      "type": [
+      "genres": [
         "FANTASY"
       ],
       "blocks": [
@@ -393,10 +393,10 @@
       "id": "14",
       "title": "Dracula",
       "subtitle": "Victorian Gothic horror told through letters, journals, and ship logs.",
-      "img": "https://picsum.photos/seed/book14/800/1200",
-      "createdAt": "1897",
+      "img": "https://m.media-amazon.com/images/I/71xcDXkr1OL._AC_UF1000,1000_QL80_.jpg",
+      "publishedYear": 1897,
       "userId": "2",
-      "type": [
+      "genres": [
         "HORROR"
       ],
       "blocks": [
@@ -412,8 +412,8 @@
         {
           "id": "2",
           "type": "IMAGE",
-          "src": "https://picsum.photos/seed/book114/800/1200",
-          "title": "Cover"
+          "src": "https://statcdn.fandango.com/MPX/image/NBCU_Fandango/482/71/thumb_0AF3AE83-A9BB-41CD-A27B-BE5739261F32.jpg",
+          "title": "Film adaptation shot"
         }
       ],
       "authorId": "12"
@@ -423,9 +423,9 @@
       "title": "The Da Vinci Code",
       "subtitle": "A symbologist and a cryptologist race through Europe decoding a secret protected for centuries.",
       "img": "https://picsum.photos/seed/book15/800/1200",
-      "createdAt": "2003",
+      "publishedYear": 2003,
       "userId": "1",
-      "type": [
+      "genres": [
         "MYSTERY"
       ],
       "blocks": [
@@ -452,9 +452,9 @@
       "title": "The Big Sleep",
       "subtitle": "Hardboiled Los Angeles: blackmail, missing daughters, and Philip Marlowe’s code.",
       "img": "https://picsum.photos/seed/book16/800/1200",
-      "createdAt": "1939",
+      "publishedYear": 1939,
       "userId": "2",
-      "type": [
+      "genres": [
         "DETECTIVE"
       ],
       "blocks": [
@@ -481,9 +481,9 @@
       "title": "Do Androids Dream of Electric Sheep?",
       "subtitle": "Bounty hunting androids in a ruined Earth—and questioning what empathy really means.",
       "img": "https://picsum.photos/seed/book17/800/1200",
-      "createdAt": "1968",
+      "publishedYear": 1968,
       "userId": "1",
-      "type": [
+      "genres": [
         "SCIENCE_FICTION"
       ],
       "blocks": [
@@ -510,9 +510,9 @@
       "title": "The Great Gatsby",
       "subtitle": "Jazz Age glamour, longing, and the American dream refracted through one summer on Long Island.",
       "img": "https://picsum.photos/seed/book18/800/1200",
-      "createdAt": "1925",
+      "publishedYear": 1925,
       "userId": "2",
-      "type": [
+      "genres": [
         "NOVEL"
       ],
       "blocks": [
@@ -539,9 +539,9 @@
       "title": "The Andromeda Strain",
       "subtitle": "A techno-thriller about a satellite-borne organism and a secret lab racing to contain it.",
       "img": "https://picsum.photos/seed/book19/800/1200",
-      "createdAt": "1969",
+      "publishedYear": 1969,
       "userId": "1",
-      "type": [
+      "genres": [
         "SCIENCE_FICTION"
       ],
       "blocks": [
@@ -564,122 +564,6 @@
       "authorId": "17"
     }
   ],
-  "reviews": [
-    {
-      "id": "1",
-      "text": "some comment",
-      "bookId": "1",
-      "userId": "1"
-    },
-    {
-      "id": "2",
-      "text": "some comment 2",
-      "bookId": "1",
-      "userId": "1"
-    },
-    {
-      "id": "3",
-      "text": "some comment 3",
-      "bookId": "1",
-      "userId": "1"
-    },
-    {
-      "bookId": "1",
-      "userId": "1",
-      "text": "123",
-      "id": "4Cljjzl"
-    },
-    {
-      "bookId": "1",
-      "userId": "1",
-      "text": "123asfasf",
-      "id": "AEM4Dvc"
-    },
-    {
-      "bookId": "1",
-      "userId": "2",
-      "text": "123asfasf",
-      "id": "IFEOWl0"
-    },
-    {
-      "bookId": "1",
-      "userId": "2",
-      "text": "hello world",
-      "id": "dBacYRZ"
-    },
-    {
-      "bookId": "1",
-      "userId": "2",
-      "text": "dssfd",
-      "id": "rBX_C-e"
-    },
-    {
-      "bookId": "1",
-      "userId": "2",
-      "text": "dscsdf",
-      "id": "5k0ApX-"
-    },
-    {
-      "bookId": "1",
-      "userId": "2",
-      "text": "sdfsdfsd",
-      "id": "w-HDIRq"
-    },
-    {
-      "bookId": "1",
-      "userId": "2",
-      "text": "asdasdasd",
-      "id": "MVvGQoZ"
-    },
-    {
-      "bookId": "3",
-      "userId": "1",
-      "text": "comment 1",
-      "id": "bAs7YBE"
-    },
-    {
-      "bookId": "2",
-      "userId": "1",
-      "text": "python!!!",
-      "id": "p5rMadd"
-    },
-    {
-      "bookId": "3",
-      "userId": "1",
-      "text": "123213",
-      "id": "Zu_RNuF"
-    },
-    {
-      "bookId": "8",
-      "userId": "1",
-      "text": "dfdsf",
-      "id": "4rFHQgJ"
-    },
-    {
-      "bookId": "8",
-      "userId": "1",
-      "text": "sdfsdf",
-      "id": "yYEdTI-"
-    },
-    {
-      "bookId": "7",
-      "userId": "1",
-      "text": "123213",
-      "id": "TR1yDY6"
-    },
-    {
-      "bookId": "7",
-      "userId": "1",
-      "text": "112",
-      "id": "wSAhqy5"
-    },
-    {
-      "bookId": "7",
-      "userId": "1",
-      "text": "hjhk",
-      "id": "7mJRMVl"
-    }
-  ],
   "users": [
     {
       "id": "1",
@@ -693,7 +577,7 @@
         "isAppRedesigned": true
       },
       "jsonSettings": {
-        "theme": "app_dark_theme",
+        "theme": "app_candy_theme",
         "isBooksPageWasOpened": true
       }
     },
@@ -707,7 +591,7 @@
       "avatar": "https://i.imgflip.com/1gl4ru.jpg?a469920"
     }
   ],
-  "profile": [
+  "profiles": [
     {
       "id": "1",
       "first": "jghwer",
@@ -731,71 +615,231 @@
       "avatar": "https://i.imgflip.com/1gl4ru.jpg?a469920"
     }
   ],
-  "book-ratings": [
+  "book-reviews": [
     {
       "id": "1",
       "rate": 4,
-      "feedback": "Good",
+      "text": "Good",
       "userId": "1",
-      "bookId": "1"
+      "bookId": "1",
+      "createdAt": "2026-05-11T15:00:00.000Z"
     },
     {
       "id": "2",
       "rate": 4,
-      "feedback": "Good",
+      "text": "Good",
       "userId": "1",
-      "bookId": "2"
+      "bookId": "2",
+      "createdAt": "2026-05-11T15:00:00.000Z"
     },
     {
       "userId": "1",
       "bookId": "3",
       "rate": 3,
-      "feedback": "",
-      "id": "I7ofk1u"
+      "text": "",
+      "id": "I7ofk1u",
+      "createdAt": "2026-05-11T15:00:00.000Z"
     },
     {
       "userId": "1",
       "bookId": "9",
       "rate": 5,
-      "feedback": "asdasdasdasd",
-      "id": "Y7MhPzo"
+      "text": "asdasdasdasd",
+      "id": "Y7MhPzo",
+      "createdAt": "2026-05-11T15:00:00.000Z"
     },
     {
       "userId": "1",
       "bookId": "10",
       "rate": 1,
-      "feedback": "Bad",
-      "id": "II0a75O"
+      "text": "Bad",
+      "id": "II0a75O",
+      "createdAt": "2026-05-11T15:00:00.000Z"
     },
     {
       "userId": "1",
       "bookId": "7",
       "rate": 3,
-      "feedback": "",
-      "id": "bcPnbbZ"
+      "text": "",
+      "id": "bcPnbbZ",
+      "createdAt": "2026-05-11T15:00:00.000Z"
     },
     {
       "userId": "1",
       "bookId": "5",
       "rate": 3,
-      "feedback": "nmnjk",
-      "id": "cnCBxTC"
+      "text": "nmnjk",
+      "id": "cnCBxTC",
+      "createdAt": "2026-05-11T15:00:00.000Z"
+    },
+    {
+      "userId": "1",
+      "bookId": "14",
+      "rate": 3,
+      "text": "my text",
+      "id": "EnYlZ5Z"
+    },
+    {
+      "userId": "1",
+      "bookId": "19",
+      "rate": 3,
+      "text": "norm",
+      "createdAt": "2026-05-16T15:00:48.479Z",
+      "id": "w0epGH6"
+    },
+    {
+      "userId": "1",
+      "bookId": "13",
+      "rate": 5,
+      "text": "cool",
+      "createdAt": "2026-05-16T15:22:11.659Z",
+      "id": "OCqyGfm"
+    },
+    {
+      "userId": "1",
+      "bookId": "11",
+      "rate": 4,
+      "text": "nice book",
+      "createdAt": "2026-05-20T11:20:07.379Z",
+      "id": "fq8f2Qa"
+    },
+    {
+      "userId": "1",
+      "bookId": "4",
+      "rate": 2,
+      "createdAt": "2026-05-20T11:25:39.961Z",
+      "id": "gubWTBh"
+    },
+    {
+      "userId": "1",
+      "bookId": "6",
+      "rate": 1,
+      "createdAt": "2026-05-20T11:27:30.579Z",
+      "id": "0wn-0r3"
+    },
+    {
+      "userId": "1",
+      "bookId": "8",
+      "rate": 4,
+      "createdAt": "2026-05-20T11:32:47.326Z",
+      "id": "_8NBPUJ"
+    },
+    {
+      "userId": "2",
+      "bookId": "11",
+      "rate": 2,
+      "text": "very tough",
+      "createdAt": "2026-05-20T11:40:55.201Z",
+      "id": "qiqhi8z"
     }
   ],
-  "profile-ratings": [
+  "review-comments": [
+    {
+      "id": "1",
+      "text": "some comment",
+      "userId": "1",
+      "reviewId": "1",
+      "createdAt": "2026-05-11T15:10:00.000Z"
+    },
+    {
+      "id": "2",
+      "text": "some comment 2",
+      "userId": "1",
+      "reviewId": "1",
+      "createdAt": "2026-05-11T15:10:00.000Z"
+    },
+    {
+      "reviewId": "I7ofk1u",
+      "bookId": "3",
+      "userId": "1",
+      "text": "test",
+      "id": "oKVMYwN"
+    },
+    {
+      "reviewId": "I7ofk1u",
+      "bookId": "3",
+      "userId": "1",
+      "text": "test1",
+      "id": "JHNoDny"
+    },
+    {
+      "reviewId": "I7ofk1u",
+      "bookId": "3",
+      "userId": "1",
+      "text": "test13",
+      "id": "vJ82-q0"
+    },
+    {
+      "reviewId": "OCqyGfm",
+      "bookId": "13",
+      "userId": "1",
+      "text": "bad",
+      "id": "zLZYXGs"
+    },
+    {
+      "reviewId": "OCqyGfm",
+      "bookId": "13",
+      "userId": "1",
+      "text": "not bad",
+      "id": "xhpcOQo"
+    },
+    {
+      "reviewId": "fq8f2Qa",
+      "bookId": "11",
+      "userId": "1",
+      "createdAt": "2026-05-20T13:06:45.331Z",
+      "text": "agreed",
+      "id": "5YpCwlP"
+    },
+    {
+      "reviewId": "fq8f2Qa",
+      "bookId": "11",
+      "userId": "1",
+      "createdAt": "2026-05-20T13:14:47.066Z",
+      "text": "yep",
+      "id": "eTbFv81"
+    },
+    {
+      "reviewId": "fq8f2Qa",
+      "bookId": "11",
+      "userId": "1",
+      "createdAt": "2026-05-20T14:02:44.164Z",
+      "text": "nope",
+      "id": "T2DfOJH"
+    },
+    {
+      "reviewId": "qiqhi8z",
+      "bookId": "11",
+      "userId": "1",
+      "createdAt": "2026-05-21T13:12:51.696Z",
+      "text": "is it?",
+      "id": "Win1Ldn"
+    },
+    {
+      "reviewId": "qiqhi8z",
+      "bookId": "11",
+      "userId": "1",
+      "createdAt": "2026-05-21T16:04:42.974Z",
+      "text": "idk",
+      "id": "ykpWN7a"
+    }
+  ],
+  "profile-reviews": [
     {
       "id": "1",
       "rate": 4,
-      "feedback": "Good",
+      "text": "Good",
       "userId": "1",
-      "profileId": "1"
+      "profileId": "1",
+      "createdAt": "2026-05-11T15:00:00.000Z"
     },
     {
       "id": "2",
       "rate": 4,
-      "feedback": "Good",
+      "text": "Good",
       "userId": "1",
-      "profileId": "2"
+      "profileId": "2",
+      "createdAt": "2026-05-11T15:00:00.000Z"
     }
   ],
   "authors": [
@@ -803,103 +847,155 @@
       "id": "1",
       "name": "Frank Herbert",
       "bio": "Frank Herbert is a featured writer in this demo catalog.",
-      "portrait": "https://picsum.photos/seed/author-1/200/200"
+      "portrait": "https://picsum.photos/seed/author-1/200/200",
+      "birthYear": 1920,
+      "deathYear": 1986
     },
     {
       "id": "2",
       "name": "J. R. R. Tolkien",
       "bio": "J. R. R. Tolkien is a featured writer in this demo catalog.",
-      "portrait": "https://picsum.photos/seed/author-2/200/200"
+      "portrait": "https://picsum.photos/seed/author-2/200/200",
+      "birthYear": 1920,
+      "deathYear": 1986
     },
     {
       "id": "3",
       "name": "William Gibson",
       "bio": "William Gibson is a featured writer in this demo catalog.",
-      "portrait": "https://picsum.photos/seed/author-3/200/200"
+      "portrait": "https://picsum.photos/seed/author-3/200/200",
+      "birthYear": 1920,
+      "deathYear": 1986
     },
     {
       "id": "4",
       "name": "Gillian Flynn",
       "bio": "Gillian Flynn is a featured writer in this demo catalog.",
-      "portrait": "https://picsum.photos/seed/author-4/200/200"
+      "portrait": "https://picsum.photos/seed/author-4/200/200",
+      "birthYear": 1920,
+      "deathYear": 1986
     },
     {
       "id": "5",
       "name": "Arthur Conan Doyle",
       "bio": "Arthur Conan Doyle is a featured writer in this demo catalog.",
-      "portrait": "https://picsum.photos/seed/author-5/200/200"
+      "portrait": "https://picsum.photos/seed/author-5/200/200",
+      "birthYear": 1920,
+      "deathYear": 1986
     },
     {
       "id": "6",
       "name": "Jane Austen",
       "bio": "Jane Austen is a featured writer in this demo catalog.",
-      "portrait": "https://picsum.photos/seed/author-6/200/200"
+      "portrait": "https://picsum.photos/seed/author-6/200/200",
+      "birthYear": 1920,
+      "deathYear": 1986
     },
     {
       "id": "7",
       "name": "Stephen King",
       "bio": "Stephen King is a featured writer in this demo catalog.",
-      "portrait": "https://picsum.photos/seed/author-7/200/200"
+      "portrait": "https://picsum.photos/seed/author-7/200/200",
+      "birthYear": 1920,
+      "deathYear": 1986
     },
     {
       "id": "8",
       "name": "Umberto Eco",
       "bio": "Umberto Eco is a featured writer in this demo catalog.",
-      "portrait": "https://picsum.photos/seed/author-8/200/200"
+      "portrait": "https://picsum.photos/seed/author-8/200/200",
+      "birthYear": 1920,
+      "deathYear": 1986
     },
     {
       "id": "9",
       "name": "Stieg Larsson",
       "bio": "Stieg Larsson is a featured writer in this demo catalog.",
-      "portrait": "https://picsum.photos/seed/author-9/200/200"
+      "portrait": "https://picsum.photos/seed/author-9/200/200",
+      "birthYear": 1920,
+      "deathYear": 1986
     },
     {
       "id": "10",
       "name": "George Orwell",
       "bio": "George Orwell is a featured writer in this demo catalog.",
-      "portrait": "https://picsum.photos/seed/author-10/200/200"
+      "portrait": "https://picsum.photos/seed/author-10/200/200",
+      "birthYear": 1920,
+      "deathYear": 1986
     },
     {
       "id": "11",
       "name": "Andy Weir",
       "bio": "Andy Weir is a featured writer in this demo catalog.",
-      "portrait": "https://picsum.photos/seed/author-11/200/200"
+      "portrait": "https://picsum.photos/seed/author-11/200/200",
+      "birthYear": 1920,
+      "deathYear": 1986
     },
     {
       "id": "12",
       "name": "Bram Stoker",
       "bio": "Bram Stoker is a featured writer in this demo catalog.",
-      "portrait": "https://picsum.photos/seed/author-12/200/200"
+      "portrait": "https://picsum.photos/seed/author-12/200/200",
+      "birthYear": 1920,
+      "deathYear": 1986
     },
     {
       "id": "13",
       "name": "Dan Brown",
       "bio": "Dan Brown is a featured writer in this demo catalog.",
-      "portrait": "https://picsum.photos/seed/author-13/200/200"
+      "portrait": "https://picsum.photos/seed/author-13/200/200",
+      "birthYear": 1920,
+      "deathYear": 1986
     },
     {
       "id": "14",
       "name": "Raymond Chandler",
       "bio": "Raymond Chandler is a featured writer in this demo catalog.",
-      "portrait": "https://picsum.photos/seed/author-14/200/200"
+      "portrait": "https://picsum.photos/seed/author-14/200/200",
+      "birthYear": 1920,
+      "deathYear": 1986
     },
     {
       "id": "15",
       "name": "Philip K. Dick",
       "bio": "Philip K. Dick is a featured writer in this demo catalog.",
-      "portrait": "https://picsum.photos/seed/author-15/200/200"
+      "portrait": "https://picsum.photos/seed/author-15/200/200",
+      "birthYear": 1920,
+      "deathYear": 1986
     },
     {
       "id": "16",
       "name": "F. Scott Fitzgerald",
       "bio": "F. Scott Fitzgerald is a featured writer in this demo catalog.",
-      "portrait": "https://picsum.photos/seed/author-16/200/200"
+      "portrait": "https://picsum.photos/seed/author-16/200/200",
+      "birthYear": 1920,
+      "deathYear": 1986
     },
     {
       "id": "17",
       "name": "Michael Crichton",
       "bio": "Michael Crichton is a featured writer in this demo catalog.",
-      "portrait": "https://picsum.photos/seed/author-17/200/200"
+      "portrait": "https://picsum.photos/seed/author-17/200/200",
+      "birthYear": 1920,
+      "deathYear": 1986
+    }
+  ],
+  "book-submissions": [
+    {
+      "id": "1",
+      "title": "Dune Messiah",
+      "subtitle": "",
+      "img": "",
+      "publishedYear": 1969,
+      "genres": [
+        "SCIENCE_FICTION"
+      ],
+      "authorId": "1",
+      "submittedByUserId": "2",
+      "status": "PENDING",
+      "moderationComment": "",
+      "createdAt": "2026-05-11T15:00:00.000Z",
+      "updatedAt": "2026-05-11T15:00:00.000Z"
     }
   ]
 }
