@@ -11,11 +11,7 @@ const options = {
 
 const server = jsonServer.create();
 
-const dbPath = path.resolve(__dirname, 'db.json');
-
-const router = jsonServer.router(dbPath);
-
-// const router = jsonServer.router(path.resolve(__dirname, 'db.json'));
+const router = jsonServer.router(path.resolve(__dirname, 'db.json'));
 
 server.use(jsonServer.defaults({}));
 server.use(jsonServer.bodyParser);
@@ -50,9 +46,32 @@ server.post('/login', (req, res) => {
     }
 });
 
+function isGuestAllowedBooksFlowRequest(req) {
+    if (req.method !== 'GET') {
+        return false;
+    }
+    const path = req.path || '';
+    if (path === '/books' || path.startsWith('/books/')) {
+        return true;
+    }
+    if (path === '/authors') {
+        return true;
+    }
+    if (path === '/book-reviews') {
+        return true;
+    }
+    if (path === '/review-comments') {
+        return true;
+    }
+    return false;
+}
+
 // Check if the user is authorized
 // eslint-disable-next-line
 server.use((req, res, next) => {
+    if (isGuestAllowedBooksFlowRequest(req)) {
+        return next();
+    }
     if (!req.headers.authorization) {
         return res.status(403).json({ message: 'AUTH ERROR' });
     }
