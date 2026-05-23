@@ -3,7 +3,9 @@ import { Book } from '@/entities/Book';
 export interface Author {
     id: string;
     name: string;
-    books: Book[];
+    birthYear: number,
+    books?: Book[];
+    deathYear?: number,
     bio?: string;
     portrait?: string;
 }
