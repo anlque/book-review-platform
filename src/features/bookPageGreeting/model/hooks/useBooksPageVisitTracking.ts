@@ -31,7 +31,7 @@ export function useBooksPageVisitTracking(): UseBooksPageVisitTrackingResult {
 
     const isBooksPageWasOpened = useMemo(() => {
         if (!userInited) {
-            return false;
+            return true;
         }
         if (authData) {
             return Boolean(authData.jsonSettings?.isBooksPageWasOpened);

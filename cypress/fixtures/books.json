@@ -11,9 +11,9 @@
         },
         "subtitle": "A desert planet, political intrigue, and a destiny that reshapes an empire.",
         "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-        "createdAt": "26.04.2022",
+        "publishedYear": 1965,
         "userId": "1",
-        "type": [
+        "genres": [
             "SCIENCE_FICTION"
         ],
         "blocks": [
@@ -89,9 +89,9 @@
         },
         "subtitle": "A reluctant hero, a perilous journey, and a dragon guarding a stolen kingdom.",
         "img": "https://admin.wac.co/uploads/Features_Of_Python_1_f4ccd6d9f7.jpg",
-        "createdAt": "26.02.2022",
+        "publishedYear": 1937,
         "userId": "1",
-        "type": [
+        "genres": [
             "FANTASY"
         ],
         "blocks": [
@@ -119,9 +119,9 @@
         },
         "subtitle": "A washed-up hacker is pulled into a high-stakes job in the neon sprawl.",
         "img": "https://miro.medium.com/max/1200/1*FNakkrty3kjOvNU8m5iQfw.png",
-        "createdAt": "26.02.2019",
+        "publishedYear": 1984,
         "userId": "1",
-        "type": [
+        "genres": [
             "CYBERPUNK"
         ],
         "blocks": [

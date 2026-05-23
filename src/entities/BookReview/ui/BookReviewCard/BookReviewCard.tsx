@@ -60,8 +60,8 @@ export const BookReviewCard = memo((props: BookReviewCardProps) => {
 
         if (addCommentForReview.fulfilled.match(result)) {
             setCommentText('');
+            setIsOpenReplyForm(false);
         }
-        setCommentText('');
     };
 
     if (isLoading) {

@@ -1,24 +1,27 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useEffect, useState } from 'react';
 import { isMobile } from 'react-device-detect';
+import { useSelector } from 'react-redux';
 import { Modal } from '@/shared/ui/redesigned/Modal';
 import { Text } from '@/shared/ui/deprecated/Text';
 import { Drawer } from '@/shared/ui/redesigned/Drawer';
+import { getUserInited } from '@/entities/User';
 import { useBooksPageVisitTracking } from '../../model/hooks/useBooksPageVisitTracking';
 
 export const BookPageGreeting = memo(() => {
     const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
+    const userInited = useSelector(getUserInited);
     const { isBooksPageWasOpened, markBooksPageAsOpened } =
         useBooksPageVisitTracking();
 
     useEffect(() => {
-        if (isBooksPageWasOpened) {
+        if (!userInited || isBooksPageWasOpened) {
             return;
         }
         setIsOpen(true);
         markBooksPageAsOpened();
-    }, [isBooksPageWasOpened, markBooksPageAsOpened]);
+    }, [userInited, isBooksPageWasOpened, markBooksPageAsOpened]);
 
     const onClose = () => setIsOpen(false);
 

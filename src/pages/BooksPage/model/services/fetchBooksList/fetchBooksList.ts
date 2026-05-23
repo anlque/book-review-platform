@@ -43,7 +43,7 @@ export const fetchBooksList = createAsyncThunk<
                 _sort: sort,
                 _order: order,
                 q: search,
-                // TODO: array genres
+                // TODO: array genres { genres_like: genres }
                 genres: genres === BookGenre.ALL ? undefined : genres,
             },
         });

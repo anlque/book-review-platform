@@ -5,9 +5,9 @@ const defaultBook = {
     img:
         'https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd' +
         '7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200',
-    createdAt: '26.02.2022',
+    publishedYear: 1965,
     userId: '1',
-    type: ['SCIENCE_FICTION'],
+    genres: ['SCIENCE_FICTION'],
     blocks: [],
 };
 

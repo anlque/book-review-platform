@@ -21,27 +21,28 @@ const BookRating = memo((props: BookRatingProps) => {
     const { t } = useTranslation('book-details');
     const userData = useSelector(getUserAuthData);
 
-    const { data: rating, isLoading } = useGetBookRating({
-        bookId,
-        userId: userData?.id ?? '',
-    });
+    const userId = userData?.id;
+
+    const { data: rating, isLoading } = useGetBookRating(
+        { bookId, userId: userId ?? '' },
+        { skip: !userId },
+    );
     const [rateBookMutation] = useRateBook();
 
     const handleRateBook = useCallback(
-        (starsCount: number, text?: string) => {
-            try {
-                rateBookMutation({
-                    userId: userData?.id ?? '',
-                    bookId,
-                    rate: starsCount,
-                    ...(text?.trim() && { text: text.trim() }),
-                });
-            } catch (e) {
-                // handle error
-                console.log(e);
+        async (starsCount: number, text?: string) => {
+            if (!userId) {
+                return;
             }
+
+            await rateBookMutation({
+                userId,
+                bookId,
+                rate: starsCount,
+                ...(text?.trim() && { text: text.trim() }),
+            }).unwrap();
         },
-        [bookId, rateBookMutation, userData?.id],
+        [bookId, rateBookMutation, userId],
     );
 
     const onAccept = useCallback(
