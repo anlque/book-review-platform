@@ -14,25 +14,27 @@ export interface BookRatingProps {
     bookId: string;
 }
 
+// TODO: trim review comments
+
 const BookRating = memo((props: BookRatingProps) => {
     const { className, bookId } = props;
     const { t } = useTranslation('book-details');
     const userData = useSelector(getUserAuthData);
 
-    const { data, isLoading } = useGetBookRating({
+    const { data: rating, isLoading } = useGetBookRating({
         bookId,
         userId: userData?.id ?? '',
     });
     const [rateBookMutation] = useRateBook();
 
     const handleRateBook = useCallback(
-        (starsCount: number, feedback?: string) => {
+        (starsCount: number, text?: string) => {
             try {
                 rateBookMutation({
                     userId: userData?.id ?? '',
                     bookId,
                     rate: starsCount,
-                    feedback,
+                    ...(text?.trim() && { text: text.trim() }),
                 });
             } catch (e) {
                 // handle error
@@ -56,11 +58,13 @@ const BookRating = memo((props: BookRatingProps) => {
         [handleRateBook],
     );
 
+    if (!userData) {
+        return;
+    }
+
     if (isLoading) {
         return <Skeleton width="100%" height={120} />;
     }
-
-    const rating = data?.[0];
 
     return (
         <RatingCard
@@ -69,7 +73,7 @@ const BookRating = memo((props: BookRatingProps) => {
             rate={rating?.rate}
             className={className}
             title={t('evaluate_book')}
-            feedbackTitle={t('your_feedback')}
+            feedbackTitle={t('leave_feedback')}
             hasFeedback
         />
     );
