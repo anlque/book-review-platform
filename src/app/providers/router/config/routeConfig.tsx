@@ -45,12 +45,10 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     [AppRoutes.BOOKS]: {
         path: getRouteBooks(),
         element: <BooksPage />,
-        authOnly: true,
     },
     [AppRoutes.BOOK_DETAILS]: {
         path: getRouteBookDetails(':id'),
         element: <BookDetailsPage />,
-        authOnly: true,
     },
     [AppRoutes.BOOK_CREATE]: {
         path: getRouteBookCreate(),

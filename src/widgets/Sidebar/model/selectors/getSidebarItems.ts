@@ -40,6 +40,15 @@ export const useSidebarItems = () => {
             }),
             text: 'about_us',
         },
+        {
+            path: getRouteBooks(),
+            Icon: toggleFeatures({
+                name: 'isAppRedesigned',
+                off: () => BookIconDeprecated,
+                on: () => BookIcon,
+            }),
+            text: 'books_page',
+        },
     ];
 
     if (userData) {
@@ -52,16 +61,6 @@ export const useSidebarItems = () => {
                     on: () => ProfileIcon,
                 }),
                 text: 'profile_page',
-                authOnly: true,
-            },
-            {
-                path: getRouteBooks(),
-                Icon: toggleFeatures({
-                    name: 'isAppRedesigned',
-                    off: () => BookIconDeprecated,
-                    on: () => BookIcon,
-                }),
-                text: 'books_page',
                 authOnly: true,
             },
         );
