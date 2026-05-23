@@ -38,12 +38,22 @@ Methodology documentation - [feature sliced design](https://feature-sliced.desig
 
 ## Work with translations
 
-Lib i18next is used for translations.
-Translation files are stored inw public/locales.
+The app uses **react-i18next**. JSON namespaces live in `public/locales/{locale}/{namespace}.json`.
 
-For comfort work recommend set up plugin for webstorm/vscode
+**Intlayer** is configured as a dev tool on top of i18next (no runtime change): it syncs those JSON files and can auto-fill missing keys in additional langs via AI.
 
-i18next documentation - [https://react.i18next.com/](https://react.i18next.com/)
+| Command | Description |
+| --- | --- |
+| `npm run i18n:test` | List missing translations (`en` → `ru`) |
+| `npm run i18n:fill` | Fill missing keys (requires API key in `.env`) |
+
+1. Copy `.env.example` → `.env` and set `OPENAI_API_KEY`.
+2. Run `npm run i18n:fill` after adding new English strings.
+
+Config: `intlayer.config.ts`. Generated cache: `.intlayer/` (gitignored).
+
+- [react-i18next](https://react.i18next.com/)
+- [Intlayer + react-i18next](https://intlayer.org/blog/intlayer-with-react-i18next)
 
 ----
 
@@ -153,7 +163,6 @@ it takes 2 args
 
 ## Features
 
-- [addCommentForm](/src/features/addCommentForm)
 - [bookEditForm](/src/features/bookEditForm)
 - [bookRating](/src/features/bookRating)
 - [bookRecommendationsList](/src/features/bookRecommendationsList)

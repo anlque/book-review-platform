@@ -6,3 +6,8 @@ storybook-static
 /storybook-static
 .fttemplates
 .vscode
+# Intlayer
+.intlayer
+
+.env
+.env.local
