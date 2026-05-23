@@ -6,7 +6,6 @@ import { AxiosInstance } from 'axios';
 import { LoginSchema } from '@/features/AuthByUsername';
 import { UserSchema } from '@/entities/User';
 import { BookDetailsSchema } from '@/entities/Book';
-import { AddCommentFormSchema } from '@/features/addCommentForm';
 import { BooksPageSchema } from '@/pages/BooksPage';
 import { UISchema } from '@/features/UI';
 import { rtkApi } from '@/shared/api/rtkApi';
@@ -22,7 +21,6 @@ export interface StateSchema {
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
     bookDetails?: BookDetailsSchema;
-    addCommentForm?: AddCommentFormSchema;
     booksPage?: BooksPageSchema;
     bookDetailsPage?: BookDetailsPageSchema;
 }
