@@ -16,7 +16,7 @@ export enum AppRoutes {
 export const getRouteMain = () => '/';
 export const getRouteSettings = () => '/settings';
 export const getRouteAbout = () => '/about';
-export const getRouteProfile = (id: string) => `/profile/${id}`;
+export const getRouteProfile = (id: string) => `/profiles/${id}`;
 export const getRouteBooks = () => '/books';
 export const getRouteBookDetails = (id: string) => `/books/${id}`;
 export const getRouteBookCreate = () => '/books/new';
