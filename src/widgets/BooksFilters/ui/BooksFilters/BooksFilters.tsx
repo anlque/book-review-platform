@@ -6,7 +6,7 @@ import { Card } from '@/shared/ui/redesigned/Card';
 import { BookSortSelector } from '@/features/BookSortSelector';
 import { BookTypeTabs } from '@/features/BookTypeTabs';
 import { VStack } from '@/shared/ui/redesigned/Stack';
-import { BookSortField, BookType } from '@/entities/Book';
+import { BookSortField, BookGenre } from '@/entities/Book';
 import { SortOrder } from '@/shared/types/sort';
 import { Input } from '@/shared/ui/redesigned/Input';
 import SearchIcon from '@/shared/assets/icons/search.svg';
@@ -16,25 +16,25 @@ interface BooksFiltersProps {
     className?: string;
     sort: BookSortField;
     order: SortOrder;
-    type: BookType;
+    genres: BookGenre;
     search: string;
     onChangeSearch: (value: string) => void;
     onChangeOrder: (newOrder: SortOrder) => void;
     onChangeSort: (newSort: BookSortField) => void;
-    onChangeType: (type: BookType) => void;
+    onChangeGenres: (type: BookGenre) => void;
 }
 
 export const BooksFilters = memo((props: BooksFiltersProps) => {
     const {
         className,
-        onChangeType,
+        onChangeGenres,
         onChangeSearch,
         search,
         onChangeSort,
         sort,
         onChangeOrder,
         order,
-        type,
+        genres,
     } = props;
     const { t } = useTranslation('books-page');
 
@@ -52,8 +52,8 @@ export const BooksFilters = memo((props: BooksFiltersProps) => {
                     addonLeft={<Icon Svg={SearchIcon} />}
                 />
                 <BookTypeTabs
-                    value={type}
-                    onChangeType={onChangeType}
+                    value={genres}
+                    onChangeGenres={onChangeGenres}
                     className={cls.tabs}
                 />
                 <BookSortSelector

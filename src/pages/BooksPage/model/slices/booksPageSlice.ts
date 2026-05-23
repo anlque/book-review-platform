@@ -6,7 +6,7 @@ import {
 import { StateSchema } from '@/app/providers/StoreProvider';
 import {
     Book,
-    BookType,
+    BookGenre,
     BookView,
     BookSortField,
 } from '@/entities/Book';
@@ -38,7 +38,7 @@ const booksPageSlice = createSlice({
         sort: BookSortField.TITLE,
         search: '',
         order: 'asc',
-        type: BookType.ALL,
+        genres: BookGenre.ALL,
     }),
     reducers: {
         setView: (state, action: PayloadAction<BookView>) => {
@@ -57,8 +57,8 @@ const booksPageSlice = createSlice({
         setSort: (state, action: PayloadAction<BookSortField>) => {
             state.sort = action.payload;
         },
-        setType: (state, action: PayloadAction<BookType>) => {
-            state.type = action.payload;
+        setType: (state, action: PayloadAction<BookGenre>) => {
+            state.genres = action.payload;
         },
         setSearch: (state, action: PayloadAction<string>) => {
             state.search = action.payload;
@@ -101,4 +101,3 @@ const booksPageSlice = createSlice({
 
 export const { reducer: booksPageReducer, actions: booksPageActions } =
     booksPageSlice;
-

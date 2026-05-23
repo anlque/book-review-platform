@@ -1,6 +1,8 @@
 import { Author } from '@/entities/Author';
 import { User } from '@/entities/User';
-import { BookBlockType, BookType } from '../consts/bookConsts';
+import { BookBlockType, BookGenre } from '../consts/bookConsts';
+
+// TODO: add slug
 
 export interface BookBlockBase {
     id: string;
@@ -28,7 +30,7 @@ export interface Book {
     author: Author;
     subtitle: string;
     img: string;
-    createdAt: string;
-    type: BookType[];
+    publishedYear: number;
+    genres: BookGenre[];
     blocks: BookBlock[];
 }

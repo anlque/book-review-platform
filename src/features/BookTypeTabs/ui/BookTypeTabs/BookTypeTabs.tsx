@@ -2,60 +2,60 @@ import { useTranslation } from 'react-i18next';
 import { memo, useCallback, useMemo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { TabItem, Tabs as TabsDeprecated } from '@/shared/ui/deprecated/Tabs';
-import { BookType } from '@/entities/Book';
+import { BookGenre } from '@/entities/Book';
 import { ToggleFeatures } from '@/shared/lib/features';
 import { Tabs } from '@/shared/ui/redesigned/Tabs';
 
 interface BookTypeTabsProps {
     className?: string;
-    value: BookType;
-    onChangeType: (type: BookType) => void;
+    value: BookGenre;
+    onChangeGenres: (type: BookGenre) => void;
 }
 
 export const BookTypeTabs = memo((props: BookTypeTabsProps) => {
-    const { className, value, onChangeType } = props;
+    const { className, value, onChangeGenres } = props;
     const { t } = useTranslation('books-page');
 
     const typeTabs = useMemo<TabItem[]>(
         () => [
             {
-                value: BookType.ALL,
+                value: BookGenre.ALL,
                 content: t('types.all'),
             },
             {
-                value: BookType.FANTASY,
+                value: BookGenre.FANTASY,
                 content: t('types.fantasy'),
             },
             {
-                value: BookType.SCIENCE_FICTION,
+                value: BookGenre.SCIENCE_FICTION,
                 content: t('types.science_fiction'),
             },
             {
-                value: BookType.ROMANCE,
+                value: BookGenre.ROMANCE,
                 content: t('types.romance'),
             },
             {
-                value: BookType.CYBERPUNK,
+                value: BookGenre.CYBERPUNK,
                 content: t('types.cyberpunk'),
             },
             {
-                value: BookType.DETECTIVE,
+                value: BookGenre.DETECTIVE,
                 content: t('types.detective'),
             },
             {
-                value: BookType.HORROR,
+                value: BookGenre.HORROR,
                 content: t('types.horror'),
             },
             {
-                value: BookType.MYSTERY,
+                value: BookGenre.MYSTERY,
                 content: t('types.mystery'),
             },
             {
-                value: BookType.THRILLER,
+                value: BookGenre.THRILLER,
                 content: t('types.thriller'),
             },
             {
-                value: BookType.NOVEL,
+                value: BookGenre.NOVEL,
                 content: t('types.novel'),
             },
         ],
@@ -64,9 +64,9 @@ export const BookTypeTabs = memo((props: BookTypeTabsProps) => {
 
     const onTabClick = useCallback(
         (tab: TabItem) => {
-            onChangeType(tab.value as BookType);
+            onChangeGenres(tab.value as BookGenre);
         },
-        [onChangeType],
+        [onChangeGenres],
     );
 
     return (

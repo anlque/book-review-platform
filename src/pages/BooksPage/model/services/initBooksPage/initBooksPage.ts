@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from '@/app/providers/StoreProvider';
-import { BookSortField, BookType } from '@/entities/Book';
+import { BookSortField, BookGenre } from '@/entities/Book';
 import { SortOrder } from '@/shared/types/sort';
 import { getBooksPageInited } from '../../selectors/booksPageSelectors';
 import { booksPageActions } from '../../slices/booksPageSlice';
@@ -18,7 +18,7 @@ export const initBooksPage = createAsyncThunk<
         const orderFromUrl = searchParams.get('order') as SortOrder;
         const sortFromUrl = searchParams.get('sort') as BookSortField;
         const searchFromUrl = searchParams.get('search');
-        const typeFromUrl = searchParams.get('type') as BookType;
+        const genreFromUrl = searchParams.get('type') as BookGenre;
 
         if (orderFromUrl) {
             dispatch(booksPageActions.setOrder(orderFromUrl));
@@ -29,12 +29,11 @@ export const initBooksPage = createAsyncThunk<
         if (searchFromUrl) {
             dispatch(booksPageActions.setSearch(searchFromUrl));
         }
-        if (typeFromUrl) {
-            dispatch(booksPageActions.setType(typeFromUrl));
+        if (genreFromUrl) {
+            dispatch(booksPageActions.setType(genreFromUrl));
         }
 
         dispatch(booksPageActions.initState());
         dispatch(fetchBooksList({}));
     }
 });
-

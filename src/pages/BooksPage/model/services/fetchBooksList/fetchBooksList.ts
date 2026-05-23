@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from '@/app/providers/StoreProvider';
-import { Book, BookType } from '@/entities/Book';
+import { Book, BookGenre } from '@/entities/Book';
 import { addQueryParams } from '@/shared/lib/url/addQueryParams/addQueryParams';
 import {
     getBooksPageLimit,
@@ -8,7 +8,7 @@ import {
     getBooksPageOrder,
     getBooksPageSearch,
     getBooksPageSort,
-    getBooksPageType,
+    getBooksPageGenres,
 } from '../../selectors/booksPageSelectors';
 
 interface FetchBooksListProps {
@@ -26,14 +26,14 @@ export const fetchBooksList = createAsyncThunk<
     const order = getBooksPageOrder(getState());
     const search = getBooksPageSearch(getState());
     const page = getBooksPageNum(getState());
-    const type = getBooksPageType(getState());
+    const genres = getBooksPageGenres(getState());
 
     try {
         addQueryParams({
             sort,
             order,
             search,
-            type,
+            genres,
         });
         const response = await extra.api.get<Book[]>('/books', {
             params: {
@@ -43,7 +43,8 @@ export const fetchBooksList = createAsyncThunk<
                 _sort: sort,
                 _order: order,
                 q: search,
-                type: type === BookType.ALL ? undefined : type,
+                // TODO: array genres
+                genres: genres === BookGenre.ALL ? undefined : genres,
             },
         });
 

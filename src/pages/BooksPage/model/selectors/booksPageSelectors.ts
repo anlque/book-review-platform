@@ -1,5 +1,5 @@
 import { StateSchema } from '@/app/providers/StoreProvider';
-import { BookSortField, BookType, BookView } from '@/entities/Book';
+import { BookSortField, BookGenre, BookView } from '@/entities/Book';
 import { buildSelector } from '@/shared/lib/store';
 
 export const getBooksPageIsLoading = (state: StateSchema) =>
@@ -18,10 +18,9 @@ export const getBooksPageSort = (state: StateSchema) =>
     state.booksPage?.sort ?? BookSortField.TITLE;
 export const getBooksPageSearch = (state: StateSchema) =>
     state.booksPage?.search ?? '';
-export const getBooksPageType = (state: StateSchema) =>
-    state.booksPage?.type ?? BookType.ALL;
+export const getBooksPageGenres = (state: StateSchema) =>
+    state.booksPage?.genres ?? BookGenre.ALL;
 
 export const [useBookItemById] = buildSelector(
     (state, id: string) => state.booksPage?.entities[id],
 );
-

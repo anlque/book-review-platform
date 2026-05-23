@@ -10,9 +10,9 @@ export const FiltersContainer = memo((props: FiltersContainerProps) => {
     const { className } = props;
     const {
         onChangeSort,
-        onChangeType,
+        onChangeGenres,
         sort,
-        type,
+        genres,
         onChangeSearch,
         search,
         onChangeOrder,
@@ -21,14 +21,14 @@ export const FiltersContainer = memo((props: FiltersContainerProps) => {
 
     return (
         <BooksFilters
-            type={type}
+            genres={genres}
             onChangeSearch={onChangeSearch}
             order={order}
             onChangeOrder={onChangeOrder}
             search={search}
             sort={sort}
             onChangeSort={onChangeSort}
-            onChangeType={onChangeType}
+            onChangeGenres={onChangeGenres}
             className={className}
         />
     );

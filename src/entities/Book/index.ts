@@ -10,7 +10,7 @@ export { BookList } from './ui/BookList/BookList';
 export { getBookDetailsData } from './model/selectors/bookDetails';
 export {
     BookView,
-    BookType,
+    BookGenre,
     BookSortField,
     BookBlockType,
 } from './model/consts/bookConsts';

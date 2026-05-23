@@ -3,10 +3,12 @@ import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text as TextDeprecated, TextSize } from '@/shared/ui/deprecated/Text';
 import { BookList } from '@/entities/Book';
-import { VStack } from '@/shared/ui/redesigned/Stack';
+import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { ToggleFeatures } from '@/shared/lib/features';
 import { Text } from '@/shared/ui/redesigned/Text';
 import { useBookRecommendationsList } from '../../api/bookRecommendationsApi';
+import RecommendationsIcon from '@/shared/assets/icons/recommendations.svg';
+import { Icon } from '@/shared/ui/redesigned/Icon';
 
 interface BookRecommendationsListProps {
     className?: string;
@@ -14,7 +16,7 @@ interface BookRecommendationsListProps {
 
 export const BookRecommendationsList = memo((props: BookRecommendationsListProps) => {
     const { className } = props;
-    const { t } = useTranslation();
+    const { t } = useTranslation('book-details');
 
     const { isLoading, data: books, error } = useBookRecommendationsList(3);
 
@@ -30,7 +32,12 @@ export const BookRecommendationsList = memo((props: BookRecommendationsListProps
         >
             <ToggleFeatures
                 feature="isAppRedesigned"
-                on={<Text size="l" title={t('recommend')} />}
+                on={
+                    <HStack gap="4">
+                        <Icon height={30} width={30} Svg={RecommendationsIcon} variant="currentColor" />
+                        <Text size="l" title={t('recommend')} />
+                    </HStack>
+                }
                 off={
                     <TextDeprecated size={TextSize.L} title={t('recommend')} />
                 }

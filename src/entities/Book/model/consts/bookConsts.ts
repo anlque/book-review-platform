@@ -8,7 +8,7 @@ export enum BookBlockType {
     TEXT = 'TEXT',
 }
 
-export enum BookType {
+export enum BookGenre {
     ALL = 'ALL',
     FANTASY = 'FANTASY',
     SCIENCE_FICTION = 'SCIENCE_FICTION',

@@ -4,10 +4,10 @@ import {
     getBooksPageOrder,
     getBooksPageSearch,
     getBooksPageSort,
-    getBooksPageType,
+    getBooksPageGenres,
     getBooksPageView,
 } from '../../model/selectors/booksPageSelectors';
-import { BookSortField, BookType, BookView } from '@/entities/Book';
+import { BookSortField, BookGenre, BookView } from '@/entities/Book';
 import { booksPageActions } from '../../model/slices/booksPageSlice';
 import { SortOrder } from '@/shared/types/sort';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -19,7 +19,7 @@ export function useBookFilters() {
     const sort = useSelector(getBooksPageSort);
     const order = useSelector(getBooksPageOrder);
     const search = useSelector(getBooksPageSearch);
-    const type = useSelector(getBooksPageType);
+    const genres = useSelector(getBooksPageGenres);
 
     const dispatch = useAppDispatch();
 
@@ -63,8 +63,8 @@ export function useBookFilters() {
         [dispatch, debouncedFetchData],
     );
 
-    const onChangeType = useCallback(
-        (value: BookType) => {
+    const onChangeGenres = useCallback(
+        (value: BookGenre) => {
             dispatch(booksPageActions.setType(value));
             dispatch(booksPageActions.setPage(1));
             fetchData();
@@ -77,12 +77,11 @@ export function useBookFilters() {
         sort,
         order,
         search,
-        type,
+        genres,
         onChangeView,
         onChangeSort,
         onChangeOrder,
         onChangeSearch,
-        onChangeType,
+        onChangeGenres,
     };
 }
-

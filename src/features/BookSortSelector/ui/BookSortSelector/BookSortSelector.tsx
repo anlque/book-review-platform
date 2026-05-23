@@ -37,6 +37,7 @@ export const BookSortSelector = memo((props: BookSortSelectorProps) => {
         [t],
     );
 
+    // TODO: sort by author name
     const sortFieldOptions = useMemo<SelectOption<BookSortField>[]>(
         () => [
             {

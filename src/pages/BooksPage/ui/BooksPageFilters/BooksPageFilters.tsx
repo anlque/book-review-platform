@@ -19,9 +19,9 @@ export const BooksPageFilters = memo((props: BooksPageFiltersProps) => {
     const { t } = useTranslation();
     const {
         onChangeSort,
-        onChangeType,
+        onChangeGenres,
         sort,
-        type,
+        genres,
         onChangeSearch,
         search,
         onChangeView,
@@ -49,8 +49,8 @@ export const BooksPageFilters = memo((props: BooksPageFiltersProps) => {
                 />
             </Card>
             <BookTypeTabs
-                value={type}
-                onChangeType={onChangeType}
+                value={genres}
+                onChangeGenres={onChangeGenres}
                 className={cls.tabs}
             />
         </div>

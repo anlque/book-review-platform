@@ -3,7 +3,7 @@ import {
     Book,
     BookView,
     BookSortField,
-    BookType,
+    BookGenre,
 } from '@/entities/Book';
 import { SortOrder } from '@/shared/types/sort';
 
@@ -20,7 +20,7 @@ export interface BooksPageSchema extends EntityState<Book, Book['id']> {
     order: SortOrder;
     sort: BookSortField;
     search: string;
-    type: BookType;
+    genres: BookGenre;
 
     _inited: boolean;
 }
