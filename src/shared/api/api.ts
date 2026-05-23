@@ -3,6 +3,7 @@ import { USER_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 
 export const $api = axios.create({
     baseURL: __API__,
+    paramsSerializer: { indexes: null },
 });
 
 $api.interceptors.request.use((config) => {
