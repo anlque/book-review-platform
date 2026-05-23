@@ -1,4 +1,5 @@
 describe('The user visits books page', () => {
+    // TODO:
     beforeEach(() => {
         cy.login().then((data) => {
             cy.visit('books');

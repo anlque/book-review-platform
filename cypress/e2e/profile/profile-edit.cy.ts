@@ -5,7 +5,7 @@ describe('The user visits profile page', () => {
         cy.visit('');
         cy.login().then((data) => {
             profileId = data.id;
-            cy.visit(`profile/${data.id}`);
+            cy.visit(`profiles/${data.id}`);
         });
     });
     afterEach(() => {

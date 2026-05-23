@@ -7,12 +7,17 @@ describe('Routing', () => {
             cy.get(selectByTestId('MainPage')).should('exist');
         });
         it('should open profile page', () => {
-            cy.visit('/profile/1');
+            cy.visit('/profiles/1');
             cy.get(selectByTestId('MainPage')).should('exist');
         });
         it('should manage non-existent route', () => {
             cy.visit('/fasfasfasf');
             cy.get(selectByTestId('NotFoundPage')).should('exist');
+        });
+
+        it('Should open books page', () => {
+            cy.visit('/books');
+            cy.get(selectByTestId('BooksPage')).should('exist');
         });
     });
     describe('The user is authorised', () => {
@@ -20,7 +25,7 @@ describe('Routing', () => {
             cy.login();
         });
         it('Should open profile page', () => {
-            cy.visit('/profile/1');
+            cy.visit('/profiles/1');
             cy.get(selectByTestId('ProfilePage')).should('exist');
         });
 
