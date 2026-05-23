@@ -142,7 +142,7 @@ it takes 2 args
 ## Entities
 
 - [Book](/src/entities/Book)
-- [Comment](/src/entities/Comment)
+- [Comment](/src/entities/BookReview)
 - [Counter](/src/entities/Counter)
 - [Country](/src/entities/Country)
 - [Currency](/src/entities/Currency)

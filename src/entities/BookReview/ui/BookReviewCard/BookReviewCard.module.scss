@@ -1,0 +1,50 @@
+.BookReviewCard {
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.username {
+    margin-left: 10px;
+}
+
+.loading {
+    border: none;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    margin: 8px 0;
+    background: color-mix(in srgb, var(--hint-redesigned) 15%, transparent);
+    border: none;
+}
+
+.reviewComment{
+    padding: var(--space-xs);
+    background: color-mix(in srgb, var(--hint-redesigned) 5%, transparent);
+    border: 1px solid color-mix(in srgb, var(--hint-redesigned) 15%, transparent);
+    border-radius: var(--border-radius-m);
+}
+
+.reviewCommentsContainer {
+    padding: 0 var(--space-s);
+    border-left: 2px solid color-mix(in srgb, var(--accent-redesigned) 50%, transparent);
+}
+
+.createdAt{
+    opacity: 50%;
+}
+
+.arrow {
+    color: var(--accent-redesigned);
+    transition: transform 200ms ease;
+}
+
+.arrowOpen{
+    transform: rotate(180deg);
+}
