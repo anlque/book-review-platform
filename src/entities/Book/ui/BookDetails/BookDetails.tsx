@@ -64,7 +64,7 @@ const Deprecated = () => {
                 </HStack>
                 <HStack gap="8" className={cls.bookInfo}>
                     <Icon className={cls.icon} Svg={CalendarIcon} />
-                    <TextDeprecated text={book?.createdAt} />
+                    <TextDeprecated text={`${book?.publishedYear}`} />
                 </HStack>
             </VStack>
             {book?.blocks.map(renderBookBlock)}
@@ -77,11 +77,6 @@ const Redesigned = () => {
 
     return (
         <>
-            <Text title={book?.title} size="l" bold />
-            <Text title={book?.subtitle} />
-            {book?.author ? (
-                <AuthorPanel author={book.author} className={cls.author} />
-            ) : null}
             <AppImage
                 fallback={
                     <SkeletonRedesigned
@@ -93,6 +88,11 @@ const Redesigned = () => {
                 src={book?.img}
                 className={cls.img}
             />
+            <Text title={book?.title} size="l" bold />
+            <Text title={book?.subtitle} />
+            {book?.author ? (
+                <AuthorPanel author={book.author} className={cls.author} />
+            ) : null}
             {book?.blocks.map(renderBookBlock)}
         </>
     );

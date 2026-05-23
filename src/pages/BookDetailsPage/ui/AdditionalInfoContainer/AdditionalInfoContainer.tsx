@@ -21,11 +21,11 @@ export const AdditionalInfoContainer = memo(() => {
     }
 
     return (
-        <Card padding="24" border="partial">
+        <Card padding="16" border="partial">
             <BookAdditionalInfo
                 onEdit={onEditBook}
                 submittedBy={book.user}
-                createdAt={book.createdAt}
+                publishedYear={book.publishedYear}
             />
         </Card>
     );

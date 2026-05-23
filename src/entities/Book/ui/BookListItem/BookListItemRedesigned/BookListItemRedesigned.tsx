@@ -4,8 +4,6 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './BookListItemRedesigned.module.scss';
 import { BookListItemProps } from '../BookListItem';
 import { Text } from '@/shared/ui/redesigned/Text';
-import { Icon } from '@/shared/ui/redesigned/Icon';
-import EyeIcon from '@/shared/assets/icons/eye.svg';
 import { Card } from '@/shared/ui/redesigned/Card';
 import { Avatar } from '@/shared/ui/redesigned/Avatar';
 import { AppImage } from '@/shared/ui/redesigned/AppImage';
@@ -51,7 +49,7 @@ export const BookListItemRedesigned = memo((props: BookListItemProps) => {
                 <VStack max gap="16">
                     <HStack gap="8" max>
                         <AuthorInline author={book.author} className={cls.writer} />
-                        <Text size="s" text={book.createdAt} />
+                        <Text size="s" text={book.publishedYear} />
                     </HStack>
                     <Text title={book.title} bold />
                     <Text title={book.subtitle} size="s" />
@@ -105,7 +103,7 @@ export const BookListItemRedesigned = memo((props: BookListItemProps) => {
                         <AuthorInline author={book.author} className={cls.writer} />
                         <Text
                             size="s"
-                            text={book.createdAt}
+                            text={book.publishedYear}
                             className={cls.date}
                         />
                     </VStack>

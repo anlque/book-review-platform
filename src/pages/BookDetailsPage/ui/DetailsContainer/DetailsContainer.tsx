@@ -1,6 +1,6 @@
 import { memo } from 'react';
-import { BookDetails } from '@/entities/Book';
 import { useParams } from 'react-router-dom';
+import { BookDetails } from '@/entities/Book';
 
 export const DetailsContainer = memo(() => {
     const { id } = useParams<{ id: string }>();
@@ -11,4 +11,3 @@ export const DetailsContainer = memo(() => {
 
     return <BookDetails id={id} />;
 });
-

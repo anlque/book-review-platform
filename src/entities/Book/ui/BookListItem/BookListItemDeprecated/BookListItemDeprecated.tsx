@@ -22,7 +22,7 @@ export const BookListItemDeprecated = memo((props: BookListItemProps) => {
     const { className, book, view, target } = props;
     const { t } = useTranslation();
 
-    const types = <Text text={book.type.join(', ')} className={cls.types} />;
+    const types = <Text text={book.genres.join(', ')} className={cls.types} />;
 
     if (view === BookView.BIG) {
         const textBlock = book.blocks.find(
@@ -44,7 +44,7 @@ export const BookListItemDeprecated = memo((props: BookListItemProps) => {
                             text={book.user.username}
                             className={cls.username}
                         />
-                        <Text text={book.createdAt} className={cls.date} />
+                        <Text text={`${book.publishedYear}`} className={cls.date} />
                     </div>
                     <Text title={book.title} className={cls.title} />
                     {types}
@@ -93,7 +93,7 @@ export const BookListItemDeprecated = memo((props: BookListItemProps) => {
                         src={book.img}
                         className={cls.img}
                     />
-                    <Text text={book.createdAt} className={cls.date} />
+                    <Text text={`${book.publishedYear}`} className={cls.date} />
                 </div>
                 <div className={cls.infoWrapper}>
                     {types}
