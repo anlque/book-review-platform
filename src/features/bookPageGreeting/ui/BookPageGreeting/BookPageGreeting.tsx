@@ -3,22 +3,22 @@ import { memo, useEffect, useState } from 'react';
 import { isMobile } from 'react-device-detect';
 import { Modal } from '@/shared/ui/redesigned/Modal';
 import { Text } from '@/shared/ui/deprecated/Text';
-import { saveJsonSettings, useJsonSettings } from '@/entities/User';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Drawer } from '@/shared/ui/redesigned/Drawer';
+import { useBooksPageVisitTracking } from '../../model/hooks/useBooksPageVisitTracking';
 
 export const BookPageGreeting = memo(() => {
     const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
-    const { isBooksPageWasOpened } = useJsonSettings();
-    const dispatch = useAppDispatch();
+    const { isBooksPageWasOpened, markBooksPageAsOpened } =
+        useBooksPageVisitTracking();
 
     useEffect(() => {
-        if (!isBooksPageWasOpened) {
-            setIsOpen(true);
-            dispatch(saveJsonSettings({ isBooksPageWasOpened: true }));
+        if (isBooksPageWasOpened) {
+            return;
         }
-    }, [dispatch, isBooksPageWasOpened]);
+        setIsOpen(true);
+        markBooksPageAsOpened();
+    }, [isBooksPageWasOpened, markBooksPageAsOpened]);
 
     const onClose = () => setIsOpen(false);
 
@@ -43,4 +43,3 @@ export const BookPageGreeting = memo(() => {
         </Modal>
     );
 });
-
