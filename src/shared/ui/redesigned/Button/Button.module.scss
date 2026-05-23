@@ -37,12 +37,12 @@
     background: var(--light-bg-redesigned);
     border: none;
     outline: none;
-    border-radius: 34px;
+    border-radius: var(--border-radius-xxl);
 }
 
 .outline {
     background: none;
-    border-radius: 34px;
+    border-radius: var(--border-radius-xxl);
 
     &:hover {
         border: 2px solid var(--accent-redesigned);
@@ -50,6 +50,10 @@
 
     &.normal {
         border: 2px solid var(--icon-redesigned);
+    }
+
+    &.accent {
+        border: 2px solid var(--accent-redesigned);
     }
 
     &.error {
@@ -63,6 +67,13 @@
 
 .square {
     padding: 0;
+    border-radius: var(--border-radius-s);
+    justify-content: center;
+}
+
+.square.s {
+    width: var(--font-line-s);
+    height: var(--font-line-s);
 }
 
 .square.m {
@@ -78,6 +89,10 @@
 .square.xl {
     width: var(--font-line-xl);
     height: var(--font-line-xl);
+}
+
+.s {
+    font: var(--font-s-redesigned);
 }
 
 .m {

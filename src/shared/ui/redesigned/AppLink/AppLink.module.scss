@@ -3,6 +3,7 @@
 
     &:hover {
         color: var(--accent-redesigned);
+        transition: color 250ms;
     }
 }
 

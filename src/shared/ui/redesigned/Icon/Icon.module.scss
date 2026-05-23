@@ -2,6 +2,18 @@
     color: var(--icon-redesigned);
 }
 
+.currentColor {
+  color: currentColor;
+}
+
+.error {
+        color: var(--red-dark);
+}
+
+.accent {
+        color: var(--accent-redesigned);
+}
+
 .button {
     margin: 0;
     padding: 0;

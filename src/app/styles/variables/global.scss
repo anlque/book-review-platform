@@ -3,6 +3,11 @@
     --font-family-text-redesigned: 'Nunito Sans', sans-serif;
     --font-family-header-redesigned: 'Roboto', sans-serif;
 
+    /* xs */
+    --font-size-xs: 10px;
+    --font-line-xs: 18px;
+    --font-xs: var(--font-size-xs) / var(--font-line-xs) var(--font-family-main);
+
     /* s */
     --font-size-s: 12px;
     --font-line-s: 20px;
@@ -39,6 +44,9 @@
 
     /* redesigned */
 
+    /* xs */
+    --font-xs-redesigned: var(--font-size-xs) / var(--font-line-xs) var(--font-family-text-redesigned);
+
     /* s */
     --font-s-redesigned: var(--font-size-s) / var(--font-line-s) var(--font-family-text-redesigned);
 
@@ -50,4 +58,40 @@
 
     /* xl */
     --font-xl-redesigned: var(--font-size-xl) / var(--font-line-xl) var(--font-family-header-redesigned);
+
+    /* border */
+
+    /* xs */
+    --border-radius-xs: 4px;
+    /* s */
+    --border-radius-s: 8px;
+    /* m */
+    --border-radius-m: 12px;
+    /* l */
+    --border-radius-l: 16px;
+    /* xl */
+    --border-radius-xl: 24px;
+    /* xxl */
+    --border-radius-xxl: 32px;
+    /* round */
+    --border-radius-round: 9999px;
+
+    /* Spacing */
+
+    /* xxs */
+    --space-xxs: 4px;
+    /* xs */
+    --space-xs: 8px;
+    /* s */
+    --space-s: 12px;
+    /* m */
+    --space-m: 16px;
+    /* l */
+    --space-l: 24px;
+    /* xl */
+    --space-xl: 32px;
+    /* xxl */
+    --space-xxl: 48px;
+    /* xxxl */
+    --space-xxxl: 64px;
 }

@@ -1,10 +1,11 @@
 .InputWrapper {
     display: flex;
     align-items: center;
-    border-radius: 48px;
-    padding: 8px 16px;
-    border: 2px solid var(--icon-redesigned);
+    border-radius: var(--border-radius-m);
+    padding: 8px 10px;
+    border: 1.5px solid color-mix(in srgb, var(--icon-redesigned) 30%, transparent);
     width: 100%;
+    transition: all 200ms;
 }
 
 .s {
@@ -24,18 +25,18 @@
 }
 
 .withAddonLeft {
-    padding-left: 8px;
+    padding-left: 4px;
 }
 
 .withAddonRight {
-    padding-right: 8px;
+    padding-right: 4px;
 }
 
 .focused {
-    border: 2px solid var(--accent-redesigned);
+    border: 1.5px solid color-mix(in srgb, var(--accent-redesigned) 60%, transparent);
 
     .addonLeft svg, .addonRight svg {
-        color: var(--accent-redesigned);
+        color: color-mix(in srgb, var(--accent-redesigned) 60%, transparent);
     }
 }
 
@@ -47,7 +48,8 @@
     background: none;
 
     &::placeholder {
-       color: var(--hint-redesigned);
+        color: color-mix(in srgb, var(--text-redesigned) 50%, transparent);
+        font: var(--font-s-redesigned);
     }
 }
 

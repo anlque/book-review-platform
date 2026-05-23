@@ -4,9 +4,12 @@ import cls from './Icon.module.scss';
 
 type SvgProps = Omit<SVGProps<SVGSVGElement>, 'onClick'>;
 
+export type IconVariant = 'primary' | 'error' | 'accent' | 'currentColor';
+
 interface IconBaseProps extends SvgProps {
     className?: string;
     btnClassName?: string;
+    variant?: IconVariant;
     Svg: FC<SVGProps<SVGSVGElement>>;
 }
 
@@ -27,13 +30,14 @@ export const Icon = memo((props: IconProps) => {
         Svg,
         width = 32,
         height = 32,
+        variant = 'primary',
         clickable,
         ...otherProps
     } = props;
 
     const icon = (
         <Svg
-            className={classNames(cls.Icon, {}, [className])}
+            className={classNames(cls.Icon, {}, [className, cls[variant]])}
             width={width}
             height={height}
             {...otherProps}
@@ -45,7 +49,7 @@ export const Icon = memo((props: IconProps) => {
         return (
             <button
                 type="button"
-                className={classNames(cls.button, {}, [btnClassName])}
+                className={classNames(cls.button, {}, [btnClassName, cls[variant]])}
                 onClick={props.onClick}
                 style={{ height, width }}
             >
