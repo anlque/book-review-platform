@@ -1,0 +1,28 @@
+.BookDetailsBreadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.link {
+    color: var(--hint-redesigned);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--accent-redesigned);
+    }
+}
+
+.separator {
+    transform: rotate(-90deg);
+    color: var(--hint-redesigned);
+    user-select: none;
+}
+
+.current {
+    color: var(--text-redesigned);
+    font-weight: 600;
+}

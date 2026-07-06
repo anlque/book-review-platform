@@ -1,13 +1,13 @@
 import {
     ButtonHTMLAttributes,
     ForwardedRef,
-    forwardRef,
+    forwardRef, memo,
     ReactNode,
 } from 'react';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
-export type ButtonVariant = 'clear' | 'outline' | 'filled';
+export type ButtonVariant = 'primary' | 'secondary' | 'clear' | 'outline' | 'filled';
 export type ButtonColor = 'normal' | 'accent' | 'success' | 'error';
 
 export type ButtonSize = 's' | 'm' | 'l' | 'xl';
@@ -27,6 +27,10 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
      */
     size?: ButtonSize;
     /**
+     * Whether button is clicked/chosen
+     */
+    active?: boolean;
+    /**
      * Whether button is enabled
      */
     disabled?: boolean;
@@ -45,13 +49,13 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     addonRight?: ReactNode;
 }
 
-export const Button = forwardRef(
+export const Button = memo(forwardRef(
     (props: ButtonProps, ref: ForwardedRef<HTMLButtonElement>) => {
         const {
             className,
             children,
             variant = 'outline',
-            square,
+            square, active,
             disabled,
             fullWidth,
             size = 'm',
@@ -63,11 +67,13 @@ export const Button = forwardRef(
 
         const mods: Mods = {
             [cls.square]: square,
+            [cls.active]: active,
             [cls.disabled]: disabled,
             [cls.fullWidth]: fullWidth,
             [cls.withAddon]: Boolean(addonLeft) || Boolean(addonRight),
         };
 
+        // TODO: role
         return (
             <button
                 type="button"
@@ -87,4 +93,6 @@ export const Button = forwardRef(
             </button>
         );
     },
-);
+));
+
+Button.displayName = 'Button';

@@ -3,7 +3,7 @@
 }
 
 .addonLeft svg, .addonRight svg {
-    color: var(--hint-redesigned);
+    color: currentColor;
 }
 
 .Button {
@@ -12,6 +12,7 @@
     padding: 6px 16px;
     display: flex;
     align-items: center;
+    transition: all 0.2s;
 
     &:hover {
         color: var(--accent-redesigned);
@@ -23,7 +24,7 @@
 }
 
 .withAddon {
-    padding: 0 16px;
+    gap: var(--space-xs);
 }
 
 .clear {
@@ -31,39 +32,77 @@
     border: none;
     background: none;
     outline: none;
+
+    &.accent {
+        color: var(--accent-redesigned);
+    }
+
+    &.error {
+        color: var(--cancel-redesigned);
+    }
+
+    &.success {
+        color: var(--save-redesigned);
+    }
+}
+
+.primary {
+    background: var(--accent-redesigned);
+    border: none;
+    outline: none;
+    border-radius: var(--border-radius-s);
+    color: var(--text-light-redesigned);
+}
+
+.secondary {
+    outline: none;
+    background: none;
+    border-radius: var(--border-radius-s);
+    border: 1px solid color-mix(in srgb, var(--accent-redesigned) 80%, transparent);
+    color: var(--accent-redesigned);
+    svg {
+        color: var(--accent-redesigned);
+    }
 }
 
 .filled {
     background: var(--light-bg-redesigned);
     border: none;
     outline: none;
-    border-radius: var(--border-radius-xxl);
+    border-radius: var(--border-radius-s);
 }
 
 .outline {
     background: none;
-    border-radius: var(--border-radius-xxl);
-
-    &:hover {
-        border: 2px solid var(--accent-redesigned);
-    }
+    border-radius: var(--border-radius-s);
 
     &.normal {
-        border: 2px solid var(--icon-redesigned);
+        border: 1px solid color-mix(in srgb, var(--text-redesigned) 15%, transparent);
     }
 
     &.accent {
-        border: 2px solid var(--accent-redesigned);
+        border: 1px solid var(--accent-redesigned);
     }
 
     &.error {
-        border: 2px solid var(--cancel-redesigned);
+        border: 1px solid var(--cancel-redesigned);
     }
 
     &.success {
         border: 2px solid var(--save-redesigned);
     }
+
+    &:hover {
+        border: 1px solid color-mix(in srgb, var(--accent-redesigned) 80%, transparent);
+    }
+
 }
+
+.active {
+    cursor: default;
+    background: color-mix(in srgb, var(--accent-redesigned) 5%, transparent);
+}
+
 
 .square {
     padding: 0;
@@ -72,23 +111,23 @@
 }
 
 .square.s {
-    width: var(--font-line-s);
-    height: var(--font-line-s);
+    width: var(--space-l);
+    height: var(--space-l);
 }
 
 .square.m {
-    width: var(--font-line-m);
-    height: var(--font-line-m);
+    width: var(--space-xl);
+    height: var(--space-xl);
 }
 
 .square.l {
-    width: var(--font-line-l);
-    height: var(--font-line-l);
+    width: var(--space-xxl);
+    height: var(--space-xxl);
 }
 
 .square.xl {
-    width: var(--font-line-xl);
-    height: var(--font-line-xl);
+    width: var(--space-xxxl);
+    height: var(--space-xxxl);
 }
 
 .s {

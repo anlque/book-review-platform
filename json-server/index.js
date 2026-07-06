@@ -54,7 +54,10 @@ function isGuestAllowedBooksFlowRequest(req) {
     if (path === '/books' || path.startsWith('/books/')) {
         return true;
     }
-    if (path === '/authors') {
+    if (/^\/books\/[^/]+\/review-stats$/.test(path)) {
+        return true;
+    }
+    if (path === '/authors' || path.startsWith('/authors/')) {
         return true;
     }
     if (path === '/book-reviews') {
@@ -65,6 +68,45 @@ function isGuestAllowedBooksFlowRequest(req) {
     }
     return false;
 }
+
+server.get('/books/:id/review-stats', (req, res) => {
+    try {
+        const db = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'db.json'), 'UTF-8'));
+        const bookId = req.params.id;
+        const reviews = (db['book-reviews'] || []).filter(
+            (review) => String(review.bookId) === String(bookId),
+        );
+        const ratingsCount = reviews.length;
+        const reviewsCount = reviews.filter(
+            (review) => review.text && String(review.text).trim().length > 0,
+        ).length;
+        const average = ratingsCount
+            ? reviews.reduce((sum, review) => sum + Number(review.rate || 0), 0) / ratingsCount
+            : 0;
+        const counts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+        reviews.forEach((review) => {
+            const rate = Number(review.rate);
+            if (counts[rate] !== undefined) {
+                counts[rate] += 1;
+            }
+        });
+        const distribution = {
+            5: ratingsCount ? Math.round((counts[5] / ratingsCount) * 100) : 0,
+            4: ratingsCount ? Math.round((counts[4] / ratingsCount) * 100) : 0,
+            3: ratingsCount ? Math.round((counts[3] / ratingsCount) * 100) : 0,
+            2: ratingsCount ? Math.round((counts[2] / ratingsCount) * 100) : 0,
+            1: ratingsCount ? Math.round((counts[1] / ratingsCount) * 100) : 0,
+        };
+        return res.json({
+            average: Math.round(average * 10) / 10,
+            ratingsCount,
+            reviewsCount,
+            distribution,
+        });
+    } catch (e) {
+        return res.status(500).json({ message: e.message });
+    }
+});
 
 // Check if the user is authorized
 // eslint-disable-next-line

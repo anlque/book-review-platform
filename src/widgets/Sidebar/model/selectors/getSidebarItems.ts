@@ -11,16 +11,17 @@ import AboutIcon from '@/shared/assets/icons/Info.svg';
 import ProfileIcon from '@/shared/assets/icons/avatar.svg';
 
 import { SidebarItemType } from '../types/sidebar';
-import {
-    getRouteAbout,
-    getRouteBooks,
-    getRouteMain,
-    getRouteProfile,
-} from '@/shared/const/router';
+import { getRouteAbout, getRouteBooks, getRouteMain, getRouteProfile } from '@/shared/const/router';
 import { toggleFeatures } from '@/shared/lib/features';
+import { useBookFilters } from '@/pages/BooksPage/lib/hooks/useBookFilters';
+import { BookGenre } from '@/entities/Book';
 
 export const useSidebarItems = () => {
     const userData = useSelector(getUserAuthData);
+    const {
+        onChangeGenres,
+
+    } = useBookFilters();
     const sidebarItemsList: SidebarItemType[] = [
         {
             path: getRouteMain(),
@@ -48,6 +49,7 @@ export const useSidebarItems = () => {
                 on: () => BookIcon,
             }),
             text: 'books_page',
+            handler: () => { onChangeGenres(BookGenre.ALL); },
         },
     ];
 

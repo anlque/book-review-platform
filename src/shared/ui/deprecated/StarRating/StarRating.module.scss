@@ -9,12 +9,14 @@
 }
 
 .StarRatingRedesigned {
+    display: flex;
+    gap: var(--space-xs);
     .normal {
         fill: none;
     }
 
     .hovered {
-        fill: var(--icon-redesigned);
+        fill: var(--accent-redesigned);
     }
 }
 

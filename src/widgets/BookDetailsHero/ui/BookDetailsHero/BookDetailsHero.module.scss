@@ -1,0 +1,68 @@
+@use '@/app/styles/media' as media;
+
+.BookDetailsHero {
+    width: 100%;
+}
+
+.sidebar {
+    position: sticky;
+    top: 24px;
+    align-self: start;
+    max-width: fit-content;
+}
+
+.cover {
+    aspect-ratio: 2 / 3;
+    margin-right: var(--space-s);
+    object-fit: cover;
+    border-radius: var(--border-radius-m);
+}
+
+.meta {
+    min-width: 0;
+}
+
+.title {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--text-redesigned);
+}
+
+.author {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.ratingValue {
+    font-size: 18px;
+}
+
+.ratingMeta {
+    color: var(--hint-redesigned);
+}
+
+.subtitle {
+    color: var(--hint-redesigned);
+}
+
+.tags {
+    flex-wrap: wrap;
+}
+
+.actions {
+    margin-top: 8px;
+}
+
+@include media.respond-down(lg) {
+    .cover {
+        margin: 0 auto;
+    }
+
+    .sidebar {
+        position: static;
+        width: 100%;
+    }
+}

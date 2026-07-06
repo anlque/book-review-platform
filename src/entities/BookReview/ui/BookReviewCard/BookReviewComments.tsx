@@ -7,7 +7,7 @@ import { Text } from '@/shared/ui/redesigned/Text';
 import { Icon } from '@/shared/ui/redesigned/Icon';
 import cls from '@/entities/BookReview/ui/BookReviewCard/BookReviewCard.module.scss';
 import MessageIcon from '@/shared/assets/icons/message.svg';
-import ArrowIcon from '@/shared/assets/icons/arrow-bottom.svg';
+import ArrowIcon from '@/shared/assets/icons/chevron-down.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ReviewComment } from '@/entities/BookReview';
 import { useFormatDate } from '@/shared/lib/date/useFormatDate';
@@ -23,7 +23,7 @@ const BookReviewComments = memo((props: BookReviewCommentsProps) => {
     const formatDate = useFormatDate();
     return (
         <>
-            <hr className={cls.divider} />
+            <hr className="divider" />
             <HStack max gap="8" justify="between">
                 <HStack gap="4">
                     <Icon Svg={MessageIcon} height={16} width={16} variant="accent" />
@@ -32,18 +32,24 @@ const BookReviewComments = memo((props: BookReviewCommentsProps) => {
                         variant="accent"
                     />
                 </HStack>
-                <Button variant="clear" onClick={() => setIsOpenReplies((prev) => !prev)}>
+                <Button
+                    variant="clear"
+                    color="accent"
+                    onClick={() => setIsOpenReplies((prev) => !prev)}
+                    addonRight={<Icon
+                        Svg={ArrowIcon}
+                        height={20}
+                        width={20}
+                        className={classNames(cls.arrow, {
+                            [cls.arrowOpen]: isOpenReplies,
+                        }, [])}
+                    />}
+                >
                     <Text
                         text={isOpenReplies ? t('hide_replies') : t('show_replies')}
                         variant="accent"
                     />
-                    <Icon
-                        Svg={ArrowIcon}
-                        variant="accent"
-                        className={classNames(cls.arrow, {
-                            [cls.arrowOpen]: isOpenReplies,
-                        }, [])}
-                    />
+
                 </Button>
             </HStack>
 

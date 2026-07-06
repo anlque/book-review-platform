@@ -18,6 +18,7 @@ function serializeParams(params: Record<string, unknown>) {
 
 export const rtkApi = createApi({
     reducerPath: 'api',
+    tagTypes: ['BookReviewStats', 'BookRating', 'UserBook', 'SavedBook'],
     baseQuery: fetchBaseQuery({
         baseUrl: __API__,
         paramsSerializer: serializeParams,

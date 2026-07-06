@@ -8,16 +8,20 @@ import {
 } from '../../api/bookRatingApi';
 import { getUserAuthData } from '@/entities/User';
 import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
+import { StarRating } from '@/shared/ui/deprecated/StarRating';
+import { VStack } from '@/shared/ui/redesigned/Stack';
+import { Text } from '@/shared/ui/redesigned/Text';
 
 export interface BookRatingProps {
     className?: string;
     bookId: string;
+    compact?: boolean;
 }
 
-// TODO: trim review comments
+// TODO: trim needed?
 
 const BookRating = memo((props: BookRatingProps) => {
-    const { className, bookId } = props;
+    const { className, bookId, compact } = props;
     const { t } = useTranslation('book-details');
     const userData = useSelector(getUserAuthData);
 
@@ -39,7 +43,7 @@ const BookRating = memo((props: BookRatingProps) => {
                 userId,
                 bookId,
                 rate: starsCount,
-                ...(text?.trim() && { text: text.trim() }),
+                ...(text !== undefined && { text }),
             }).unwrap();
         },
         [bookId, rateBookMutation, userId],
@@ -60,11 +64,30 @@ const BookRating = memo((props: BookRatingProps) => {
     );
 
     if (!userData) {
-        return;
+        return null;
     }
 
     if (isLoading) {
-        return <Skeleton width="100%" height={120} />;
+        return <Skeleton width="100%" height={compact ? 48 : 120} />;
+    }
+
+    if (compact) {
+        return (
+            <VStack gap="8" className={className} max>
+                <StarRating
+                    size={24}
+                    selectedStars={rating?.rate ?? 0}
+                    onSelect={(starsCount) => handleRateBook(starsCount)}
+                />
+                {!rating?.rate &&
+                <Text
+                    text={t('evaluate_book')}
+                    size="s"
+                    className={className}
+                    variant="accent"
+                />}
+            </VStack>
+        );
     }
 
     return (

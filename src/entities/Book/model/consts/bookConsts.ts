@@ -3,11 +3,6 @@ export enum BookSortField {
     AUTHOR = 'author',
 }
 
-export enum BookBlockType {
-    IMAGE = 'IMAGE',
-    TEXT = 'TEXT',
-}
-
 export enum BookGenre {
     ALL = 'ALL',
     FANTASY = 'FANTASY',

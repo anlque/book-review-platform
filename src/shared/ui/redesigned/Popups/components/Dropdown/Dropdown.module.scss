@@ -4,10 +4,12 @@
     z-index: 10000;
     flex-direction: column;
     display: flex;
+    margin: 3px;
+    outline: none;
 }
 
 .item {
-    padding: 10px 25px;
+    padding: 7px 25px;
     width: 100%;
     border: none;
     background: none;

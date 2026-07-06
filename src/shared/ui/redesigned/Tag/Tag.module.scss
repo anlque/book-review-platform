@@ -1,0 +1,11 @@
+.Tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-redesigned);
+    background: color-mix(in srgb, var(--hint-redesigned) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--hint-redesigned) 20%, transparent);
+}

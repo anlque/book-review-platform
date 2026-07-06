@@ -1,0 +1,24 @@
+.Badge {
+  font: var(--font-s-redesigned);
+  padding-inline: var(--space-xs);
+  border-radius: var(--border-radius-m);
+}
+
+.primary{
+  background: var(--accent-redesigned);
+  color: var(--text-light-redesigned);
+}
+
+.secondary{
+  border: 1px solid color-mix(in srgb, var(--accent-redesigned) 80%, transparent);
+  color: var(--accent-redesigned);
+}
+
+.outline{
+  border: 1px solid color-mix(in srgb, var(--text-redesigned) 15%, transparent);
+}
+
+.filled{
+  background: var(--light-bg-redesigned);
+  color: var(--accent-redesigned);
+}

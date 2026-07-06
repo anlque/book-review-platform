@@ -1,0 +1,38 @@
+.BookDetailsRatingDistribution {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius-l);
+    border: 1px solid color-mix(in srgb, var(--hint-redesigned) 15%, transparent);
+}
+
+.starLabel {
+    width: 48px;
+    flex-shrink: 0;
+    text-wrap: nowrap;
+    color: var(--hint-redesigned);
+}
+
+.barTrack {
+    flex: 1;
+    height: 8px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--hint-redesigned) 15%, transparent);
+    overflow: hidden;
+}
+
+.barFill {
+    height: 100%;
+    border-radius: 999px;
+    background: var(--accent-redesigned);
+}
+
+.percent {
+    width: 40px;
+    text-align: right;
+    flex-shrink: 0;
+    color: var(--hint-redesigned);
+}
+
+.total {
+    color: var(--hint-redesigned);
+}

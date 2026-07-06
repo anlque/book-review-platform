@@ -1,0 +1,20 @@
+.BookDetailsSidebar {
+    width: 100%;
+    border-radius: var(--border-radius-l);
+    border: 1px solid color-mix(in srgb, var(--hint-redesigned) 15%, transparent);
+}
+
+.linkButton {
+    justify-content: flex-start;
+    gap: var(--space-s);
+}
+
+.shareRecommend {
+    width: 100%;
+
+    button {
+        width: 100%;
+        justify-content: flex-start;
+        gap: var(--space-s);
+    }
+}

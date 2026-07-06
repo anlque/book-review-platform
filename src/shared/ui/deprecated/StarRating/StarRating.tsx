@@ -15,10 +15,6 @@ interface StarRatingProps {
 
 const stars = [1, 2, 3, 4, 5];
 
-/**
- * Deprecated, use new components from redesigned folder
- * @deprecated
- */
 export const StarRating = memo((props: StarRatingProps) => {
     const { className, size = 30, selectedStars = 0, onSelect } = props;
     const [currentStarsCount, setCurrentStarsCount] = useState(selectedStars);
@@ -80,7 +76,7 @@ export const StarRating = memo((props: StarRatingProps) => {
                 return (
                     <ToggleFeatures
                         feature="isAppRedesigned"
-                        on={<Icon clickable={!isSelected} {...commonProps} />}
+                        on={<Icon clickable={!isSelected} variant="accent" {...commonProps} />}
                         off={<IconDeprecated {...commonProps} />}
                     />
                 );

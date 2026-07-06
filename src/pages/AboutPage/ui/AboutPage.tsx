@@ -62,7 +62,7 @@ const AboutPage = memo(() => {
                                 </div>
                                 <Text title={t('offer_title')} size="m" bold />
                             </HStack>
-                            <hr className={cls.divider} />
+                            <hr className="divider" />
                             <VStack gap="16" max>
                                 {offerItems.map((line, index) => (
                                     <HStack

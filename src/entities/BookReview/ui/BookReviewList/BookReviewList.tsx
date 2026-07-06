@@ -7,6 +7,7 @@ import { VStack } from '@/shared/ui/redesigned/Stack';
 import { BookReviewCard } from '../BookReviewCard/BookReviewCard';
 import { BookReview } from '../../model/types/bookReview';
 import { ToggleFeatures } from '@/shared/lib/features';
+import cls from './BookReviewList.module.scss';
 
 interface CommentListProps {
     className?: string;
@@ -20,7 +21,7 @@ export const BookReviewList = memo((props: CommentListProps) => {
 
     if (isLoading) {
         return (
-            <VStack gap="8" max className={classNames('', {}, [className])}>
+            <VStack gap="16" max className={classNames(cls.BookReviewList, {}, [className])}>
                 <BookReviewCard isLoading />
                 <BookReviewCard isLoading />
                 <BookReviewCard isLoading />
@@ -29,7 +30,7 @@ export const BookReviewList = memo((props: CommentListProps) => {
     }
 
     return (
-        <VStack gap="8" max className={classNames('', {}, [className])}>
+        <VStack gap="16" max className={classNames(cls.BookReviewList, {}, [className])}>
             {bookReviews?.length ? (
                 bookReviews.map((bookReview) => (
                     <BookReviewCard

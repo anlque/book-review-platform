@@ -5,4 +5,5 @@ export interface SidebarItemType {
     text: string;
     Icon: FC<SVGProps<SVGSVGElement>>;
     authOnly?: boolean;
+    handler?: () => void;
 }

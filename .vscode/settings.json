@@ -8,12 +8,12 @@
     "activityBarBadge.foreground": "#e7e7e7",
     "commandCenter.border": "#e7e7e799",
     "sash.hoverBorder": "#cc3baa",
-    "statusBar.background": "#a82c8b",
+    "statusBar.background": "#08142b",
     "statusBar.foreground": "#e7e7e7",
     "statusBarItem.hoverBackground": "#cc3baa",
-    "statusBarItem.remoteBackground": "#a82c8b",
+    "statusBarItem.remoteBackground": "#08142b",
     "statusBarItem.remoteForeground": "#e7e7e7",
-    "titleBar.activeBackground": "#a82c8b",
+    "titleBar.activeBackground": "#101319",
     "titleBar.activeForeground": "#e7e7e7",
     "titleBar.inactiveBackground": "#a82c8b99",
     "titleBar.inactiveForeground": "#e7e7e799"
@@ -30,5 +30,5 @@
       "css",
       "scss"
     ],
-    "i18n-ally.keystyle": "flat",
+    "i18n-ally.keystyle": "flat"
 }

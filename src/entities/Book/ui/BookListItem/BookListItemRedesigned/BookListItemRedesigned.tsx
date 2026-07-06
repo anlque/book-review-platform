@@ -13,8 +13,7 @@ import { getRouteBookDetails } from '@/shared/const/router';
 import { Button } from '@/shared/ui/redesigned/Button';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { AuthorInline } from '@/entities/Author';
-import { BookBlockType, BookView } from '../../../model/consts/bookConsts';
-import { BookTextBlock } from '../../../model/types/book';
+import { BookView } from '../../../model/consts/bookConsts';
 
 export const BookListItemRedesigned = memo((props: BookListItemProps) => {
     const { className, book, view, target } = props;
@@ -32,9 +31,7 @@ export const BookListItemRedesigned = memo((props: BookListItemProps) => {
     );
 
     if (view === BookView.BIG) {
-        const textBlock = book.blocks.find(
-            (block) => block.type === BookBlockType.TEXT,
-        ) as BookTextBlock;
+        const firstBlock = book.blocks[0];
 
         return (
             <Card
@@ -59,10 +56,10 @@ export const BookListItemRedesigned = memo((props: BookListItemProps) => {
                         className={cls.img}
                         alt={book.title}
                     />
-                    {textBlock?.paragraphs && (
+                    {firstBlock?.paragraphs && (
                         <Text
                             className={cls.textBlock}
-                            text={textBlock.paragraphs.slice(0, 2).join(' ')}
+                            text={firstBlock.paragraphs.slice(0, 2).join(' ')}
                         />
                     )}
                     <HStack max justify="between">

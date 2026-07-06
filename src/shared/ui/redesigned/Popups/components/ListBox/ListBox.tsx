@@ -7,7 +7,7 @@ import { Button } from '../../../Button/Button';
 import cls from './ListBox.module.scss';
 import { mapDirectionClass } from '../../styles/consts';
 import popupCls from '../../styles/popup.module.scss';
-import ArrowIcon from '@/shared/assets/icons/arrow-bottom.svg';
+import ArrowIcon from '@/shared/assets/icons/chevron-down.svg';
 import { Icon } from '../../../Icon';
 
 export interface ListBoxItem<T extends string> {

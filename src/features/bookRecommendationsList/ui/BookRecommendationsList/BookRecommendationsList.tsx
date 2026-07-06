@@ -27,7 +27,7 @@ export const BookRecommendationsList = memo((props: BookRecommendationsListProps
     return (
         <VStack
             data-testid="BookRecommendationsList"
-            gap="8"
+            gap="16"
             className={classNames('', {}, [className])}
         >
             <ToggleFeatures

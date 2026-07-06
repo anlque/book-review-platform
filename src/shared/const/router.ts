@@ -7,6 +7,7 @@ export enum AppRoutes {
     BOOK_DETAILS = 'book_details',
     BOOK_CREATE = 'book_create',
     BOOK_EDIT = 'book_edit',
+    AUTHOR = 'author',
     ADMIN_PANEL = 'admin_panel',
     FORBIDDEN = 'forbidden',
     // last
@@ -21,6 +22,7 @@ export const getRouteBooks = () => '/books';
 export const getRouteBookDetails = (id: string) => `/books/${id}`;
 export const getRouteBookCreate = () => '/books/new';
 export const getRouteBookEdit = (id: string) => `/books/${id}/edit`;
+export const getRouteAuthor = (id: string) => `/authors/${id}`;
 export const getRouteAdmin = () => '/admin';
 export const getRouteForbidden = () => '/forbidden';
 
@@ -33,6 +35,7 @@ export const AppRouteByPathPattern: Record<string, AppRoutes> = {
     [getRouteBookDetails(':id')]: AppRoutes.BOOK_DETAILS,
     [getRouteBookCreate()]: AppRoutes.BOOK_CREATE,
     [getRouteBookEdit(':id')]: AppRoutes.BOOK_EDIT,
+    [getRouteAuthor(':id')]: AppRoutes.AUTHOR,
     [getRouteAdmin()]: AppRoutes.ADMIN_PANEL,
     [getRouteForbidden()]: AppRoutes.FORBIDDEN,
 };

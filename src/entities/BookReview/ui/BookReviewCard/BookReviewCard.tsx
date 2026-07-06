@@ -21,8 +21,7 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch
 import { addCommentForReview } from '@/features/addReviewComment';
 import { useFormatDate } from '@/shared/lib/date/useFormatDate';
 import { getUserAuthData } from '@/entities/User';
-import { Icon } from '@/shared/ui/redesigned/Icon';
-import MessageIcon from '@/shared/assets/icons/message.svg';
+import { StarRating } from '@/shared/ui/deprecated/StarRating';
 import BookReviewReplyForm from './BookReviewReplyForm';
 import BookReviewComments from './BookReviewComments';
 
@@ -98,37 +97,62 @@ export const BookReviewCard = memo((props: BookReviewCardProps) => {
         <ToggleFeatures
             feature="isAppRedesigned"
             on={
-                <Card padding="16" border="partial" fullWidth>
+                <Card padding="0" border="partial" fullWidth>
                     <VStack
                         data-testid="CommentCard.Content"
-                        gap="8"
+                        gap="16"
                         max
-                        className={classNames(cls.CommentCardRedesigned, {}, [
+                        className={classNames(cls.BookReviewCardRedesigned, {}, [
                             className,
                         ])}
                     >
-                        <HStack max justify="between">
+                        <HStack max justify="between" align="start" className={cls.headerRow}>
                             <AppLink to={getRouteProfile(bookReview.user.id)}>
-                                <HStack gap="8">
-                                    {bookReview.user.avatar ? (
+                                <HStack gap="8" align="start" className={cls.userMeta}>
+                                    {bookReview.user.avatar && (
                                         <Avatar
-                                            size={30}
+                                            size={40}
                                             src={bookReview.user.avatar}
                                         />
-                                    ) : null}
-                                    <Text text={bookReview.user.username} bold />
-                                    <Text
-                                        text={
-                                            `${formatDate(bookReview.createdAt)}
-                                                        `
-                                        }
-                                        size="s"
-                                        className={cls.createdAt}
-                                    />
+                                    )}
+                                    <VStack gap="4" align="start">
+                                        <Text text={bookReview.user.username} bold />
+                                        <Text
+                                            text={formatDate(bookReview.createdAt)}
+                                            size="s"
+                                            className={cls.createdAt}
+                                        />
+                                    </VStack>
                                 </HStack>
                             </AppLink>
                             <Button
                                 variant="clear"
+                            >
+                                <StarRating
+                                    className={cls.stars}
+                                    size={20}
+                                    selectedStars={bookReview.rate}
+                                />
+
+                            </Button>
+                        </HStack>
+
+                        <Text text={bookReview.text} className={cls.reviewText} />
+
+                        <HStack gap="16">
+                            <Button variant="clear" className={cls.helpful}>
+                                <Text
+                                    text={t('helpful')}
+                                    size="s"
+                                    variant="accent"
+                                />
+                            </Button>
+
+                            <hr className={cls.verticalDivider} />
+
+                            <Button
+                                variant="clear"
+                                className={cls.helpful}
                                 onClick={() => {
                                     if (isOpenReplyForm && commentText.length > 0) {
                                         setCommentText('');
@@ -136,14 +160,10 @@ export const BookReviewCard = memo((props: BookReviewCardProps) => {
                                     setIsOpenReplyForm((prev) => !prev);
                                 }}
                             >
-                                <HStack gap="4">
-                                    <Icon Svg={MessageIcon} height={16} width={16} variant="accent" />
-                                    <Text text={t('reply_review')} variant="accent" />
-                                </HStack>
+                                <Text size="s" text={t('reply_review')} variant="accent" />
                             </Button>
-                        </HStack>
 
-                        <Text text={bookReview.text} />
+                        </HStack>
 
                         {bookReview.comments && bookReview.comments.length > 0 &&
                             <BookReviewComments comments={bookReview.comments} />}

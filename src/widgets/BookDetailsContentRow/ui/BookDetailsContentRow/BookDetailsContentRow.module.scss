@@ -1,0 +1,17 @@
+@use '@/app/styles/media' as media;
+
+.BookDetailsContentRow {
+    display: flex;
+    gap: var(--space-s);
+    width: 100%;
+}
+
+.distribution{
+    min-width: 0;
+}
+
+@include media.respond-down(lg) {
+    .BookDetailsContentRow {
+        grid-template-columns: 1fr;
+    }
+}

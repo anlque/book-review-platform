@@ -11,6 +11,7 @@ import { UISchema } from '@/features/UI';
 import { rtkApi } from '@/shared/api/rtkApi';
 import { ProfileSchema } from '@/features/editableProfileCard';
 import { BookDetailsPageSchema } from '@/pages/BookDetailsPage';
+import { AuthorDetailsSchema } from '@/pages/AuthorPage/model/types/authorDetailsSchema';
 
 export interface StateSchema {
     user: UserSchema;
@@ -23,6 +24,7 @@ export interface StateSchema {
     bookDetails?: BookDetailsSchema;
     booksPage?: BooksPageSchema;
     bookDetailsPage?: BookDetailsPageSchema;
+    authorDetails?: AuthorDetailsSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

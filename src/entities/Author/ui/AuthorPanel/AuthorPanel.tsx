@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text } from '@/shared/ui/redesigned/Text';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
@@ -14,6 +15,11 @@ interface AuthorPanelProps {
 
 export const AuthorPanel = memo((props: AuthorPanelProps) => {
     const { className, author } = props;
+    const { t } = useTranslation(['book-details', 'books-page']);
+
+    const lifespan = [author.birthYear, author.deathYear]
+        .filter(Boolean)
+        .join(' – ');
 
     return (
         <HStack
@@ -30,8 +36,18 @@ export const AuthorPanel = memo((props: AuthorPanelProps) => {
                     <Skeleton width={72} height={72} border="50%" />
                 }
             />
-            <VStack gap="8" max align="start">
-                <Text title={author.name} bold />
+            <VStack gap="4" max align="start">
+                <Text title={t('about_author')} size="s" bold />
+
+                <HStack gap="4">
+                    <Text text={author.name} size="s" />
+                    <>
+                        (
+                        <Text text={lifespan} size="s" className={cls.lifespan} />
+                        )
+                    </>
+                </HStack>
+
                 {author.bio ? (
                     <Text text={author.bio} size="s" />
                 ) : null}

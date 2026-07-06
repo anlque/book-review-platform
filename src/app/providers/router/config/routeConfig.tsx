@@ -3,6 +3,7 @@ import { AboutPage } from '@/pages/AboutPage';
 import { ProfilePage } from '@/pages/ProfilePage';
 import { BooksPage } from '@/pages/BooksPage';
 import { BookDetailsPage } from '@/pages/BookDetailsPage';
+import { AuthorPage } from '@/pages/AuthorPage';
 import { BookEditPage } from '@/pages/BookEditPage';
 import { AdminPanelPage } from '@/pages/AdminPanelPage';
 import { UserRole } from '@/entities/User';
@@ -15,6 +16,7 @@ import {
     getRouteBookCreate,
     getRouteBookDetails,
     getRouteBookEdit,
+    getRouteAuthor,
     getRouteForbidden,
     getRouteBooks,
     getRouteMain,
@@ -49,6 +51,10 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     [AppRoutes.BOOK_DETAILS]: {
         path: getRouteBookDetails(':id'),
         element: <BookDetailsPage />,
+    },
+    [AppRoutes.AUTHOR]: {
+        path: getRouteAuthor(':id'),
+        element: <AuthorPage />,
     },
     [AppRoutes.BOOK_CREATE]: {
         path: getRouteBookCreate(),

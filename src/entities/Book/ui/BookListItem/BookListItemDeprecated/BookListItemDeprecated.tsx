@@ -3,10 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from '../BookListItem.module.scss';
 import { Text } from '@/shared/ui/deprecated/Text';
-import { BookTextBlock } from '../../../model/types/book';
 import {
     BookView,
-    BookBlockType,
 } from '../../../model/consts/bookConsts';
 import { Card } from '@/shared/ui/deprecated/Card';
 import { Avatar } from '@/shared/ui/deprecated/Avatar';
@@ -25,9 +23,7 @@ export const BookListItemDeprecated = memo((props: BookListItemProps) => {
     const types = <Text text={book.genres.join(', ')} className={cls.types} />;
 
     if (view === BookView.BIG) {
-        const textBlock = book.blocks.find(
-            (block) => block.type === BookBlockType.TEXT,
-        ) as BookTextBlock;
+        const firstBlock = book.blocks[0];
 
         return (
             <div
@@ -54,9 +50,9 @@ export const BookListItemDeprecated = memo((props: BookListItemProps) => {
                         className={cls.img}
                         alt={book.title}
                     />
-                    {textBlock && (
+                    {firstBlock && (
                         <BookTextBlockComponent
-                            block={textBlock}
+                            block={firstBlock}
                             className={cls.textBlock}
                         />
                     )}

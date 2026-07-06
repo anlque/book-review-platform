@@ -1,8 +1,7 @@
 .BookDetailsPage {
     min-height: 100%;
-}
-
-.layout {
-    min-height: 100%;
+    padding: var(--space-l);
+    border-radius: var(--border-radius-l);
+    background: var(--dark-bg-redesigned);
 }
 

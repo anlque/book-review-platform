@@ -3,12 +3,12 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text as TextDeprecated } from '@/shared/ui/deprecated/Text';
 import { Text } from '@/shared/ui/redesigned/Text';
 import cls from './BookTextBlockComponent.module.scss';
-import { BookTextBlock } from '../../model/types/book';
+import { BookBlock } from '../../model/types/book';
 import { ToggleFeatures } from '@/shared/lib/features';
 
 interface BookTextBlockComponentProps {
     className?: string;
-    block: BookTextBlock;
+    block: BookBlock;
 }
 
 export const BookTextBlockComponent = memo((props: BookTextBlockComponentProps) => {
@@ -50,4 +50,3 @@ export const BookTextBlockComponent = memo((props: BookTextBlockComponentProps) 
         </div>
     );
 });
-

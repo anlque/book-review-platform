@@ -1,0 +1,40 @@
+.BookDetailsDetailsCard {
+    width: 100%;
+    border-radius: var(--border-radius-l);
+    border: 1px solid color-mix(in srgb, var(--hint-redesigned) 15%, transparent);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px 16px;
+}
+
+.label {
+    color: var(--hint-redesigned);
+}
+
+.authorSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+    padding-top: var(--space-s);
+    border-top: 1px solid color-mix(in srgb, var(--hint-redesigned) 20%, transparent);
+}
+
+.lifespan {
+    color: var(--hint-redesigned);
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

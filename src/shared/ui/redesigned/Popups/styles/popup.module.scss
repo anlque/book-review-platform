@@ -3,7 +3,7 @@
 }
 
 .menu {
-    border-radius: 18px;
+    border-radius: var(--border-radius-m);
     border: 1px solid var(--accent-redesigned);
     overflow: hidden;
 }
@@ -17,10 +17,14 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+
+    &[data-active] {
+        border: var(--accent-redesigned);
+    }
 }
 
 .active {
-    background: var(--light-bg-redesigned);
+    border: var(--accent-redesigned);
 }
 
 .optionsBottomLeft {

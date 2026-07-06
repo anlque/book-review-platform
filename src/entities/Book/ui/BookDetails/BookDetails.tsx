@@ -12,7 +12,6 @@ import {
     TextAlign,
     TextSize,
 } from '@/shared/ui/deprecated/Text';
-import { Text } from '@/shared/ui/redesigned/Text';
 import { Skeleton as SkeletonDeprecated } from '@/shared/ui/deprecated/Skeleton';
 import { Skeleton as SkeletonRedesigned } from '@/shared/ui/redesigned/Skeleton';
 import { Avatar } from '@/shared/ui/deprecated/Avatar';
@@ -20,6 +19,7 @@ import EyeIcon from '@/shared/assets/icons/eye.svg';
 import CalendarIcon from '@/shared/assets/icons/calendar.svg';
 import { Icon } from '@/shared/ui/deprecated/Icon';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
+import { AuthorPanel } from '@/entities/Author';
 import { fetchBookById } from '../../model/services/fetchBookById/fetchBookById';
 import { bookDetailsReducer } from '../../model/slice/bookDetailsSlice';
 import cls from './BookDetails.module.scss';
@@ -29,9 +29,7 @@ import {
     getBookDetailsIsLoading,
 } from '../../model/selectors/bookDetails';
 import { renderBookBlock } from './renderBlock';
-import { toggleFeatures, ToggleFeatures } from '@/shared/lib/features';
-import { AppImage } from '@/shared/ui/redesigned/AppImage';
-import { AuthorPanel } from '@/entities/Author';
+import { getFeatureFlag, toggleFeatures, ToggleFeatures } from '@/shared/lib/features';
 
 interface BookDetailsProps {
     className?: string;
@@ -75,25 +73,20 @@ const Deprecated = () => {
 const Redesigned = () => {
     const book = useSelector(getBookDetailsData);
 
+    if (!book) {
+        return null;
+    }
+
+    // TODO:
+    const imageBlocks = [] as any;
+
+    if (!imageBlocks.length) {
+        return null;
+    }
+
     return (
         <>
-            <AppImage
-                fallback={
-                    <SkeletonRedesigned
-                        width="100%"
-                        height={420}
-                        border="16px"
-                    />
-                }
-                src={book?.img}
-                className={cls.img}
-            />
-            <Text title={book?.title} size="l" bold />
-            <Text title={book?.subtitle} />
-            {book?.author ? (
-                <AuthorPanel author={book.author} className={cls.author} />
-            ) : null}
-            {book?.blocks.map(renderBookBlock)}
+            {imageBlocks.map(renderBookBlock)}
         </>
     );
 };
@@ -136,7 +129,9 @@ export const BookDetails = memo((props: BookDetailsProps) => {
     let content;
 
     if (isLoading) {
-        content = <BookDetailsSkeleton />;
+        content = getFeatureFlag('isAppRedesigned')
+            ? null
+            : <BookDetailsSkeleton />;
     } else if (error) {
         content = (
             <TextDeprecated

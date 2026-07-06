@@ -25,20 +25,32 @@ const BookReviewReplyForm = memo((props: BookReviewReplyFormProps) => {
             size="l"
             variant="clear"
             color="normal"
+            data-testid="BookReviewReplyForm.Send"
             onClick={onReply}
         >
             <Icon Svg={SendIcon} height={20} width={20} />
         </Button>;
 
     return (
-        <HStack max gap="8" justify="between">
+        <HStack
+            max
+            gap="8"
+            justify="between"
+            data-testid="BookReviewReplyForm"
+        >
             {avatar ? (
                 <Avatar
                     size={35}
                     src={avatar}
                 />
             ) : null}
-            <Input value={text} placeholder={t('your_reply')} onChange={onSetComment} addonRight={sendBtn} />
+            <Input
+                data-testid="BookReviewReplyForm.Input"
+                value={text}
+                placeholder={t('your_reply')}
+                onChange={onSetComment}
+                addonRight={sendBtn}
+            />
             <Button
                 square
                 size="l"
