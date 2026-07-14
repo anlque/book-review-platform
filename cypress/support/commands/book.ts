@@ -1,6 +1,13 @@
 const defaultBook = {
     title: 'Dune',
     authorId: '1',
+    label: 'Classic',
+    pages: 688,
+    language: 'English',
+    publisher: 'Chilton Books',
+    country: 'United States',
+    isbn: '978-0441172719',
+    format: 'Print (Hardcover)',
     subtitle: 'A desert planet, political intrigue, and a destiny that reshapes an empire.',
     img:
         'https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd' +
@@ -10,6 +17,8 @@ const defaultBook = {
     genres: ['SCIENCE_FICTION'],
     blocks: [],
 };
+
+type CreatedBook = typeof defaultBook & { id: string };
 
 export const createBook = (book?: Partial<typeof defaultBook>) => {
     return cy
@@ -35,7 +44,7 @@ declare global {
         interface Chainable {
             createBook(
                 book?: Partial<typeof defaultBook>,
-            ): Chainable<Record<string, unknown>>;
+            ): Chainable<CreatedBook>;
             removeBook(bookId: string): Chainable<void>;
         }
     }

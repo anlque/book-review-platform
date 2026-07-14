@@ -20,7 +20,9 @@
       "publishedYear": 1965,
       "userId": "1",
       "genres": [
-        "SCIENCE_FICTION"
+        "SCIENCE_FICTION",
+        "FANTASY",
+        "NOVEL"
       ],
       "blocks": [
         {
@@ -31,15 +33,16 @@
             "House Atreides is ordered to take control of Arrakis, the only source of the universe’s most valuable substance: spice melange.",
             "Paul Atreides must survive betrayal and desert storms as ancient forces awaken around him."
           ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://picsum.photos/seed/book101/800/1200",
-          "title": "Cover"
         }
       ],
-      "authorId": "1"
+      "authorId": "1",
+      "label": "Classic",
+      "pages": 688,
+      "language": "English",
+      "publisher": "Chilton Books",
+      "country": "United States",
+      "isbn": "978-0441172719",
+      "format": "Print (Hardcover)"
     },
     {
       "id": "2",
@@ -49,7 +52,8 @@
       "publishedYear": 1937,
       "userId": "1",
       "genres": [
-        "FANTASY"
+        "FANTASY",
+        "NOVEL"
       ],
       "blocks": [
         {
@@ -60,15 +64,16 @@
             "Bilbo Baggins is swept into a quest with thirteen dwarves and the wizard Gandalf to reclaim a kingdom from the dragon Smaug.",
             "Tolkien’s tale blends humour, courage, and mythic landscapes that define modern fantasy."
           ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://picsum.photos/seed/book102/800/1200",
-          "title": "Cover"
         }
       ],
-      "authorId": "2"
+      "authorId": "2",
+      "label": "Classic",
+      "pages": 310,
+      "language": "English",
+      "publisher": "George Allen & Unwin",
+      "country": "United Kingdom",
+      "isbn": "978-0547928227",
+      "format": "Print (Paperback)"
     },
     {
       "id": "3",
@@ -78,7 +83,9 @@
       "publishedYear": 1984,
       "userId": "2",
       "genres": [
-        "CYBERPUNK"
+        "CYBERPUNK",
+        "THRILLER",
+        "NOVEL"
       ],
       "blocks": [
         {
@@ -89,15 +96,16 @@
             "Case, a washed-up console cowboy, is offered one last job that pulls him into a conspiracy woven by an enigmatic AI.",
             "Gibson’s prose defined the texture of high-tech, low-life futures for generations of readers."
           ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://picsum.photos/seed/book103/800/1200",
-          "title": "Cover"
         }
       ],
-      "authorId": "3"
+      "authorId": "3",
+      "label": "Cyberpunk",
+      "pages": 271,
+      "language": "English",
+      "publisher": "Ace Books",
+      "country": "United States",
+      "isbn": "978-0441569595",
+      "format": "Print (Paperback)"
     },
     {
       "id": "4",
@@ -107,7 +115,9 @@
       "publishedYear": 2012,
       "userId": "1",
       "genres": [
-        "THRILLER"
+        "THRILLER",
+        "DETECTIVE",
+        "NOVEL"
       ],
       "blocks": [
         {
@@ -118,15 +128,16 @@
             "On the morning of their fifth anniversary, Amy Dunne disappears—and suspicion falls on her husband Nick.",
             "Flynn alternates voices to expose manipulation, performance, and the cost of a perfect public image."
           ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://picsum.photos/seed/book104/800/1200",
-          "title": "Cover"
         }
       ],
-      "authorId": "4"
+      "authorId": "4",
+      "label": "Bestseller",
+      "pages": 432,
+      "language": "English",
+      "publisher": "Crown Publishing Group",
+      "country": "United States",
+      "isbn": "978-0307588371",
+      "format": "Print (Hardcover)"
     },
     {
       "id": "5",
@@ -136,7 +147,9 @@
       "publishedYear": 1902,
       "userId": "1",
       "genres": [
-        "DETECTIVE"
+        "DETECTIVE",
+        "FANTASY",
+        "NOVEL"
       ],
       "blocks": [
         {
@@ -147,15 +160,16 @@
             "Holmes and Watson untangle rumours of a supernatural hound haunting the Baskerville line.",
             "Atmospheric moors and tight deduction make this one of the most celebrated detective novels."
           ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://picsum.photos/seed/book105/800/1200",
-          "title": "Cover"
         }
       ],
-      "authorId": "5"
+      "authorId": "5",
+      "label": "Classic",
+      "pages": 256,
+      "language": "English",
+      "publisher": "George Newnes",
+      "country": "United Kingdom",
+      "isbn": "978-0140437867",
+      "format": "Print (Paperback)"
     },
     {
       "id": "6",
@@ -165,7 +179,8 @@
       "publishedYear": 1813,
       "userId": "2",
       "genres": [
-        "ROMANCE"
+        "ROMANCE",
+        "NOVEL"
       ],
       "blocks": [
         {
@@ -176,15 +191,16 @@
             "Elizabeth Bennet navigates society’s expectations while clashing—and eventually connecting—with the proud Mr Darcy.",
             "Austen’s dialogue and irony remain a gold standard for character-driven romance."
           ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://picsum.photos/seed/book106/800/1200",
-          "title": "Cover"
         }
       ],
-      "authorId": "6"
+      "authorId": "6",
+      "label": "Classic",
+      "pages": 279,
+      "language": "English",
+      "publisher": "T. Egerton, Whitehall",
+      "country": "United Kingdom",
+      "isbn": "978-0141439518",
+      "format": "Print (Paperback)"
     },
     {
       "id": "7",
@@ -194,7 +210,8 @@
       "publishedYear": 1986,
       "userId": "1",
       "genres": [
-        "HORROR"
+        "HORROR",
+        "THRILLER"
       ],
       "blocks": [
         {
@@ -205,15 +222,16 @@
             "The Losers Club confronts a shape-shifting predator that feeds on fear—often appearing as a clown.",
             "King interweaves past and present to explore memory, friendship, and what it costs to face the dark."
           ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://picsum.photos/seed/book107/800/1200",
-          "title": "Cover"
         }
       ],
-      "authorId": "7"
+      "authorId": "7",
+      "label": "Horror Classic",
+      "pages": 1138,
+      "language": "English",
+      "publisher": "Viking Press",
+      "country": "United States",
+      "isbn": "978-1501142970",
+      "format": "Print (Paperback)"
     },
     {
       "id": "8",
@@ -223,7 +241,8 @@
       "publishedYear": 1980,
       "userId": "2",
       "genres": [
-        "MYSTERY"
+        "MYSTERY",
+        "NOVEL"
       ],
       "blocks": [
         {
@@ -234,15 +253,16 @@
             "Brother William of Baskerville arrives to debate theology—and ends up investigating a series of bizarre deaths.",
             "Eco layers semiotics, history, and detective fiction into a labyrinthine library of ideas."
           ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://picsum.photos/seed/book108/800/1200",
-          "title": "Cover"
         }
       ],
-      "authorId": "8"
+      "authorId": "8",
+      "label": "Historical Mystery",
+      "pages": 512,
+      "language": "Italian",
+      "publisher": "Bompiani",
+      "country": "Italy",
+      "isbn": "978-0156001311",
+      "format": "Print (Paperback)"
     },
     {
       "id": "9",
@@ -252,7 +272,8 @@
       "publishedYear": 1977,
       "userId": "1",
       "genres": [
-        "HORROR"
+        "HORROR",
+        "THRILLER"
       ],
       "blocks": [
         {
@@ -263,15 +284,16 @@
             "Jack Torrance takes a winter caretaker job at the Overlook Hotel, bringing his wife Wendy and psychic son Danny.",
             "As the snow seals them in, the hotel’s history presses against Jack’s fragile sobriety."
           ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://picsum.photos/seed/book109/800/1200",
-          "title": "Cover"
         }
       ],
-      "authorId": "7"
+      "authorId": "7",
+      "label": "Horror Classic",
+      "pages": 447,
+      "language": "English",
+      "publisher": "Doubleday",
+      "country": "United States",
+      "isbn": "978-0307743657",
+      "format": "Print (Paperback)"
     },
     {
       "id": "10",
@@ -281,7 +303,8 @@
       "publishedYear": 2005,
       "userId": "2",
       "genres": [
-        "THRILLER"
+        "THRILLER",
+        "DETECTIVE"
       ],
       "blocks": [
         {
@@ -292,25 +315,27 @@
             "Mikael Blomkvist teams up with Lisbeth Salander to crack a cold case buried under corporate secrecy.",
             "Larsson’s Millennium series blends procedural detail with blistering social critique."
           ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://picsum.photos/seed/book110/800/1200",
-          "title": "Cover"
         }
       ],
-      "authorId": "9"
+      "authorId": "9",
+      "label": "Nordic Noir",
+      "pages": 465,
+      "language": "Swedish",
+      "publisher": "Norstedts Forlag",
+      "country": "Sweden",
+      "isbn": "978-0307454546",
+      "format": "Print (Paperback)"
     },
     {
       "id": "11",
       "title": "1984",
       "subtitle": "A dystopian novel of surveillance, propaganda, and the politics of truth.",
-      "img": "https://picsum.photos/seed/book11/800/1200",
+      "img": "https://darlingaxe.com/cdn/shop/articles/1984_Plot_Analysis_2651x.jpg?v=1751243751",
       "publishedYear": 1949,
       "userId": "1",
       "genres": [
-        "NOVEL"
+        "NOVEL",
+        "THRILLER"
       ],
       "blocks": [
         {
@@ -321,15 +346,16 @@
             "Winston Smith works rewriting history for the Party, until a forbidden love and doubt crack his obedience.",
             "Orwell’s terms—Big Brother, thoughtcrime, Newspeak—entered the global vocabulary."
           ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://picsum.photos/seed/book111/800/1200",
-          "title": "Cover"
         }
       ],
-      "authorId": "10"
+      "authorId": "10",
+      "label": "Classic",
+      "pages": 328,
+      "language": "English",
+      "publisher": "Secker & Warburg",
+      "country": "United Kingdom",
+      "isbn": "978-0451524935",
+      "format": "Print (Paperback)"
     },
     {
       "id": "12",
@@ -339,7 +365,8 @@
       "publishedYear": 2011,
       "userId": "2",
       "genres": [
-        "SCIENCE_FICTION"
+        "SCIENCE_FICTION",
+        "NOVEL"
       ],
       "blocks": [
         {
@@ -350,15 +377,16 @@
             "Mark Watney is left behind by his crew after a dust storm; he must farm potatoes and jury-rig communications.",
             "Weir’s debut celebrates problem-solving under impossible odds with humour and rigour."
           ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://picsum.photos/seed/book112/800/1200",
-          "title": "Cover"
         }
       ],
-      "authorId": "11"
+      "authorId": "11",
+      "label": "Science Fiction",
+      "pages": 369,
+      "language": "English",
+      "publisher": "Crown Publishing Group",
+      "country": "United States",
+      "isbn": "978-0553418026",
+      "format": "Print (Paperback)"
     },
     {
       "id": "13",
@@ -368,7 +396,8 @@
       "publishedYear": 1954,
       "userId": "1",
       "genres": [
-        "FANTASY"
+        "FANTASY",
+        "NOVEL"
       ],
       "blocks": [
         {
@@ -379,15 +408,16 @@
             "Frodo Baggins inherits a ring that darkens the world; a fellowship sets out to destroy it.",
             "From the Shire to Moria, Tolkien expands his legendarium with epic scope and intimate courage."
           ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://picsum.photos/seed/book113/800/1200",
-          "title": "Cover"
         }
       ],
-      "authorId": "2"
+      "authorId": "2",
+      "label": "Epic Fantasy",
+      "pages": 423,
+      "language": "English",
+      "publisher": "George Allen & Unwin",
+      "country": "United Kingdom",
+      "isbn": "978-0547928210",
+      "format": "Print (Paperback)"
     },
     {
       "id": "14",
@@ -397,7 +427,9 @@
       "publishedYear": 1897,
       "userId": "2",
       "genres": [
-        "HORROR"
+        "HORROR",
+        "THRILLER",
+        "NOVEL"
       ],
       "blocks": [
         {
@@ -408,15 +440,16 @@
             "Jonathan Harker’s Transylvanian journey introduces Count Dracula, whose hunger reaches England.",
             "Stoker’s collage narrative helped codify the modern vampire for literature and film."
           ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://statcdn.fandango.com/MPX/image/NBCU_Fandango/482/71/thumb_0AF3AE83-A9BB-41CD-A27B-BE5739261F32.jpg",
-          "title": "Film adaptation shot"
         }
       ],
-      "authorId": "12"
+      "authorId": "12",
+      "label": "Gothic Classic",
+      "pages": 418,
+      "language": "English",
+      "publisher": "Archibald Constable and Company",
+      "country": "United Kingdom",
+      "isbn": "978-0141439846",
+      "format": "Print (Paperback)"
     },
     {
       "id": "15",
@@ -426,7 +459,8 @@
       "publishedYear": 2003,
       "userId": "1",
       "genres": [
-        "MYSTERY"
+        "MYSTERY",
+        "DETECTIVE"
       ],
       "blocks": [
         {
@@ -437,15 +471,16 @@
             "Robert Langdon is pulled into a murder investigation at the Louvre that spirals into conspiracy and history.",
             "Brown’s pacing and puzzles made this one of the best-selling mysteries of its era."
           ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://picsum.photos/seed/book115/800/1200",
-          "title": "Cover"
         }
       ],
-      "authorId": "13"
+      "authorId": "13",
+      "label": "Bestseller",
+      "pages": 489,
+      "language": "English",
+      "publisher": "Doubleday",
+      "country": "United States",
+      "isbn": "978-0307474278",
+      "format": "Print (Paperback)"
     },
     {
       "id": "16",
@@ -455,7 +490,8 @@
       "publishedYear": 1939,
       "userId": "2",
       "genres": [
-        "DETECTIVE"
+        "DETECTIVE",
+        "THRILLER"
       ],
       "blocks": [
         {
@@ -466,15 +502,16 @@
             "Private detective Philip Marlowe is hired by General Sternwood—and walks into a maze of vice and violence.",
             "Chandler’s voice rewrote what crime prose could sound like on the page."
           ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://picsum.photos/seed/book116/800/1200",
-          "title": "Cover"
         }
       ],
-      "authorId": "14"
+      "authorId": "14",
+      "label": "Hardboiled Classic",
+      "pages": 231,
+      "language": "English",
+      "publisher": "Alfred A. Knopf",
+      "country": "United States",
+      "isbn": "978-0394758282",
+      "format": "Print (Paperback)"
     },
     {
       "id": "17",
@@ -484,7 +521,8 @@
       "publishedYear": 1968,
       "userId": "1",
       "genres": [
-        "SCIENCE_FICTION"
+        "SCIENCE_FICTION",
+        "NOVEL"
       ],
       "blocks": [
         {
@@ -495,15 +533,16 @@
             "Rick Deckard tracks escaped Nexus-6 androids while craving a real animal in a dying ecosystem.",
             "Dick’s themes of authenticity and compassion inspired generations of philosophical SF."
           ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://picsum.photos/seed/book117/800/1200",
-          "title": "Cover"
         }
       ],
-      "authorId": "15"
+      "authorId": "15",
+      "label": "Science Fiction",
+      "pages": 210,
+      "language": "English",
+      "publisher": "Doubleday",
+      "country": "United States",
+      "isbn": "978-0345404473",
+      "format": "Print (Paperback)"
     },
     {
       "id": "18",
@@ -513,7 +552,8 @@
       "publishedYear": 1925,
       "userId": "2",
       "genres": [
-        "NOVEL"
+        "NOVEL",
+        "ROMANCE"
       ],
       "blocks": [
         {
@@ -524,15 +564,16 @@
             "Nick Carraway becomes drawn into the orbit of Jay Gatsby, whose parties mask an obsessive love for Daisy Buchanan.",
             "Fitzgerald’s prose captures aspiration, illusion, and the ache beneath the glitter."
           ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://picsum.photos/seed/book118/800/1200",
-          "title": "Cover"
         }
       ],
-      "authorId": "16"
+      "authorId": "16",
+      "label": "Classic",
+      "pages": 180,
+      "language": "English",
+      "publisher": "Charles Scribner’s Sons",
+      "country": "United States",
+      "isbn": "978-0743273565",
+      "format": "Print (Paperback)"
     },
     {
       "id": "19",
@@ -542,7 +583,8 @@
       "publishedYear": 1969,
       "userId": "1",
       "genres": [
-        "SCIENCE_FICTION"
+        "SCIENCE_FICTION",
+        "THRILLER"
       ],
       "blocks": [
         {
@@ -553,15 +595,16 @@
             "After a small town dies almost overnight, scientists isolate an extraterrestrial microorganism code-named Andromeda.",
             "Crichton’s clinical detail and ticking-clock structure defined the modern outbreak thriller."
           ]
-        },
-        {
-          "id": "2",
-          "type": "IMAGE",
-          "src": "https://picsum.photos/seed/book119/800/1200",
-          "title": "Cover"
         }
       ],
-      "authorId": "17"
+      "authorId": "17",
+      "label": "Techno-thriller",
+      "pages": 295,
+      "language": "English",
+      "publisher": "Alfred A. Knopf",
+      "country": "United States",
+      "isbn": "978-0061703157",
+      "format": "Print (Paperback)"
     }
   ],
   "users": [
@@ -822,6 +865,22 @@
       "createdAt": "2026-05-21T16:04:42.974Z",
       "text": "idk",
       "id": "ykpWN7a"
+    },
+    {
+      "reviewId": "1",
+      "bookId": "1",
+      "userId": "1",
+      "createdAt": "2026-05-23T13:17:41.286Z",
+      "text": "knnln",
+      "id": "Uip2aMI"
+    },
+    {
+      "reviewId": "1",
+      "bookId": "1",
+      "userId": "1",
+      "createdAt": "2026-06-16T12:03:54.676Z",
+      "text": "idk",
+      "id": "cl2gmKW"
     }
   ],
   "profile-reviews": [
@@ -978,6 +1037,27 @@
       "portrait": "https://picsum.photos/seed/author-17/200/200",
       "birthYear": 1920,
       "deathYear": 1986
+    }
+  ],
+  "user-books": [
+    {
+      "userId": "1",
+      "bookId": "1",
+      "status": "WANT_TO_READ",
+      "id": 1
+    },
+    {
+      "userId": "1",
+      "bookId": "11",
+      "status": "WANT_TO_READ",
+      "id": 2
+    }
+  ],
+  "saved-books": [
+    {
+      "userId": "1",
+      "bookId": "11",
+      "id": 1
     }
   ],
   "book-submissions": [
