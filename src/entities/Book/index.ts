@@ -6,7 +6,10 @@ export type { Book } from './model/types/book';
 
 export type { BookDetailsSchema } from './model/types/bookDetailsSchema';
 
-export { BookList } from './ui/BookList/BookList';
+export {
+    BookGenre,
+    BookSortField, BookView,
+} from './model/consts/bookConsts';
 export {
     getBookDetailsData,
     getBookDetailsError,
@@ -14,8 +17,4 @@ export {
 } from './model/selectors/bookDetails';
 export { fetchBookById } from './model/services/fetchBookById/fetchBookById';
 export { bookDetailsReducer } from './model/slice/bookDetailsSlice';
-export {
-    BookView,
-    BookGenre,
-    BookSortField,
-} from './model/consts/bookConsts';
+export { BookList } from './ui/BookList/BookList';

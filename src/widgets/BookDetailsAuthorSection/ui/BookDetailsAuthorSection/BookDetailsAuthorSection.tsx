@@ -1,15 +1,15 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import { AuthorPanel } from '@/entities/Author';
 import {
     getBookDetailsData,
     getBookDetailsIsLoading,
 } from '@/entities/Book';
-import { AuthorPanel } from '@/entities/Author';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { Card } from '@/shared/ui/redesigned/Card';
 import { VStack } from '@/shared/ui/redesigned/Stack';
 import { Text } from '@/shared/ui/redesigned/Text';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './BookDetailsAuthorSection.module.scss';
 
 interface BookDetailsAuthorSectionProps {

@@ -1,14 +1,13 @@
-import { useTranslation } from 'react-i18next';
 import { HTMLAttributeAnchorTarget, memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text, TextSize } from '@/shared/ui/deprecated/Text';
-import { BookListItemSkeleton } from '../BookListItem/BookListItemSkeleton';
-import { BookListItem } from '../BookListItem/BookListItem';
-import cls from './BookList.module.scss';
-import { ToggleFeatures } from '@/shared/lib/features';
 import { HStack } from '@/shared/ui/redesigned/Stack';
-import { Book } from '../../model/types/book';
 import { BookView } from '../../model/consts/bookConsts';
+import { Book } from '../../model/types/book';
+import { BookListItem } from '../BookListItem/BookListItem';
+import { BookListItemSkeleton } from '../BookListItem/BookListItemSkeleton';
+import cls from './BookList.module.scss';
 
 interface BookListProps {
     className?: string;
@@ -59,47 +58,22 @@ export const BookList = memo((props: BookListProps) => {
     }
 
     return (
-        <ToggleFeatures
-            feature="isAppRedesigned"
-            on={
-                <HStack
-                    wrap="wrap"
-                    gap="16"
-                    className={classNames(cls.BookListRedesigned, {}, [])}
-                    data-testid="BookList"
-                >
-                    {books.map((item) => (
-                        <BookListItem
-                            book={item}
-                            view={view}
-                            target={target}
-                            key={item.id}
-                            className={cls.card}
-                        />
-                    ))}
-                    {isLoading && getSkeletons(view)}
-                </HStack>
-            }
-            off={
-                <div
-                    className={classNames(cls.BookList, {}, [
-                        className,
-                        cls[view],
-                    ])}
-                    data-testid="BookList"
-                >
-                    {books.map((item) => (
-                        <BookListItem
-                            book={item}
-                            view={view}
-                            target={target}
-                            key={item.id}
-                            className={cls.card}
-                        />
-                    ))}
-                    {isLoading && getSkeletons(view)}
-                </div>
-            }
-        />
+        <HStack
+            wrap="wrap"
+            gap="16"
+            className={classNames(cls.BookListRedesigned, {}, [])}
+            data-testid="BookList"
+        >
+            {books.map((item) => (
+                <BookListItem
+                    book={item}
+                    view={view}
+                    target={target}
+                    key={item.id}
+                    className={cls.card}
+                />
+            ))}
+            {isLoading && getSkeletons(view)}
+        </HStack>
     );
 });

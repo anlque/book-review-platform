@@ -1,8 +1,10 @@
 import {
-    bindActionCreators, createSlice, SliceCaseReducers, CreateSliceOptions,
+    bindActionCreators, createSlice,
+    CreateSliceOptions,
+    SliceCaseReducers,
 } from '@reduxjs/toolkit';
-import { useDispatch } from 'react-redux';
 import { useMemo } from 'react';
+import { useDispatch } from 'react-redux';
 
 export function buildSlice<
     State,

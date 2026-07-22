@@ -1,13 +1,13 @@
-import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Card } from '@/shared/ui/deprecated/Card';
 import { Input } from '@/shared/ui/deprecated/Input';
 import cls from './BooksPageFilters.module.scss';
 
 import { BookSortSelector } from '@/features/BookSortSelector';
-import { BookViewSelector } from '@/features/BookViewSelector';
 import { BookTypeTabs } from '@/features/BookTypeTabs';
+import { BookViewSelector } from '@/features/BookViewSelector';
 import { useBookFilters } from '../../lib/hooks/useBookFilters';
 
 interface BooksPageFiltersProps {

@@ -1,5 +1,5 @@
 import { StateSchema } from '@/app/providers/StoreProvider';
-import { BookSortField, BookGenre, BookView } from '@/entities/Book';
+import { BookGenre, BookSortField, BookView } from '@/entities/Book';
 import { buildSelector } from '@/shared/lib/store';
 
 export const getBooksPageIsLoading = (state: StateSchema) =>

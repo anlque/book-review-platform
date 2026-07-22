@@ -4,11 +4,11 @@ import {
     PayloadAction,
 } from '@reduxjs/toolkit';
 
-import { BookReview } from '@/entities/BookReview';
 import { StateSchema } from '@/app/providers/StoreProvider';
+import { BookReview } from '@/entities/BookReview';
+import { addCommentForReview } from '@/features/addReviewComment';
 import { fetchReviewsByBookId } from '../services/fetchReviewsByBookId/fetchReviewsByBookId';
 import { BookDetailsReviewsSchema } from '../types/BookDetailsReviewsSchema';
-import { addCommentForReview } from '@/features/addReviewComment';
 
 const bookReviewsAdapter = createEntityAdapter({
     selectId: (bookReview: BookReview) => bookReview.id,

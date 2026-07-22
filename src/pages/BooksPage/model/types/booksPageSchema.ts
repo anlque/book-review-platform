@@ -1,9 +1,9 @@
 import { EntityState } from '@reduxjs/toolkit';
 import {
     Book,
-    BookView,
-    BookSortField,
     BookGenre,
+    BookSortField,
+    BookView,
 } from '@/entities/Book';
 import { SortOrder } from '@/shared/types/sort';
 

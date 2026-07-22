@@ -1,9 +1,8 @@
-import { useTranslation } from 'react-i18next';
 import { memo, useCallback, useMemo } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import { TabItem, Tabs as TabsDeprecated } from '@/shared/ui/deprecated/Tabs';
+import { useTranslation } from 'react-i18next';
 import { BookGenre } from '@/entities/Book';
-import { ToggleFeatures } from '@/shared/lib/features';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { TabItem } from '@/shared/ui/deprecated/Tabs';
 import { Tabs } from '@/shared/ui/redesigned/Tabs';
 
 interface BookTypeTabsProps {
@@ -70,25 +69,12 @@ export const BookTypeTabs = memo((props: BookTypeTabsProps) => {
     );
 
     return (
-        <ToggleFeatures
-            feature="isAppRedesigned"
-            on={
-                <Tabs
-                    direction="column"
-                    tabs={typeTabs}
-                    value={value}
-                    onTabClick={onTabClick}
-                    className={classNames('', {}, [className])}
-                />
-            }
-            off={
-                <TabsDeprecated
-                    tabs={typeTabs}
-                    value={value}
-                    onTabClick={onTabClick}
-                    className={classNames('', {}, [className])}
-                />
-            }
+        <Tabs
+            direction="column"
+            tabs={typeTabs}
+            value={value}
+            onTabClick={onTabClick}
+            className={classNames('', {}, [className])}
         />
     );
 });

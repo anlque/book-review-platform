@@ -2,9 +2,9 @@ import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { getUserAuthData } from '@/entities/User';
+import StarIcon from '@/shared/assets/icons/star.svg';
 import { Button } from '@/shared/ui/redesigned/Button';
 import { Icon } from '@/shared/ui/redesigned/Icon';
-import StarIcon from '@/shared/assets/icons/star.svg';
 import {
     useGetSavedBook,
     useSaveBook,

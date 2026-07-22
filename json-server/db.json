@@ -616,9 +616,6 @@
         "ADMIN"
       ],
       "avatar": "https://i.ytimg.com/vi/Q6Nsvrnnug8/maxresdefault.jpg",
-      "features": {
-        "isAppRedesigned": true
-      },
       "jsonSettings": {
         "theme": "app_candy_theme",
         "isBooksPageWasOpened": true

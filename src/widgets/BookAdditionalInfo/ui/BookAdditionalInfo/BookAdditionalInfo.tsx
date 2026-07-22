@@ -1,15 +1,15 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useMediaQuery } from 'react-responsive';
 import { useSelector } from 'react-redux';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import cls from './BookAdditionalInfo.module.scss';
+import { useMediaQuery } from 'react-responsive';
 import { getUserAuthData, User } from '@/entities/User';
-import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
-import { Avatar } from '@/shared/ui/redesigned/Avatar';
-import { Text } from '@/shared/ui/redesigned/Text';
-import { Button } from '@/shared/ui/redesigned/Button';
 import { smallerThanLg } from '@/shared/const/mediaQuery';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Avatar } from '@/shared/ui/redesigned/Avatar';
+import { Button } from '@/shared/ui/redesigned/Button';
+import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
+import { Text } from '@/shared/ui/redesigned/Text';
+import cls from './BookAdditionalInfo.module.scss';
 
 interface BookAdditionalInfoProps {
     className?: string;

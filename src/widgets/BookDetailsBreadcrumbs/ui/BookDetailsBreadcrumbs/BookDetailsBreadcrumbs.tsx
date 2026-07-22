@@ -6,15 +6,15 @@ import {
     getBookDetailsData,
     getBookDetailsIsLoading,
 } from '@/entities/Book';
+import { useBookFilters } from '@/pages/BooksPage/lib/hooks/useBookFilters';
+import ChevronIcon from '@/shared/assets/icons/chevron-down.svg';
 import {
     getRouteBooks,
 } from '@/shared/const/router';
-import { AppLink } from '@/shared/ui/redesigned/AppLink';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import cls from './BookDetailsBreadcrumbs.module.scss';
+import { AppLink } from '@/shared/ui/redesigned/AppLink';
 import { Icon } from '@/shared/ui/redesigned/Icon';
-import ChevronIcon from '@/shared/assets/icons/chevron-down.svg';
-import { useBookFilters } from '@/pages/BooksPage/lib/hooks/useBookFilters';
+import cls from './BookDetailsBreadcrumbs.module.scss';
 
 interface BookDetailsBreadcrumbsProps {
     className?: string;

@@ -1,8 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { getUserAuthData } from '@/entities/User';
 import { ThunkConfig } from '@/app/providers/StoreProvider';
 import { getBookDetailsData } from '@/entities/Book';
 import { ReviewComment } from '@/entities/BookReview';
+import { getUserAuthData } from '@/entities/User';
 
 interface AddCommentForReviewArg {
     reviewId: string;

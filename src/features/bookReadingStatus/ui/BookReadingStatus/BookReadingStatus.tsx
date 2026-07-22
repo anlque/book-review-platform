@@ -2,18 +2,18 @@ import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { getUserAuthData } from '@/entities/User';
+import CurrentlyReadingIcon from '@/shared/assets/icons/book.svg';
+import WantToReadIcon from '@/shared/assets/icons/bookmark.svg';
+import ReadIcon from '@/shared/assets/icons/tick-circle.svg';
 import { Button } from '@/shared/ui/redesigned/Button';
+import { Icon } from '@/shared/ui/redesigned/Icon';
 import { VStack } from '@/shared/ui/redesigned/Stack';
 import { Text } from '@/shared/ui/redesigned/Text';
-import { ReadingStatus } from '../../model/types/readingStatus';
 import {
     useGetReadingStatus,
     useSetReadingStatus,
 } from '../../api/bookReadingStatusApi';
-import { Icon } from '@/shared/ui/redesigned/Icon';
-import CurrentlyReadingIcon from '@/shared/assets/icons/book.svg';
-import WantToReadIcon from '@/shared/assets/icons/bookmark.svg';
-import ReadIcon from '@/shared/assets/icons/tick-circle.svg';
+import { ReadingStatus } from '../../model/types/readingStatus';
 
 interface BookReadingStatusProps {
     className?: string;

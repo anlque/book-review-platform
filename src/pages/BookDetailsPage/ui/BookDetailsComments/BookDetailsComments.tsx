@@ -1,25 +1,23 @@
-import { useTranslation } from 'react-i18next';
 import { memo, useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text as TextDeprecated, TextSize } from '@/shared/ui/deprecated/Text';
-import { Text } from '@/shared/ui/redesigned/Text';
 import { BookReviewList } from '@/entities/BookReview';
-import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { ToggleFeatures } from '@/shared/lib/features';
-import { Card } from '@/shared/ui/redesigned/Card';
-import { Button } from '@/shared/ui/redesigned/Button';
-import { Icon } from '@/shared/ui/redesigned/Icon';
 import { getUserAuthData } from '@/entities/User';
 import { AddBookReviewModal } from '@/features/addBookReview';
 import { useGetBookReviewStats } from '@/features/bookDetailsStats';
 import IconPencil from '@/shared/assets/icons/pencil.svg';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { Button } from '@/shared/ui/redesigned/Button';
+import { Card } from '@/shared/ui/redesigned/Card';
+import { Icon } from '@/shared/ui/redesigned/Icon';
+import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
+import { Text } from '@/shared/ui/redesigned/Text';
 
+import { getBookReviewsIsLoading } from '../../model/selectors/reviews';
 import { fetchReviewsByBookId } from '../../model/services/fetchReviewsByBookId/fetchReviewsByBookId';
 import { getBookReviews } from '../../model/slices/bookDetailsReviewsSlice';
-import { getBookReviewsIsLoading } from '../../model/selectors/reviews';
 import cls from './BookDetailsComments.module.scss';
 
 const PREVIEW_COUNT = 3;
@@ -96,40 +94,29 @@ export const BookDetailsComments = memo((props: BookDetailsCommentsProps) => {
 
     return (
         <>
-            <ToggleFeatures
-                feature="isAppRedesigned"
-                on={
-                    <Card
-                        className={classNames(cls.section, {}, [className])}
-                        padding="0"
-                        border="partial"
-                        max
-                        data-testid="BookDetailsReviews"
-                    >
-                        <VStack gap="16" max className={cls.list}>
-                            {reviewsHeader}
-                            {reviewsList}
-                            {reviews.length > PREVIEW_COUNT && (
-                                <Button
-                                    variant="clear"
-                                    color="accent"
-                                    onClick={() => setShowAll((prev) => !prev)}
-                                >
-                                    {showAll
-                                        ? t('show_less_reviews')
-                                        : t('show_all_reviews')}
-                                </Button>
-                            )}
-                        </VStack>
-                    </Card>
-                }
-                off={
-                    <VStack gap="8" max className={className}>
-                        <TextDeprecated size={TextSize.L} title={t('reviews')} />
-                        {reviewsList}
-                    </VStack>
-                }
-            />
+            <Card
+                className={classNames(cls.section, {}, [className])}
+                padding="0"
+                border="partial"
+                max
+                data-testid="BookDetailsReviews"
+            >
+                <VStack gap="16" max className={cls.list}>
+                    {reviewsHeader}
+                    {reviewsList}
+                    {reviews.length > PREVIEW_COUNT && (
+                        <Button
+                            variant="clear"
+                            color="accent"
+                            onClick={() => setShowAll((prev) => !prev)}
+                        >
+                            {showAll
+                                ? t('show_less_reviews')
+                                : t('show_all_reviews')}
+                        </Button>
+                    )}
+                </VStack>
+            </Card>
             {id && (
                 <AddBookReviewModal
                     bookId={id}

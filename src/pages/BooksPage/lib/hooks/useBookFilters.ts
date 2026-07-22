@@ -1,18 +1,18 @@
-import { useSelector } from 'react-redux';
 import { useCallback } from 'react';
+import { useSelector } from 'react-redux';
+import { BookGenre, BookSortField, BookView } from '@/entities/Book';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
+import { SortOrder } from '@/shared/types/sort';
 import {
+    getBooksPageGenres,
     getBooksPageOrder,
     getBooksPageSearch,
     getBooksPageSort,
-    getBooksPageGenres,
     getBooksPageView,
 } from '../../model/selectors/booksPageSelectors';
-import { BookSortField, BookGenre, BookView } from '@/entities/Book';
-import { booksPageActions } from '../../model/slices/booksPageSlice';
-import { SortOrder } from '@/shared/types/sort';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { fetchBooksList } from '../../model/services/fetchBooksList/fetchBooksList';
-import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
+import { booksPageActions } from '../../model/slices/booksPageSlice';
 
 export function useBookFilters() {
     const view = useSelector(getBooksPageView);

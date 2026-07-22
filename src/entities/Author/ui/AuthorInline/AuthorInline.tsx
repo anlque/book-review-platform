@@ -1,7 +1,7 @@
 import { memo } from 'react';
+import { getRouteAuthor } from '@/shared/const/router';
 import { AppLink } from '@/shared/ui/redesigned/AppLink';
 import { Text } from '@/shared/ui/redesigned/Text';
-import { getRouteAuthor } from '@/shared/const/router';
 import { Author } from '../../model/types/author';
 import cls from './AuthorInline.module.scss';
 

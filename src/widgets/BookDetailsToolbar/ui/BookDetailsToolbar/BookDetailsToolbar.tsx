@@ -1,9 +1,8 @@
 import { memo } from 'react';
-import { BookDetailsBreadcrumbs } from '@/widgets/BookDetailsBreadcrumbs';
 import { BookShareButton } from '@/features/bookShare';
-import { BookSaveButton } from '@/features/bookSave';
-import { HStack } from '@/shared/ui/redesigned/Stack';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { HStack } from '@/shared/ui/redesigned/Stack';
+import { BookDetailsBreadcrumbs } from '@/widgets/BookDetailsBreadcrumbs';
 import cls from './BookDetailsToolbar.module.scss';
 
 interface BookDetailsToolbarProps {

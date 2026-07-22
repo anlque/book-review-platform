@@ -6,4 +6,3 @@ export interface BookDetailsRecommendationsSchema
     isLoading?: boolean;
     error?: string;
 }
-

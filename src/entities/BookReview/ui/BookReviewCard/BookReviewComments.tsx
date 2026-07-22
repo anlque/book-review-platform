@@ -1,16 +1,16 @@
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Avatar } from '@/shared/ui/redesigned/Avatar';
-import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
-import { Button } from '@/shared/ui/redesigned/Button';
-import { Text } from '@/shared/ui/redesigned/Text';
-import { Icon } from '@/shared/ui/redesigned/Icon';
-import cls from '@/entities/BookReview/ui/BookReviewCard/BookReviewCard.module.scss';
-import MessageIcon from '@/shared/assets/icons/message.svg';
-import ArrowIcon from '@/shared/assets/icons/chevron-down.svg';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { ReviewComment } from '@/entities/BookReview';
+import cls from '@/entities/BookReview/ui/BookReviewCard/BookReviewCard.module.scss';
+import ArrowIcon from '@/shared/assets/icons/chevron-down.svg';
+import MessageIcon from '@/shared/assets/icons/message.svg';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { useFormatDate } from '@/shared/lib/date/useFormatDate';
+import { Avatar } from '@/shared/ui/redesigned/Avatar';
+import { Button } from '@/shared/ui/redesigned/Button';
+import { Icon } from '@/shared/ui/redesigned/Icon';
+import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
+import { Text } from '@/shared/ui/redesigned/Text';
 
 interface BookReviewCommentsProps {
     comments: ReviewComment[]

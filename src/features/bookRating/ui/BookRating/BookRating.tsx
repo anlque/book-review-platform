@@ -1,16 +1,16 @@
-import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { RatingCard } from '@/entities/Rating';
-import {
-    useGetBookRating,
-    useRateBook,
-} from '../../api/bookRatingApi';
 import { getUserAuthData } from '@/entities/User';
 import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
 import { StarRating } from '@/shared/ui/deprecated/StarRating';
 import { VStack } from '@/shared/ui/redesigned/Stack';
 import { Text } from '@/shared/ui/redesigned/Text';
+import {
+    useGetBookRating,
+    useRateBook,
+} from '../../api/bookRatingApi';
 
 export interface BookRatingProps {
     className?: string;

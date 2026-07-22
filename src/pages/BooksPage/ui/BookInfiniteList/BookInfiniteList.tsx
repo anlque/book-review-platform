@@ -1,14 +1,14 @@
-import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { BookList } from '@/entities/Book';
 import { Text } from '@/shared/ui/deprecated/Text';
-import { getBooks } from '../../model/slices/booksPageSlice';
+import { BookList } from '@/entities/Book';
 import {
     getBooksPageError,
     getBooksPageIsLoading,
     getBooksPageView,
 } from '../../model/selectors/booksPageSelectors';
+import { getBooks } from '../../model/slices/booksPageSlice';
 
 interface BookInfiniteListProps {
     className?: string;

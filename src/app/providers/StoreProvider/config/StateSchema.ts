@@ -3,15 +3,15 @@ import {
     EnhancedStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit';
 import { AxiosInstance } from 'axios';
-import { LoginSchema } from '@/features/AuthByUsername';
-import { UserSchema } from '@/entities/User';
 import { BookDetailsSchema } from '@/entities/Book';
-import { BooksPageSchema } from '@/pages/BooksPage';
-import { UISchema } from '@/features/UI';
-import { rtkApi } from '@/shared/api/rtkApi';
+import { UserSchema } from '@/entities/User';
+import { LoginSchema } from '@/features/AuthByUsername';
 import { ProfileSchema } from '@/features/editableProfileCard';
-import { BookDetailsPageSchema } from '@/pages/BookDetailsPage';
+import { UISchema } from '@/features/UI';
 import { AuthorDetailsSchema } from '@/pages/AuthorPage/model/types/authorDetailsSchema';
+import { BookDetailsPageSchema } from '@/pages/BookDetailsPage';
+import { BooksPageSchema } from '@/pages/BooksPage';
+import { rtkApi } from '@/shared/api/rtkApi';
 
 export interface StateSchema {
     user: UserSchema;

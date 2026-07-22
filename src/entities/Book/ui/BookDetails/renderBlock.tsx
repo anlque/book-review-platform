@@ -1,6 +1,6 @@
 import { BookBlock } from '../../model/types/book';
-import cls from './BookDetails.module.scss';
 import { BookTextBlockComponent } from '../BookTextBlockComponent/BookTextBlockComponent';
+import cls from './BookDetails.module.scss';
 
 export const renderBookBlock = (block: BookBlock) => {
     // TODO: redundant?

@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from '@/app/providers/StoreProvider';
-import { BookSortField, BookGenre } from '@/entities/Book';
+import { BookGenre, BookSortField } from '@/entities/Book';
 import { SortOrder } from '@/shared/types/sort';
 import { getBooksPageInited } from '../../selectors/booksPageSelectors';
 import { booksPageActions } from '../../slices/booksPageSlice';

@@ -1,19 +1,17 @@
 import { memo, Suspense, useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { getUserAuthData, getUserInited, initAuthData } from '@/entities/User';
-import { AppRouter } from './providers/router';
+import { syncBooksPageVisitFromGuestStorage } from '@/features/bookPageGreeting';
+import { AppLoaderLayout } from '@/shared/layouts/AppLoaderLayout';
+import { MainLayout } from '@/shared/layouts/MainLayout';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 import { Navbar } from '@/widgets/Navbar';
 import { Sidebar } from '@/widgets/Sidebar';
-import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { ToggleFeatures } from '@/shared/lib/features';
-import { MainLayout } from '@/shared/layouts/MainLayout';
-import { AppLoaderLayout } from '@/shared/layouts/AppLoaderLayout';
-import { PageLoader } from '@/widgets/PageLoader';
 import { useAppToolbar } from './lib/useAppToolbar';
+import { AppRouter } from './providers/router';
 import { withTheme } from './providers/ThemeProvider/ui/withTheme';
-import { syncBooksPageVisitFromGuestStorage } from '@/features/bookPageGreeting';
 
 // TODO: make books route available for everyone
 // TODO: create authors route
@@ -49,52 +47,30 @@ const App = memo(() => {
 
     if (!inited) {
         return (
-            <ToggleFeatures
-                feature="isAppRedesigned"
-                on={
-                    <div
-                        id="app"
-                        className={classNames('app_redesigned', {}, [theme])}
-                    >
-                        <AppLoaderLayout />
-                        {' '}
-                    </div>
-                }
-                off={<PageLoader />}
-            />
+            <div
+                id="app"
+                className={classNames('app_redesigned', {}, [theme])}
+            >
+                <AppLoaderLayout />
+                {' '}
+            </div>
         );
     }
 
     return (
-        <ToggleFeatures
-            feature="isAppRedesigned"
-            off={
-                <div id="app" className={classNames('app', {}, [theme])}>
-                    <Suspense fallback="">
-                        <Navbar />
-                        <div className="content-page">
-                            <Sidebar />
-                            <AppRouter />
-                        </div>
-                    </Suspense>
-                </div>
-            }
-            on={
-                <div
-                    id="app"
-                    className={classNames('app_redesigned', {}, [theme])}
-                >
-                    <Suspense fallback="">
-                        <MainLayout
-                            header={<Navbar />}
-                            content={<AppRouter />}
-                            sidebar={<Sidebar />}
-                            toolbar={toolbar}
-                        />
-                    </Suspense>
-                </div>
-            }
-        />
+        <div
+            id="app"
+            className={classNames('app_redesigned', {}, [theme])}
+        >
+            <Suspense fallback="">
+                <MainLayout
+                    header={<Navbar />}
+                    content={<AppRouter />}
+                    sidebar={<Sidebar />}
+                    toolbar={toolbar}
+                />
+            </Suspense>
+        </div>
     );
 });
 

@@ -1,11 +1,11 @@
-import { useTranslation } from 'react-i18next';
 import { memo, useEffect, useState } from 'react';
 import { isMobile } from 'react-device-detect';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { Modal } from '@/shared/ui/redesigned/Modal';
+import { getUserInited } from '@/entities/User';
 import { Text } from '@/shared/ui/deprecated/Text';
 import { Drawer } from '@/shared/ui/redesigned/Drawer';
-import { getUserInited } from '@/entities/User';
+import { Modal } from '@/shared/ui/redesigned/Modal';
 import { useBooksPageVisitTracking } from '../../model/hooks/useBooksPageVisitTracking';
 
 export const BookPageGreeting = memo(() => {

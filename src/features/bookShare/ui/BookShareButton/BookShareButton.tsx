@@ -2,9 +2,9 @@ import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { getBookDetailsData } from '@/entities/Book';
+import ShareIcon from '@/shared/assets/icons/share.svg';
 import { Button } from '@/shared/ui/redesigned/Button';
 import { Icon } from '@/shared/ui/redesigned/Icon';
-import ShareIcon from '@/shared/assets/icons/share.svg';
 
 interface BookShareButtonProps {
     className?: string;

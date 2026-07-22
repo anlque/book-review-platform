@@ -1,19 +1,19 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { CountrySelect } from '@/entities/Country';
+import { CurrencySelect } from '@/entities/Currency';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
-import cls from './ProfileCardDeprecated.module.scss';
-import { ProfileCardProps } from '../ProfileCard/ProfileCard';
-import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { Avatar as AvatarDeprecated } from '@/shared/ui/deprecated/Avatar';
 import { Input as InputDeprecated } from '@/shared/ui/deprecated/Input';
-import { CurrencySelect } from '@/entities/Currency';
-import { CountrySelect } from '@/entities/Country';
 import { Loader } from '@/shared/ui/deprecated/Loader';
 import {
-    Text as TextDeprecated,
     TextAlign,
+    Text as TextDeprecated,
     TextTheme,
 } from '@/shared/ui/deprecated/Text';
+import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
+import { ProfileCardProps } from '../ProfileCard/ProfileCard';
+import cls from './ProfileCardDeprecated.module.scss';
 
 export const ProfileCardDeprecatedError = () => {
     const { t } = useTranslation();

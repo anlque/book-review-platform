@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { AuthorDetailsSchema } from '../types/authorDetailsSchema';
 import { fetchAuthorDetails } from '../services/fetchAuthorDetails/fetchAuthorDetails';
+import { AuthorDetailsSchema } from '../types/authorDetailsSchema';
 
 const initialState: AuthorDetailsSchema = {
     isLoading: false,

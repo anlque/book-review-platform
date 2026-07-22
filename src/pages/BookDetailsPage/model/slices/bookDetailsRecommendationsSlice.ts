@@ -46,4 +46,3 @@ const bookDetailsRecommendationsSlice = createSlice({
 
 export const { reducer: bookDetailsRecommendationsReducer } =
     bookDetailsRecommendationsSlice;
-

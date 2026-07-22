@@ -1,7 +1,7 @@
 import { memo } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { BookDetailsAbout } from '@/widgets/BookDetailsAbout';
 import { BookDetailsRatingDistribution } from '@/widgets/BookDetailsRatingDistribution';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './BookDetailsContentRow.module.scss';
 
 interface BookDetailsContentRowProps {

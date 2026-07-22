@@ -3,12 +3,12 @@ import { ThunkConfig } from '@/app/providers/StoreProvider';
 import { Book, BookGenre } from '@/entities/Book';
 import { addQueryParams } from '@/shared/lib/url/addQueryParams/addQueryParams';
 import {
+    getBooksPageGenres,
     getBooksPageLimit,
     getBooksPageNum,
     getBooksPageOrder,
     getBooksPageSearch,
     getBooksPageSort,
-    getBooksPageGenres,
 } from '../../selectors/booksPageSelectors';
 
 interface FetchBooksListProps {

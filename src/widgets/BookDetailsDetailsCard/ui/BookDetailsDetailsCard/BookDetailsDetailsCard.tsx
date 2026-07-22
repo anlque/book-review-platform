@@ -1,19 +1,19 @@
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import { AuthorPanel } from '@/entities/Author';
 import {
     BookGenre,
     getBookDetailsData,
     getBookDetailsIsLoading,
 } from '@/entities/Book';
-import { AuthorPanel } from '@/entities/Author';
 import { getRouteAuthor } from '@/shared/const/router';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppLink } from '@/shared/ui/redesigned/AppLink';
 import { Button } from '@/shared/ui/redesigned/Button';
 import { Card } from '@/shared/ui/redesigned/Card';
 import { VStack } from '@/shared/ui/redesigned/Stack';
 import { Text } from '@/shared/ui/redesigned/Text';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './BookDetailsDetailsCard.module.scss';
 
 interface BookDetailsDetailsCardProps {

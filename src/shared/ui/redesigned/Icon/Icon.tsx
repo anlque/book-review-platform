@@ -1,4 +1,4 @@
-import { memo, type SVGProps, type FC } from 'react';
+import { memo, type FC, type SVGProps } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Icon.module.scss';
 

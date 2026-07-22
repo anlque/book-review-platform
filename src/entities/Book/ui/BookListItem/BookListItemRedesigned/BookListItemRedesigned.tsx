@@ -1,19 +1,19 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import cls from './BookListItemRedesigned.module.scss';
-import { BookListItemProps } from '../BookListItem';
-import { Text } from '@/shared/ui/redesigned/Text';
-import { Card } from '@/shared/ui/redesigned/Card';
-import { Avatar } from '@/shared/ui/redesigned/Avatar';
-import { AppImage } from '@/shared/ui/redesigned/AppImage';
-import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
-import { AppLink } from '@/shared/ui/redesigned/AppLink';
-import { getRouteBookDetails } from '@/shared/const/router';
-import { Button } from '@/shared/ui/redesigned/Button';
-import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { AuthorInline } from '@/entities/Author';
+import { getRouteBookDetails } from '@/shared/const/router';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { AppImage } from '@/shared/ui/redesigned/AppImage';
+import { AppLink } from '@/shared/ui/redesigned/AppLink';
+import { Avatar } from '@/shared/ui/redesigned/Avatar';
+import { Button } from '@/shared/ui/redesigned/Button';
+import { Card } from '@/shared/ui/redesigned/Card';
+import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
+import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { BookView } from '../../../model/consts/bookConsts';
+import { BookListItemProps } from '../BookListItem';
+import cls from './BookListItemRedesigned.module.scss';
 
 export const BookListItemRedesigned = memo((props: BookListItemProps) => {
     const { className, book, view, target } = props;

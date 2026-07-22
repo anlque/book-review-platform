@@ -1,11 +1,11 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useGetBookReviewStats } from '@/features/bookDetailsStats';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { Card } from '@/shared/ui/redesigned/Card';
+import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { Text } from '@/shared/ui/redesigned/Text';
-import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './BookDetailsRatingDistribution.module.scss';
 
 interface BookDetailsRatingDistributionProps {

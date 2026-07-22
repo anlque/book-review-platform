@@ -1,20 +1,20 @@
 import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import { getBookDetailsData } from '@/entities/Book';
 import { getUserAuthData } from '@/entities/User';
+import { AddBookReviewModal } from '@/features/addBookReview';
 import { BookRating } from '@/features/bookRating';
 import { BookReadingStatus, ReadingStatus, useSetReadingStatus } from '@/features/bookReadingStatus';
-import { AddBookReviewModal } from '@/features/addBookReview';
-import { getBookDetailsData } from '@/entities/Book';
-import { Card } from '@/shared/ui/redesigned/Card';
-import { VStack } from '@/shared/ui/redesigned/Stack';
-import { Text } from '@/shared/ui/redesigned/Text';
-import { Button } from '@/shared/ui/redesigned/Button';
-import { Icon } from '@/shared/ui/redesigned/Icon';
+import ListIcon from '@/shared/assets/icons/list.svg';
 import PencilIcon from '@/shared/assets/icons/pencil.svg';
 import SendIcon from '@/shared/assets/icons/send.svg';
-import ListIcon from '@/shared/assets/icons/list.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { Button } from '@/shared/ui/redesigned/Button';
+import { Card } from '@/shared/ui/redesigned/Card';
+import { Icon } from '@/shared/ui/redesigned/Icon';
+import { VStack } from '@/shared/ui/redesigned/Stack';
+import { Text } from '@/shared/ui/redesigned/Text';
 import cls from './BookDetailsSidebar.module.scss';
 
 interface BookDetailsSidebarProps {

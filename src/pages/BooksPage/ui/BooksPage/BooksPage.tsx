@@ -1,29 +1,27 @@
 import { memo, useCallback } from 'react';
-import { useSearchParams } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
+import { useSearchParams } from 'react-router-dom';
+import { AvatarDropdown } from '@/features/avatarDropdown';
+import { NotificationButton } from '@/features/notificationButton';
+import { smallerThanLg } from '@/shared/const/mediaQuery';
+import { StickyContentLayout } from '@/shared/layouts/StickyContentLayout';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import {
     DynamicModuleLoader,
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Page } from '@/widgets/Page';
 import cls from './BooksPage.module.scss';
-import { ToggleFeatures } from '@/shared/lib/features';
-import { StickyContentLayout } from '@/shared/layouts/StickyContentLayout';
-import { smallerThanLg } from '@/shared/const/mediaQuery';
-import { NotificationButton } from '@/features/notificationButton';
-import { AvatarDropdown } from '@/features/avatarDropdown';
 
-import { BookInfiniteList } from '../BookInfiniteList/BookInfiniteList';
-import { BooksPageFilters } from '../BooksPageFilters/BooksPageFilters';
+import { BookPageGreeting } from '@/features/bookPageGreeting';
 import { fetchNextBooksPage } from '../../model/services/fetchNextBooksPage/fetchNextBooksPage';
 import { initBooksPage } from '../../model/services/initBooksPage/initBooksPage';
 import { booksPageReducer } from '../../model/slices/booksPageSlice';
-import { BookPageGreeting } from '@/features/bookPageGreeting';
-import { ViewSelectorContainer } from '../ViewSelectorContainer/ViewSelectorContainer';
+import { BookInfiniteList } from '../BookInfiniteList/BookInfiniteList';
 import { FiltersContainer } from '../FiltersContainer/FiltersContainer';
+import { ViewSelectorContainer } from '../ViewSelectorContainer/ViewSelectorContainer';
 
 interface BooksPageProps {
     className?: string;
@@ -48,42 +46,26 @@ const BooksPage = (props: BooksPageProps) => {
     });
 
     const content = (
-        <ToggleFeatures
-            feature="isAppRedesigned"
-            on={
-                <StickyContentLayout
-                    left={
-                        <>
-                            <ViewSelectorContainer />
-                            {isSmallerThanLg && (
-                                <div className={cls.avatarBlock}>
-                                    <NotificationButton />
-                                    <AvatarDropdown />
-                                </div>
-                            )}
-                        </>
-                    }
-                    right={<FiltersContainer />}
-                    className={cls.layout}
-                    content={
-                        <Page
-                            data-testid="BooksPage"
-                            onScrollEnd={onLoadNextPart}
-                            className={classNames(cls.BooksPage, {}, [className])}
-                        >
-                            <BookInfiniteList className={cls.list} />
-                            <BookPageGreeting />
-                        </Page>
-                    }
-                />
+        <StickyContentLayout
+            left={
+                <>
+                    <ViewSelectorContainer />
+                    {isSmallerThanLg && (
+                        <div className={cls.avatarBlock}>
+                            <NotificationButton />
+                            <AvatarDropdown />
+                        </div>
+                    )}
+                </>
             }
-            off={
+            right={<FiltersContainer />}
+            className={cls.layout}
+            content={
                 <Page
                     data-testid="BooksPage"
                     onScrollEnd={onLoadNextPart}
                     className={classNames(cls.BooksPage, {}, [className])}
                 >
-                    <BooksPageFilters />
                     <BookInfiniteList className={cls.list} />
                     <BookPageGreeting />
                 </Page>

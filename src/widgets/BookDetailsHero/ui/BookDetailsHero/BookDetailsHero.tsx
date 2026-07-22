@@ -1,35 +1,36 @@
 import { memo, useCallback, useMemo } from 'react';
-import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { fetchBookById,
-    BookGenre,
+import { AuthorInline } from '@/entities/Author';
+import {
     BookDetailsSkeleton,
+    BookGenre,
+    fetchBookById,
     getBookDetailsData,
     getBookDetailsError,
     getBookDetailsIsLoading,
 } from '@/entities/Book';
-import { AuthorInline } from '@/entities/Author';
+import { getUserAuthData, isUserAdmin } from '@/entities/User';
 import { useGetBookReviewStats } from '@/features/bookDetailsStats';
 import { ReadingStatus, useSetReadingStatus } from '@/features/bookReadingStatus';
-import { getUserAuthData, isUserAdmin } from '@/entities/User';
+import BookmarkIcon from '@/shared/assets/icons/bookmark.svg';
+import StarIcon from '@/shared/assets/icons/star.svg';
 import { getRouteBookEdit } from '@/shared/const/router';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { StarRating } from '@/shared/ui/deprecated/StarRating';
 import { AppImage } from '@/shared/ui/redesigned/AppImage';
+import { Badge } from '@/shared/ui/redesigned/Badge/Badge';
 import { Button } from '@/shared/ui/redesigned/Button';
 import { Card } from '@/shared/ui/redesigned/Card';
+import { Icon } from '@/shared/ui/redesigned/Icon';
+import { Dropdown } from '@/shared/ui/redesigned/Popups';
 import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { Text } from '@/shared/ui/redesigned/Text';
-import { StarRating } from '@/shared/ui/deprecated/StarRating';
-import { Dropdown } from '@/shared/ui/redesigned/Popups';
 import { BookDetailsSidebar } from '@/widgets/BookDetailsSidebar';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './BookDetailsHero.module.scss';
-import { Icon } from '@/shared/ui/redesigned/Icon';
-import BookmarkIcon from '@/shared/assets/icons/bookmark.svg';
-import StarIcon from '@/shared/assets/icons/star.svg';
-import { Badge } from '@/shared/ui/redesigned/Badge/Badge';
 
 interface BookDetailsHeroProps {
     className?: string;

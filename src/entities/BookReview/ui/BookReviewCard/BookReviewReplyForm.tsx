@@ -1,12 +1,12 @@
-import { memo, useState } from 'react';
+import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
+import CrossIcon from '@/shared/assets/icons/cross.svg';
+import SendIcon from '@/shared/assets/icons/send.svg';
 import { Avatar } from '@/shared/ui/redesigned/Avatar';
-import { Input } from '@/shared/ui/redesigned/Input';
-import { HStack } from '@/shared/ui/redesigned/Stack';
 import { Button } from '@/shared/ui/redesigned/Button';
 import { Icon } from '@/shared/ui/redesigned/Icon';
-import SendIcon from '@/shared/assets/icons/send.svg';
-import CrossIcon from '@/shared/assets/icons/cross.svg';
+import { Input } from '@/shared/ui/redesigned/Input';
+import { HStack } from '@/shared/ui/redesigned/Stack';
 
 interface BookReviewReplyFormProps {
     text: string;

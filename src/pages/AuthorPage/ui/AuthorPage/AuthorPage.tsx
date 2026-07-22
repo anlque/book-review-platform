@@ -1,24 +1,24 @@
 import { memo, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { AuthorPanel } from '@/entities/Author';
+import { BookList } from '@/entities/Book';
 import {
     DynamicModuleLoader,
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { Page } from '@/widgets/Page';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
 import { VStack } from '@/shared/ui/redesigned/Stack';
 import { Text } from '@/shared/ui/redesigned/Text';
-import { AuthorPanel } from '@/entities/Author';
-import { BookList } from '@/entities/Book';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { Page } from '@/widgets/Page';
 import {
     getAuthorDetailsData,
     getAuthorDetailsError,
     getAuthorDetailsIsLoading,
 } from '../../model/selectors/authorDetails';
 import { fetchAuthorDetails } from '../../model/services/fetchAuthorDetails/fetchAuthorDetails';
-import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
 import { authorDetailsReducer } from '../../model/slices/authorDetailsSlice';
 import cls from './AuthorPage.module.scss';
 

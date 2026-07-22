@@ -25,4 +25,3 @@ export const fetchBookRecommendations = createAsyncThunk<
         return rejectWithValue('error');
     }
 });
-

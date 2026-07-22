@@ -6,8 +6,9 @@ import {
     readBooksPageWasOpenedFromStorage,
     writeBooksPageWasOpenedToStorage,
 } from '../../lib/booksPageVisitStorage';
-import { markAuthenticatedBooksPageAsOpened } from
-    '../services/markAuthenticatedBooksPageAsOpened/markAuthenticatedBooksPageAsOpened';
+import {
+    markAuthenticatedBooksPageAsOpened,
+} from '../services/markAuthenticatedBooksPageAsOpened/markAuthenticatedBooksPageAsOpened';
 
 export interface UseBooksPageVisitTrackingResult {
     isBooksPageWasOpened: boolean;

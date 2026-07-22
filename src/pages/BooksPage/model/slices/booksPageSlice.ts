@@ -7,13 +7,13 @@ import { StateSchema } from '@/app/providers/StoreProvider';
 import {
     Book,
     BookGenre,
-    BookView,
     BookSortField,
+    BookView,
 } from '@/entities/Book';
 import { BOOKS_VIEW_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 import { SortOrder } from '@/shared/types/sort';
-import { BooksPageSchema } from '../types/booksPageSchema';
 import { fetchBooksList } from '../services/fetchBooksList/fetchBooksList';
+import { BooksPageSchema } from '../types/booksPageSchema';
 
 const booksAdapter = createEntityAdapter({
     selectId: (book: Book) => book.id,

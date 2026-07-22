@@ -1,10 +1,6 @@
 import { FeatureFlags } from '@/shared/types/featureFlags';
-import { LOCAL_STORAGE_LAST_DESIGN_KEY } from '@/shared/const/localstorage';
 
-const defaultFeatures: FeatureFlags = {
-    isAppRedesigned:
-        localStorage.getItem(LOCAL_STORAGE_LAST_DESIGN_KEY) === 'new',
-};
+const defaultFeatures: FeatureFlags = {};
 // features do not change during session, so it's redundant to make them reactive
 let featureFlags: FeatureFlags = {
     ...defaultFeatures,

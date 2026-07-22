@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
-import cls from './Badge.module.scss';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import cls from './Badge.module.scss';
 
 export type BadgeVariant = 'primary' | 'secondary' | 'outline' | 'filled';
 

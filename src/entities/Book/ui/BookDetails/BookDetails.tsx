@@ -1,35 +1,24 @@
-import { useTranslation } from 'react-i18next';
 import { memo, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import {
     DynamicModuleLoader,
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import {
-    Text as TextDeprecated,
-    TextAlign,
-    TextSize,
-} from '@/shared/ui/deprecated/Text';
-import { Skeleton as SkeletonDeprecated } from '@/shared/ui/deprecated/Skeleton';
 import { Skeleton as SkeletonRedesigned } from '@/shared/ui/redesigned/Skeleton';
-import { Avatar } from '@/shared/ui/deprecated/Avatar';
-import EyeIcon from '@/shared/assets/icons/eye.svg';
-import CalendarIcon from '@/shared/assets/icons/calendar.svg';
-import { Icon } from '@/shared/ui/deprecated/Icon';
-import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
-import { AuthorPanel } from '@/entities/Author';
-import { fetchBookById } from '../../model/services/fetchBookById/fetchBookById';
-import { bookDetailsReducer } from '../../model/slice/bookDetailsSlice';
-import cls from './BookDetails.module.scss';
+import { VStack } from '@/shared/ui/redesigned/Stack';
+import { Text } from '@/shared/ui/redesigned/Text';
 import {
     getBookDetailsData,
     getBookDetailsError,
     getBookDetailsIsLoading,
 } from '../../model/selectors/bookDetails';
+import { fetchBookById } from '../../model/services/fetchBookById/fetchBookById';
+import { bookDetailsReducer } from '../../model/slice/bookDetailsSlice';
+import cls from './BookDetails.module.scss';
 import { renderBookBlock } from './renderBlock';
-import { getFeatureFlag, toggleFeatures, ToggleFeatures } from '@/shared/lib/features';
 
 interface BookDetailsProps {
     className?: string;
@@ -38,36 +27,6 @@ interface BookDetailsProps {
 
 const reducers: ReducersList = {
     bookDetails: bookDetailsReducer,
-};
-
-const Deprecated = () => {
-    const book = useSelector(getBookDetailsData);
-    return (
-        <>
-            <HStack justify="center" max className={cls.avatarWrapper}>
-                <Avatar size={200} src={book?.img} className={cls.avatar} />
-            </HStack>
-            <VStack gap="4" max data-testid="BookDetails.Info">
-                <TextDeprecated
-                    className={cls.title}
-                    title={book?.title}
-                    text={book?.subtitle}
-                    size={TextSize.L}
-                />
-                {book?.author ? (
-                    <AuthorPanel author={book.author} className={cls.author} />
-                ) : null}
-                <HStack gap="8" className={cls.bookInfo}>
-                    <Icon className={cls.icon} Svg={EyeIcon} />
-                </HStack>
-                <HStack gap="8" className={cls.bookInfo}>
-                    <Icon className={cls.icon} Svg={CalendarIcon} />
-                    <TextDeprecated text={`${book?.publishedYear}`} />
-                </HStack>
-            </VStack>
-            {book?.blocks.map(renderBookBlock)}
-        </>
-    );
 };
 
 const Redesigned = () => {
@@ -92,11 +51,7 @@ const Redesigned = () => {
 };
 
 export const BookDetailsSkeleton = () => {
-    const Skeleton = toggleFeatures({
-        name: 'isAppRedesigned',
-        on: () => SkeletonRedesigned,
-        off: () => SkeletonDeprecated,
-    });
+    const Skeleton = SkeletonRedesigned;
     return (
         <VStack gap="16" max>
             <Skeleton
@@ -129,23 +84,17 @@ export const BookDetails = memo((props: BookDetailsProps) => {
     let content;
 
     if (isLoading) {
-        content = getFeatureFlag('isAppRedesigned')
-            ? null
-            : <BookDetailsSkeleton />;
+        content = null;
     } else if (error) {
         content = (
-            <TextDeprecated
-                align={TextAlign.CENTER}
+            <Text
+                align="center"
                 title={t('loading_error')}
             />
         );
     } else {
         content = (
-            <ToggleFeatures
-                feature="isAppRedesigned"
-                on={<Redesigned />}
-                off={<Deprecated />}
-            />
+            <Redesigned />
         );
     }
 

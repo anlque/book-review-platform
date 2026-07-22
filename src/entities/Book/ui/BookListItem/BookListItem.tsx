@@ -1,9 +1,7 @@
 import { HTMLAttributeAnchorTarget, memo } from 'react';
-import { ToggleFeatures } from '@/shared/lib/features';
-import { BookListItemDeprecated } from './BookListItemDeprecated/BookListItemDeprecated';
-import { BookListItemRedesigned } from './BookListItemRedesigned/BookListItemRedesigned';
-import { Book } from '../../model/types/book';
 import { BookView } from '../../model/consts/bookConsts';
+import { Book } from '../../model/types/book';
+import { BookListItemRedesigned } from './BookListItemRedesigned/BookListItemRedesigned';
 
 export interface BookListItemProps {
     className?: string;
@@ -14,10 +12,6 @@ export interface BookListItemProps {
 
 export const BookListItem = memo((props: BookListItemProps) => {
     return (
-        <ToggleFeatures
-            feature="isAppRedesigned"
-            on={<BookListItemRedesigned {...props} />}
-            off={<BookListItemDeprecated {...props} />}
-        />
+        <BookListItemRedesigned {...props} />
     );
 });

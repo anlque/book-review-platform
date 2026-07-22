@@ -1,12 +1,10 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text as TextDeprecated } from '@/shared/ui/deprecated/Text';
-import { Text } from '@/shared/ui/redesigned/Text';
 import { VStack } from '@/shared/ui/redesigned/Stack';
-import { BookReviewCard } from '../BookReviewCard/BookReviewCard';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { BookReview } from '../../model/types/bookReview';
-import { ToggleFeatures } from '@/shared/lib/features';
+import { BookReviewCard } from '../BookReviewCard/BookReviewCard';
 import cls from './BookReviewList.module.scss';
 
 interface CommentListProps {
@@ -40,11 +38,7 @@ export const BookReviewList = memo((props: CommentListProps) => {
                     />
                 ))
             ) : (
-                <ToggleFeatures
-                    feature="isAppRedesigned"
-                    on={<Text text={t('no_comments')} />}
-                    off={<TextDeprecated text={t('no_comments')} />}
-                />
+                <Text text={t('no_comments')} />
             )}
         </VStack>
     );

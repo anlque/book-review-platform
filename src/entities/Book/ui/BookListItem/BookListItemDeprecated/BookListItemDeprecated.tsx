@@ -1,20 +1,20 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { getRouteBookDetails } from '@/shared/const/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import cls from '../BookListItem.module.scss';
+import { AppLink } from '@/shared/ui/deprecated/AppLink';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
+import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Card } from '@/shared/ui/deprecated/Card';
+import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
 import { Text } from '@/shared/ui/deprecated/Text';
+import { AppImage } from '@/shared/ui/redesigned/AppImage';
 import {
     BookView,
 } from '../../../model/consts/bookConsts';
-import { Card } from '@/shared/ui/deprecated/Card';
-import { Avatar } from '@/shared/ui/deprecated/Avatar';
-import { AppImage } from '@/shared/ui/redesigned/AppImage';
-import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
 import { BookTextBlockComponent } from '../../BookTextBlockComponent/BookTextBlockComponent';
-import { AppLink } from '@/shared/ui/deprecated/AppLink';
-import { getRouteBookDetails } from '@/shared/const/router';
-import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
 import { BookListItemProps } from '../BookListItem';
+import cls from '../BookListItem.module.scss';
 
 export const BookListItemDeprecated = memo((props: BookListItemProps) => {
     const { className, book, view, target } = props;
