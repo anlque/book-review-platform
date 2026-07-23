@@ -36,6 +36,7 @@ export const removeBook = (bookId: string) => {
         method: 'DELETE',
         url: `http://localhost:8000/books/${bookId}`,
         headers: { Authorization: 'asasf' },
+        failOnStatusCode: false,
     });
 };
 

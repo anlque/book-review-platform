@@ -5,7 +5,7 @@
   display: grid;
   grid-template-areas:
             'sidebar content rightbar';
-  grid-template-columns: min-content 1fr 100px;
+  grid-template-columns: min-content 1fr min-content;
   overflow: hidden auto;
   width: 100vw;
 }
@@ -46,16 +46,20 @@
 }
 
 @include media.respond-down(lg) {
-  .sidebar, .content {
-    padding: 12px;
+  .MainLayout {
+    display: block;
+    overflow: hidden auto;
   }
 
-  .toolbar, .rightbar{
-    width: 0;
+  .sidebar,
+  .rightbar {
+    display: none;
   }
 
   .content {
-    width: calc(100vw - var(--sidebar-width-collapsed));
+    width: 100%;
+    max-width: none;
+    padding: 0;
   }
 
 }

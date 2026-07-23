@@ -1,3 +1,5 @@
+@use '@/app/styles/media' as media;
+
 .BookDetailsPage {
     min-height: 100%;
     padding: var(--space-l);
@@ -5,3 +7,10 @@
     background: var(--dark-bg-redesigned);
 }
 
+@include media.respond-down(lg) {
+    .BookDetailsPage {
+        padding: var(--space-m);
+        padding-bottom: calc(88px + env(safe-area-inset-bottom));
+        border-radius: 0;
+    }
+}

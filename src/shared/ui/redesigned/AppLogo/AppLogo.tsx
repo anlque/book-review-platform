@@ -1,5 +1,7 @@
 import { memo } from 'react';
+import AppSvg from '@/shared/assets/icons/app-image.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { Icon } from '@/shared/ui/redesigned/Icon';
 import { HStack } from '../Stack';
 import cls from './AppLogo.module.scss';
 
@@ -15,7 +17,12 @@ export const AppLogo = memo(({ className, size = 50 }: AppLogoProps) => {
             justify="center"
             className={classNames(cls.appLogoWrapper, {}, [className])}
         >
-            <img src="/logo.png" alt="Writing quill" height={size} width={size} />
+            <Icon
+                Svg={AppSvg}
+                width={size}
+                height={size}
+                className={cls.appLogo}
+            />
             <div className={cls.gradientBig} />
             <div className={cls.gradientSmall} />
         </HStack>

@@ -1,10 +1,11 @@
-import { memo, useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
+import { memo, useCallback, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {
     bookDetailsReducer,
     fetchBookById,
 } from '@/entities/Book';
+import { AddBookReviewModal } from '@/features/addBookReview';
+import { useBookActions } from '@/features/bookActions';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import {
     DynamicModuleLoader,
@@ -21,6 +22,7 @@ import { Page } from '@/widgets/Page';
 import { fetchReviewsByBookId } from '../../model/services/fetchReviewsByBookId/fetchReviewsByBookId';
 import { bookDetailsPageReducer } from '../../model/slices';
 import { BookDetailsComments } from '../BookDetailsComments/BookDetailsComments';
+import { MobileBookPageControls } from '../MobileBookPageControls/MobileBookPageControls';
 import cls from './BookDetailsPage.module.scss';
 
 interface BookDetailsPageProps {
@@ -34,9 +36,12 @@ const reducers: ReducersList = {
 
 const BookDetailsPage = (props: BookDetailsPageProps) => {
     const { className } = props;
-    const { t } = useTranslation('book-details');
     const { id } = useParams<{ id: string }>();
     const dispatch = useAppDispatch();
+    const [activeMobileOverlay, setActiveMobileOverlay] = useState<
+        'navigation' | 'status' | 'rating' | 'more' | null
+    >(null);
+    const { actions, isReviewOpen, closeReview } = useBookActions(id ?? '');
 
     useInitialEffect(() => {
         if (__PROJECT__ !== 'storybook' && id) {
@@ -56,6 +61,11 @@ const BookDetailsPage = (props: BookDetailsPageProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+            <MobileBookPageControls
+                activeOverlay={activeMobileOverlay}
+                setActiveOverlay={setActiveMobileOverlay}
+                actions={actions}
+            />
             <Page
                 className={classNames(
                     cls.BookDetailsPage,
@@ -67,7 +77,7 @@ const BookDetailsPage = (props: BookDetailsPageProps) => {
                     <BookDetailsToolbar bookId={id} />
                     <BookDetailsHero
                         bookId={id}
-                        onReviewAdded={onReviewAdded}
+                        actions={actions}
                     />
                     <BookDetailsContentRow bookId={id} />
                     <BookDetailsDetailsCard />
@@ -77,6 +87,12 @@ const BookDetailsPage = (props: BookDetailsPageProps) => {
                     />
                 </VStack>
             </Page>
+            <AddBookReviewModal
+                bookId={id}
+                isOpen={isReviewOpen}
+                onClose={closeReview}
+                onSuccess={onReviewAdded}
+            />
         </DynamicModuleLoader>
     );
 };

@@ -605,6 +605,26 @@
       "country": "United States",
       "isbn": "978-0061703157",
       "format": "Print (Paperback)"
+    },
+    {
+      "title": "Dune",
+      "authorId": "1",
+      "label": "Classic",
+      "pages": 688,
+      "language": "English",
+      "publisher": "Chilton Books",
+      "country": "United States",
+      "isbn": "978-0441172719",
+      "format": "Print (Hardcover)",
+      "subtitle": "A desert planet, political intrigue, and a destiny that reshapes an empire.",
+      "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
+      "publishedYear": 1965,
+      "userId": "1",
+      "genres": [
+        "SCIENCE_FICTION"
+      ],
+      "blocks": [],
+      "id": "8Fqfp8H"
     }
   ],
   "users": [
@@ -616,8 +636,11 @@
         "ADMIN"
       ],
       "avatar": "https://i.ytimg.com/vi/Q6Nsvrnnug8/maxresdefault.jpg",
+      "features": {
+        "isAppRedesigned": true
+      },
       "jsonSettings": {
-        "theme": "app_candy_theme",
+        "theme": "app_light_theme",
         "isBooksPageWasOpened": true
       }
     },
@@ -628,7 +651,10 @@
       "roles": [
         "USER"
       ],
-      "avatar": "https://i.imgflip.com/1gl4ru.jpg?a469920"
+      "avatar": "https://i.imgflip.com/1gl4ru.jpg?a469920",
+      "jsonSettings": {
+        "isBooksPageWasOpened": true
+      }
     }
   ],
   "profiles": [

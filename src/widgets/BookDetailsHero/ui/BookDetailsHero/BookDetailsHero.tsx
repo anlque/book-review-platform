@@ -12,8 +12,8 @@ import {
     getBookDetailsIsLoading,
 } from '@/entities/Book';
 import { getUserAuthData, isUserAdmin } from '@/entities/User';
+import { BookActions } from '@/features/bookActions';
 import { useGetBookReviewStats } from '@/features/bookDetailsStats';
-import { ReadingStatus, useSetReadingStatus } from '@/features/bookReadingStatus';
 import BookmarkIcon from '@/shared/assets/icons/bookmark.svg';
 import StarIcon from '@/shared/assets/icons/star.svg';
 import { getRouteBookEdit } from '@/shared/const/router';
@@ -35,14 +35,14 @@ import cls from './BookDetailsHero.module.scss';
 interface BookDetailsHeroProps {
     className?: string;
     bookId: string;
-    onReviewAdded?: () => void;
+    actions: BookActions;
 }
 
 const genreTranslationKey = (genre: BookGenre) =>
     `types.${genre.toLowerCase()}`;
 
 export const BookDetailsHero = memo((props: BookDetailsHeroProps) => {
-    const { className, bookId, onReviewAdded } = props;
+    const { className, bookId, actions } = props;
     const { t } = useTranslation(['book-details', 'books-page']);
     const dispatch = useAppDispatch();
     const book = useSelector(getBookDetailsData);
@@ -52,7 +52,6 @@ export const BookDetailsHero = memo((props: BookDetailsHeroProps) => {
     const isAdmin = useSelector(isUserAdmin);
     const navigate = useNavigate();
     const { data: stats } = useGetBookReviewStats(bookId);
-    const [setReadingStatus] = useSetReadingStatus();
 
     const genreLabels = useMemo(() => {
         if (!book?.genres?.length) {
@@ -69,17 +68,6 @@ export const BookDetailsHero = memo((props: BookDetailsHeroProps) => {
             .getElementById('book-details-rating')
             ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, []);
-
-    const onWantToRead = useCallback(() => {
-        if (!user?.id) {
-            return;
-        }
-        setReadingStatus({
-            userId: user.id,
-            bookId,
-            status: ReadingStatus.WANT_TO_READ,
-        });
-    }, [bookId, setReadingStatus, user?.id]);
 
     const onEdit = useCallback(() => {
         if (book) {
@@ -192,7 +180,7 @@ export const BookDetailsHero = memo((props: BookDetailsHeroProps) => {
                     <Button
                         variant="primary"
                         color="accent"
-                        onClick={onWantToRead}
+                        onClick={actions.onAddToList}
                         addonLeft={<Icon height={20} width={20} Svg={BookmarkIcon} />}
                     >
 
@@ -224,9 +212,8 @@ export const BookDetailsHero = memo((props: BookDetailsHeroProps) => {
             </VStack>
 
             <BookDetailsSidebar
-                bookId={bookId}
                 className={cls.sidebar}
-                onReviewAdded={onReviewAdded}
+                actions={actions}
             />
         </HStack>
     );

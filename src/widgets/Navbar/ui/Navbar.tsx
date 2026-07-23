@@ -1,12 +1,10 @@
 import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { useMediaQuery } from 'react-responsive';
 import { getUserAuthData } from '@/entities/User';
 import { LoginModal } from '@/features/AuthByUsername';
 import { AvatarDropdown } from '@/features/avatarDropdown';
 import { NotificationButton } from '@/features/notificationButton';
-import { smallerThanLg } from '@/shared/const/mediaQuery';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button } from '@/shared/ui/redesigned/Button';
 import { HStack } from '@/shared/ui/redesigned/Stack';
@@ -20,7 +18,6 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     const { t } = useTranslation();
     const [isAuthModal, setIsAuthModal] = useState(false);
     const authData = useSelector(getUserAuthData);
-    const isSmallerThanLg = useMediaQuery(smallerThanLg);
 
     const onCloseModal = useCallback(() => {
         setIsAuthModal(false);
@@ -30,23 +27,19 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         setIsAuthModal(true);
     }, []);
 
-    const mainClass = cls.NavbarRedesigned;
-
     if (authData) {
         return (
-            <header className={classNames(mainClass, {}, [className])}>
-                {!isSmallerThanLg &&
+            <header className={classNames(cls.Navbar, {}, [className])}>
                 <HStack gap="4" className={cls.actions}>
                     <NotificationButton />
                     <AvatarDropdown />
-                </HStack>}
-
+                </HStack>
             </header>
         );
     }
 
     return (
-        <header className={classNames(mainClass, {}, [className])}>
+        <header className={classNames(cls.Navbar, {}, [className])}>
             <Button
                 variant="clear"
                 className={cls.links}
