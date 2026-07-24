@@ -10,6 +10,7 @@ interface IconBaseProps extends SvgProps {
     className?: string;
     btnClassName?: string;
     variant?: IconVariant;
+    dataTestId?: string
     Svg: FC<SVGProps<SVGSVGElement>>;
 }
 
@@ -32,6 +33,7 @@ export const Icon = memo((props: IconProps) => {
         height = 32,
         variant = 'primary',
         clickable,
+        dataTestId,
         ...otherProps
     } = props;
 
@@ -52,6 +54,7 @@ export const Icon = memo((props: IconProps) => {
                 className={classNames(cls.button, {}, [btnClassName, cls[variant]])}
                 onClick={props.onClick}
                 style={{ height, width }}
+                data-testid={dataTestId}
             >
                 {icon}
             </button>
