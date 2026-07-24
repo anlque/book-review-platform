@@ -10,7 +10,7 @@ interface IconBaseProps extends SvgProps {
     className?: string;
     btnClassName?: string;
     variant?: IconVariant;
-    dataTestId?: string
+    dataTestId?: string;
     Svg: FC<SVGProps<SVGSVGElement>>;
 }
 
