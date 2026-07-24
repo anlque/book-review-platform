@@ -3,7 +3,19 @@
 }
 
 .addonLeft svg, .addonRight svg {
-    color: currentColor;
+    color: currentcolor;
+}
+
+.secondary {
+    outline: none;
+    background: none;
+    border-radius: var(--border-radius-s);
+    border: 1px solid color-mix(in srgb, var(--accent-redesigned) 80%, transparent);
+    color: var(--accent-redesigned);
+
+    svg {
+        color: var(--accent-redesigned);
+    }
 }
 
 .Button {
@@ -52,17 +64,6 @@
     outline: none;
     border-radius: var(--border-radius-s);
     color: var(--text-light-redesigned);
-}
-
-.secondary {
-    outline: none;
-    background: none;
-    border-radius: var(--border-radius-s);
-    border: 1px solid color-mix(in srgb, var(--accent-redesigned) 80%, transparent);
-    color: var(--accent-redesigned);
-    svg {
-        color: var(--accent-redesigned);
-    }
 }
 
 .filled {
