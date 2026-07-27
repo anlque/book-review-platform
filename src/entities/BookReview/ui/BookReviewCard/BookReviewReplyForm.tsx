@@ -38,12 +38,12 @@ const BookReviewReplyForm = memo((props: BookReviewReplyFormProps) => {
             justify="between"
             data-testid="BookReviewReplyForm"
         >
-            {avatar ? (
+            {avatar && (
                 <Avatar
                     size={35}
                     src={avatar}
                 />
-            ) : null}
+            )}
             <Input
                 data-testid="BookReviewReplyForm.Input"
                 value={text}

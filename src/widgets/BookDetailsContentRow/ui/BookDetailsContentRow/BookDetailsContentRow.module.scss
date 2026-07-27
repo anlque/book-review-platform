@@ -10,8 +10,8 @@
     min-width: 0;
 }
 
-@include media.respond-down(lg) {
+@include media.respond-down(md) {
     .BookDetailsContentRow {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
 }

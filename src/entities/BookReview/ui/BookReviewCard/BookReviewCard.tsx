@@ -117,8 +117,7 @@ export const BookReviewCard = memo((props: BookReviewCardProps) => {
                         variant="clear"
                     >
                         <StarRating
-                            className={cls.stars}
-                            size={20}
+                            className={cls.rating}
                             selectedStars={bookReview.rate}
                         />
 

@@ -1,0 +1,67 @@
+.content {
+    width: 100%;
+}
+
+.sidebar {
+    height: 100%;
+
+    .logo {
+        padding-top: 20px;
+    }
+
+    .items {
+        margin-top: 40px;
+    }
+
+    .switchers {
+        position: absolute;
+        bottom: 40px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 16px;
+    }
+}
+
+.sidebarCollapsed {
+    .items {
+        align-items: center;
+    }
+
+    .switchers {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.drawer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 100%;
+
+    .logo {
+        align-self: center;
+
+        svg {
+            height: 100px;
+            width: 100px;
+        }
+    }
+
+    .switchers {
+        display: flex;
+        margin: auto auto 0;
+        gap: var(--space-xl);
+        button {
+            font: var(--font-l-redesigned);
+            min-height: 40px;
+            min-width: 40px;
+
+            svg {
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+}

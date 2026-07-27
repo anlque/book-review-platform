@@ -33,7 +33,7 @@ export const AuthorPanel = memo((props: AuthorPanelProps) => {
                 className={cls.portrait}
                 alt={author.name}
                 fallback={
-                    <Skeleton width={72} height={72} border="50%" />
+                    <Skeleton className={cls.portrait} />
                 }
             />
             <VStack gap="4" max align="start">

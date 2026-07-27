@@ -20,7 +20,7 @@
     }
 }
 
-.itemRedesigned {
+.sidebarItem, .drawerItem {
     &:hover {
         svg {
             color: var(--accent-redesigned);
@@ -34,7 +34,7 @@
     padding: 0 16px;
 }
 
-.collapsedRedesigned {
+.sidebarItemCollapsed {
     padding: 0 0 0 16px;
 
     .link {
@@ -44,7 +44,7 @@
     }
 }
 
-.active {
+.sidebarItemActive, .drawerItemActive {
     background: linear-gradient(89.97deg, rgb(94 211 243 / 30%) 1.15%, rgb(94 211 243 / 0%) 99.97%);
     position: relative;
 
@@ -55,5 +55,15 @@
         left: 0;
         background: var(--accent-redesigned);
         height: 100%;
+    }
+}
+
+.drawerItem {
+    padding-block: 10px;
+    font: var(--font-l-redesigned);
+
+    svg {
+        height: 30px;
+        width: 30px;
     }
 }

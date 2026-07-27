@@ -58,6 +58,53 @@
     gap: 32px;
 }
 
+@media (max-width: 1199px) {
+
+    .gapTablet4 {
+        gap: 4px;
+    }
+
+    .gapTablet8 {
+        gap: 8px;
+    }
+    .gapTablet16 {
+        gap: 16px;
+    }
+
+    .gapTablet24 {
+        gap: 24px;
+    }
+
+    .gapTablet32 {
+        gap: 32px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .gapMobile4 {
+        gap: 4px;
+    }
+
+    .gapMobile8 {
+        gap: 8px;
+    }
+
+    .gapMobile16 {
+        gap: 16px;
+    }
+
+    .gapMobile24 {
+        gap: 24px;
+    }
+
+    .gapMobile32 {
+        gap: 32px;
+    }
+
+}
+
 .max {
     width: 100%;
 }

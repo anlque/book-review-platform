@@ -34,6 +34,22 @@ const gapClasses: Record<FlexGap, string> = {
     32: cls.gap32,
 };
 
+const tabletGapClasses: Record<FlexGap, string> = {
+    4: cls.gapTablet4,
+    8: cls.gapTablet8,
+    16: cls.gapTablet16,
+    24: cls.gapTablet24,
+    32: cls.gapTablet32,
+};
+
+const mobileGapClasses: Record<FlexGap, string> = {
+    4: cls.gapMobile4,
+    8: cls.gapMobile8,
+    16: cls.gapMobile16,
+    24: cls.gapMobile24,
+    32: cls.gapMobile32,
+};
+
 type DivProps = DetailedHTMLProps<
     HTMLAttributes<HTMLDivElement>,
     HTMLDivElement
@@ -47,6 +63,8 @@ export interface FlexProps extends DivProps {
     direction: FlexDirection;
     wrap?: FlexWrap;
     gap?: FlexGap;
+    gapTablet?: FlexGap;
+    gapMobile?: FlexGap;
     max?: boolean;
 }
 
@@ -59,6 +77,8 @@ export const Flex = (props: FlexProps) => {
         direction = 'row',
         wrap = 'nowrap',
         gap,
+        gapTablet,
+        gapMobile,
         max,
         ...otherProps
     } = props;
@@ -70,6 +90,8 @@ export const Flex = (props: FlexProps) => {
         directionClasses[direction],
         cls[wrap],
         gap && gapClasses[gap],
+        gapTablet && tabletGapClasses[gapTablet],
+        gapMobile && mobileGapClasses[gapMobile],
     ];
 
     const mods: Mods = {

@@ -1,5 +1,6 @@
 .BookDetailsSidebar {
     width: 100%;
+    min-width: 0;
     border-radius: var(--border-radius-l);
     border: 1px solid color-mix(in srgb, var(--hint-redesigned) 15%, transparent);
 }

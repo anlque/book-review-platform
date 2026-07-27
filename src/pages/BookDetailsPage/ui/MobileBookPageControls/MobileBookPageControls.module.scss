@@ -76,6 +76,7 @@
     color: var(--text-redesigned);
     box-shadow: 0 20px 60px rgb(0 0 0 / 30%);
     outline: none;
+    height: 100%;
 }
 
 .panelLeft {
@@ -95,26 +96,10 @@
     border-radius: 20px 20px 0 0;
 }
 
-.panelHeader {
-    margin-bottom: var(--space-m);
-}
-
-.drawerLogo {
-    align-self: center;
-}
-
-.navItem {
-    display: flex;
-    align-items: center;
-    gap: var(--space-s);
-    min-height: 44px;
-    padding: 0 12px;
-    border-radius: var(--border-radius-s);
-}
-
-.activeNavItem {
-    color: var(--accent-redesigned);
-    background: color-mix(in srgb, var(--accent-redesigned) 10%, transparent);
+.closeButton {
+    position: absolute;
+    right: var(--space-s);
+    margin-inline: auto 0;
 }
 
 .ratingGroup {

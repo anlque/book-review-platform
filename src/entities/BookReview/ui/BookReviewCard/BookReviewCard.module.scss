@@ -1,3 +1,5 @@
+@use '@/app/styles/media' as media;
+
 .BookReviewCard {
     padding: 10px;
     border: 1px solid var(--primary-color);
@@ -18,8 +20,13 @@
     min-width: 0;
 }
 
-.stars {
+.rating {
     margin-top: 4px;
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+
 }
 
 .reviewText {
@@ -70,4 +77,14 @@
 
 .arrowOpen{
     transform: rotate(180deg);
+}
+
+@include media.respond-down(md) {
+    .rating {
+        gap: var(--space-xxs);
+        svg {
+            width: 15px;
+            height: 15px;
+        }
+    }
 }

@@ -1,6 +1,7 @@
 import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import { BrowserView, MobileView } from 'react-device-detect';
 import { getUserAuthData } from '@/entities/User';
 import { StarRating } from '@/shared/ui/deprecated/StarRating';
 import { Button } from '@/shared/ui/redesigned/Button';
@@ -9,6 +10,7 @@ import { Modal } from '@/shared/ui/redesigned/Modal';
 import { VStack } from '@/shared/ui/redesigned/Stack';
 import { Text } from '@/shared/ui/redesigned/Text';
 import { useAddBookReview } from '../../api/addBookReviewApi';
+import { Drawer } from '@/shared/ui/redesigned/Drawer';
 
 interface AddBookReviewModalProps {
     bookId: string;
@@ -43,26 +45,34 @@ export const AddBookReviewModal = memo((props: AddBookReviewModalProps) => {
         onSuccess?.();
     }, [addReview, bookId, onClose, onSuccess, rate, text, user?.id]);
 
+    const modalContent =
+        <VStack gap="16" max>
+            <Text title={t('write_review')} size="l" bold />
+            <StarRating selectedStars={rate} onSelect={setRate} size={28} />
+            <Input
+                value={text}
+                onChange={setText}
+                placeholder={t('your_feedback')}
+            />
+            <Button
+                fullWidth
+                variant="filled"
+                color="accent"
+                disabled={isLoading || !text.trim()}
+                onClick={onSubmit}
+            >
+                {t('send')}
+            </Button>
+        </VStack>;
+
     return (
-        <Modal isOpen={isOpen} onClose={onClose} lazy>
-            <VStack gap="16" max>
-                <Text title={t('write_review')} size="l" bold />
-                <StarRating selectedStars={rate} onSelect={setRate} size={28} />
-                <Input
-                    value={text}
-                    onChange={setText}
-                    placeholder={t('your_feedback')}
-                />
-                <Button
-                    fullWidth
-                    variant="filled"
-                    color="accent"
-                    disabled={isLoading || !text.trim()}
-                    onClick={onSubmit}
-                >
-                    {t('send')}
-                </Button>
-            </VStack>
-        </Modal>
+        <>
+            <BrowserView>
+                <Modal isOpen={isOpen} onClose={onClose} lazy>{modalContent}</Modal>
+            </BrowserView>
+            <MobileView>
+                <Drawer isOpen={isOpen} onClose={onClose}>{modalContent}</Drawer>
+            </MobileView>
+        </>
     );
 });

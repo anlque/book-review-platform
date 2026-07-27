@@ -1,15 +1,10 @@
-import { memo, useEffect, useMemo, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { LangSwitcher } from '@/features/LangSwitcher';
-import { ThemeSwitcher } from '@/features/ThemeSwitcher';
 import ArrowIcon from '@/shared/assets/icons/chevron-down.svg';
 import { smallerThanLg } from '@/shared/const/mediaQuery';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { AppLogo } from '@/shared/ui/redesigned/AppLogo';
 import { Icon } from '@/shared/ui/redesigned/Icon';
-import { VStack } from '@/shared/ui/redesigned/Stack';
-import { useSidebarItems } from '../../model/selectors/getSidebarItems';
-import { SidebarItem } from '../SidebarItem/SidebarItem';
+import { NavigationContent } from '../NavigationContent/NavigationContent';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
@@ -18,24 +13,11 @@ interface SidebarProps {
 
 export const Sidebar = memo(({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState(false);
-    const sidebarItemsList = useSidebarItems();
     const isSmallerThanLg = useMediaQuery(smallerThanLg);
 
     const onToggle = () => {
         setCollapsed((prev) => !prev);
     };
-
-    const itemsList = useMemo(
-        () =>
-            sidebarItemsList.map((item) => (
-                <SidebarItem
-                    item={item}
-                    collapsed={collapsed}
-                    key={item.path}
-                />
-            )),
-        [collapsed, sidebarItemsList],
-    );
 
     useEffect(() => {
         if (isSmallerThanLg) {
@@ -54,13 +36,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                 [className],
             )}
         >
-            <AppLogo
-                size={collapsed ? 30 : 70}
-                className={cls.appLogo}
-            />
-            <VStack role="navigation" gap="8" className={cls.items}>
-                {itemsList}
-            </VStack>
+            <NavigationContent variant="sidebar" collapsed={collapsed} />
             {!isSmallerThanLg && <Icon
                 dataTestId="sidebar-toggle"
                 onClick={onToggle}
@@ -69,11 +45,6 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                 Svg={ArrowIcon}
                 clickable
             />}
-
-            <div className={cls.switchers}>
-                <ThemeSwitcher />
-                <LangSwitcher short={collapsed} className={cls.lang} />
-            </div>
         </aside>
     );
 });

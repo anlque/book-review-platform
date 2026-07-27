@@ -1,9 +1,11 @@
 import { memo } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { BookShareButton } from '@/features/bookShare';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { HStack } from '@/shared/ui/redesigned/Stack';
 import { BookDetailsBreadcrumbs } from '@/widgets/BookDetailsBreadcrumbs';
 import cls from './BookDetailsToolbar.module.scss';
+import { smallerThanLg } from '@/shared/const/mediaQuery';
 
 interface BookDetailsToolbarProps {
     className?: string;
@@ -12,6 +14,7 @@ interface BookDetailsToolbarProps {
 
 export const BookDetailsToolbar = memo((props: BookDetailsToolbarProps) => {
     const { className, bookId } = props;
+    const isSmallerThanLg = useMediaQuery(smallerThanLg);
 
     return (
         <HStack
@@ -24,7 +27,7 @@ export const BookDetailsToolbar = memo((props: BookDetailsToolbarProps) => {
         >
             <BookDetailsBreadcrumbs />
             <HStack gap="8" className={cls.actions}>
-                <BookShareButton />
+                {!isSmallerThanLg && <BookShareButton />}
                 {/* <BookSaveButton bookId={bookId} /> */}
             </HStack>
         </HStack>

@@ -6,11 +6,8 @@ import {
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { getBookDetailsData } from '@/entities/Book';
-import { getUserAuthData } from '@/entities/User';
 import { BookActions } from '@/features/bookActions';
 import { ReadingStatus } from '@/features/bookReadingStatus';
-import { LangSwitcher } from '@/features/LangSwitcher';
-import { ThemeSwitcher } from '@/features/ThemeSwitcher';
 import BookIcon from '@/shared/assets/icons/book.svg';
 import BookmarkIcon from '@/shared/assets/icons/bookmark.svg';
 import BurgerIcon from '@/shared/assets/icons/burger.svg';
@@ -23,14 +20,12 @@ import ShareIcon from '@/shared/assets/icons/share.svg';
 import StarIcon from '@/shared/assets/icons/star.svg';
 import ReadIcon from '@/shared/assets/icons/tick-circle.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { AppLogo } from '@/shared/ui/redesigned/AppLogo';
-import { AppLink } from '@/shared/ui/redesigned/AppLink';
 import { Button } from '@/shared/ui/redesigned/Button';
 import { Icon } from '@/shared/ui/redesigned/Icon';
 import { Portal } from '@/shared/ui/redesigned/Portal';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { Text } from '@/shared/ui/redesigned/Text';
-import { useSidebarItems } from '@/widgets/Sidebar/model/selectors/getSidebarItems';
+import { NavigationContent } from '@/widgets/Sidebar';
 import { useMobileOverlayBehavior } from './lib/useMobileOverlayBehavior';
 import cls from './MobileBookPageControls.module.scss';
 
@@ -113,6 +108,7 @@ const MobileOverlay = (props: MobileOverlayProps) => {
                 className={cls.overlayRoot}
                 role="presentation"
             >
+                {/* TODO: is it okay to use btn here? */}
                 <button
                     type="button"
                     className={cls.overlay}
@@ -131,17 +127,15 @@ const MobileOverlay = (props: MobileOverlayProps) => {
                     aria-labelledby={`${id}-title`}
                     tabIndex={-1}
                 >
-                    <HStack justify="between" align="center" max className={cls.panelHeader}>
-                        <Text title={title} size="m" bold />
-                        <Button
-                            square
-                            variant="clear"
-                            aria-label="Close"
-                            onClick={onClose}
-                        >
-                            <Icon Svg={CloseIcon} width={20} height={20} />
-                        </Button>
-                    </HStack>
+                    <Button
+                        square
+                        variant="clear"
+                        aria-label="Close"
+                        className={cls.closeButton}
+                        onClick={onClose}
+                    >
+                        <Icon Svg={CloseIcon} width={30} height={30} />
+                    </Button>
                     {children}
                 </dialog>
             </div>
@@ -186,8 +180,6 @@ const MobileBookHeader = (props: MobileBookHeaderProps) => {
 const MobileNavigationDrawer = (props: MobileNavigationDrawerProps) => {
     const { isOpen, onClose, menuButtonRef } = props;
     const { t } = useTranslation();
-    const items = useSidebarItems();
-    const user = useSelector(getUserAuthData);
 
     return (
         <MobileOverlay
@@ -198,37 +190,7 @@ const MobileNavigationDrawer = (props: MobileNavigationDrawerProps) => {
             onClose={onClose}
             triggerRef={menuButtonRef}
         >
-            <VStack gap="24" max data-testid="MobileNavigationDrawer">
-                <AppLogo size={64} className={cls.drawerLogo} />
-                <VStack role="navigation" aria-label="Global navigation" gap="8" max>
-                    {items.map((item) => {
-                        if (item.authOnly && !user) {
-                            return null;
-                        }
-
-                        return (
-                            <AppLink
-                                key={item.path}
-                                to={item.path}
-                                className={cls.navItem}
-                                activeClassName={cls.activeNavItem}
-                                onClick={() => {
-                                    item.handler?.();
-                                    onClose();
-                                }}
-                            >
-                                <Icon Svg={item.Icon} width={20} height={20} />
-                                <span>{t(item.text)}</span>
-                            </AppLink>
-                        );
-                    })}
-                </VStack>
-                <hr className="divider" />
-                <VStack gap="16" max>
-                    <ThemeSwitcher />
-                    <LangSwitcher />
-                </VStack>
-            </VStack>
+            <NavigationContent variant="drawer" onNavigate={onClose} data-testid="MobileNavigationDrawer" />
         </MobileOverlay>
     );
 };

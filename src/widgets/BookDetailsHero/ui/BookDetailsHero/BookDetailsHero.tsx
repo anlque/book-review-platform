@@ -118,7 +118,9 @@ export const BookDetailsHero = memo((props: BookDetailsHeroProps) => {
 
     return (
         <HStack
-            gap="24"
+            gap="32"
+            gapMobile="16"
+            gapTablet="24"
             max
             className={className}
             data-testid="BookDetailsHero"
@@ -130,8 +132,7 @@ export const BookDetailsHero = memo((props: BookDetailsHeroProps) => {
                 className={cls.cover}
                 fallback={
                     <Skeleton
-                        width={260}
-                        height={380}
+                        className={cls.cover}
                         border="16px"
                     />
                 }
@@ -149,7 +150,7 @@ export const BookDetailsHero = memo((props: BookDetailsHeroProps) => {
                     <VStack gap="4" align="start">
                         <HStack gap="8" align="center">
                             <StarRating
-                                size={20}
+                                className={cls.rating}
                                 selectedStars={averageStars}
                             />
                             <Text

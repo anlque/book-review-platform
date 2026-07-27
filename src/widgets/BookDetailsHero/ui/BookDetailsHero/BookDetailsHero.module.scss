@@ -16,6 +16,10 @@
     margin-right: var(--space-s);
     object-fit: cover;
     border-radius: var(--border-radius-m);
+    display: block;
+    width: 260px;
+    height: auto;
+    flex-shrink: 0;
 }
 
 .meta {
@@ -56,6 +60,11 @@
     margin-top: 8px;
 }
 
+.rating svg {
+    width: 20px;
+    height: 20px;
+}
+
 @include media.respond-down(lg) {
     .BookDetailsHero {
         flex-direction: column;
@@ -63,9 +72,10 @@
     }
 
     .cover {
-        width: min(220px, 64vw);
+        width: 220px;
         height: auto;
         margin: 0 auto;
+        flex-shrink: 0;
     }
 
     .sidebar {
@@ -78,7 +88,26 @@
 
     .meta {
         width: 100%;
-        align-items: center;
-        text-align: center;
+        min-width: 0;
+    }
+}
+
+@include media.respond-down(md) {
+    .cover {
+        width: 200px;
+    }
+
+    .rating {
+        gap: var(--space-xxs);
+        svg {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
+
+@include media.respond-down(sm) {
+    .cover {
+        width: 170px;
     }
 }
